@@ -319,35 +319,42 @@
   </section>
 
   <section id="slices">
-    <div class="sec-head"><span class="sec-num">04</span><h2>Three vertical slices</h2></div>
-    <p class="lede">Each runs end-to-end — fetch → rank → publish <code>dashboard.html</code> — and demos on its own. Ranking starts mechanical (signals only); the LLM judge arrives in slice three, matching the "signals-first" runtime decision.</p>
+    <div class="sec-head"><span class="sec-num">04</span><h2>Four vertical slices</h2></div>
+    <p class="lede">Each runs end-to-end and demos on its own. <strong>Revised (2026-07-08):</strong> the LLM makes every editorial call — clustering, relevance, selection, and the one-line significance. Hard signals no longer <em>rank</em>; they are only a cheap pre-filter to keep the LLM's input small. So S1–S2 build the plumbing the LLM structurally cannot do for itself (cross-run memory and velocity), and the LLM lands in S3.</p>
 
     <div class="slice">
-      <div class="slice-head"><span class="sec-num">S1</span><h3>One feed to one page</h3></div>
-      <p class="proves">Proves the report shape and that a raw signal threshold produces something readable.</p>
+      <div class="slice-head"><span class="sec-num">S1</span><h3>One feed to one page</h3> <span class="chip">done</span></div>
+      <p class="proves">Proves the report shape + the fetch→render skeleton. Now doubles as the runnable stand-in until the LLM lands.</p>
       <ul>
-        <li>Fetch GitHub (new repos, sort by stars) <em>or</em> HN (points &gt; threshold).</li>
-        <li>Render <code>dashboard.html</code>: one card per item — what, why it matters, signal, link.</li>
+        <li>Fetch HN (points &gt; threshold); render <code>dashboard.html</code> — one card per item: what, signal, link.</li>
         <li>Manual run. No state, no clustering, no LLM. Feed-down shows a clear banner.</li>
       </ul>
     </div>
 
     <div class="slice">
-      <div class="slice-head"><span class="sec-num">S2</span><h3>Cluster &amp; remember</h3></div>
-      <p class="proves">Proves the hard logic — cross-source story clustering, velocity, and repeat suppression.</p>
+      <div class="slice-head"><span class="sec-num">S2</span><h3>Feeds &amp; memory</h3></div>
+      <p class="proves">Proves the two things the LLM can't do for itself: cross-run memory and velocity. Runs keyless, no LLM.</p>
       <ul>
-        <li>Add HN, HF, arXiv, Reddit, newsletters behind one adapter interface (a flaky feed degrades, never crashes).</li>
-        <li>Cluster the same story across sources into one <code>Item</code>; persist to <code>state.json</code>.</li>
-        <li>Rank on 24h signal <em>velocity</em> vs the stored snapshot; suppress already-reported items unless they jump. Mechanical ranking, cut to 5–8.</li>
+        <li>Add more feeds (GitHub first, then HF/arXiv/Reddit/newsletters) behind one adapter interface — a flaky feed degrades, never crashes. Light hard-signal pre-filter.</li>
+        <li>Persist <code>state.json</code> (per-source seen-records + <code>peak_signal</code> + <code>reported_at</code>) and <code>runs.json</code> (health log). Compute 24h <em>velocity</em> deltas vs the stored snapshot.</li>
+        <li>Selection is a deliberately-dumb top-by-signal stand-in so <code>python run.py</code> still works — deleted in S3. Cross-source clustering into a canonical <code>Item</code> is deferred to the LLM in S3.</li>
       </ul>
     </div>
 
     <div class="slice">
-      <div class="slice-head"><span class="sec-num">S3</span><h3>Judge &amp; run unattended</h3></div>
-      <p class="proves">Proves relevance ranking and trustworthy unattended operation.</p>
+      <div class="slice-head"><span class="sec-num">S3</span><h3>The LLM judge</h3></div>
+      <p class="proves">Proves the actual product — the filter. Needs <code>ANTHROPIC_API_KEY</code>.</p>
       <ul>
-        <li>Add the LLM judge: rank agent-dev topics first, drop pure-discussion noise, write the one-line "why it matters". Needs <code>ANTHROPIC_API_KEY</code> as a repo secret.</li>
-        <li>Schedule at 00:00 UTC (= 08:00 SGT) — the repo carries a disabled scaffold at <code>.github/workflows/sitrep.yml.disabled</code>.</li>
+        <li>Replace the stand-in with one LLM call: hand it today's candidates <em>plus the memory</em> (prior reports + peak signals).</li>
+        <li>The LLM does clustering, relevance (agent-dev first), repeat-suppression, resurface-on-jump, cut-to-5–8, and the one-line "why it matters".</li>
+      </ul>
+    </div>
+
+    <div class="slice">
+      <div class="slice-head"><span class="sec-num">S4</span><h3>Run unattended</h3></div>
+      <p class="proves">Proves trustworthy autonomous operation — the "claw" running itself.</p>
+      <ul>
+        <li>Enable the cron at 00:00 UTC (= 08:00 SGT) — the repo carries a disabled scaffold at <code>.github/workflows/sitrep.yml.disabled</code>. Wire <code>ANTHROPIC_API_KEY</code> as a repo secret. Switch to the fixed UTC-day window.</li>
         <li>Per-feed health line; newsletter cross-check for missed stories; corrections when a reported item is retracted.</li>
       </ul>
     </div>
@@ -418,8 +425,8 @@ Run {
       <p class="val"><b>Broad intake</b> — launches + research + industry + informal discourse (HN, Reddit, GitHub trending) — with <b>agent-dev ranked first</b>, general AI second.</p>
     </div>
     <div class="decide">
-      <div class="decide-head">Ranking <span class="locked">locked</span></div>
-      <p class="val"><b>Signals shortlist first</b> (stars/velocity, points, upvotes, paper attention); <b>LLM judge added in S3</b> for relevance and de-noising.</p>
+      <div class="decide-head">Ranking <span class="locked">revised 2026-07-08</span></div>
+      <p class="val"><b>The LLM makes every editorial call</b> — clustering, relevance, selection, and the one-line significance. Hard signals (stars/velocity, points, upvotes) are <b>only a cheap pre-filter</b> to bound the LLM's input, not a ranker. Supersedes the original "signals shortlist first, LLM refines" call: there is no mechanical clustering or tier-ranking. S1–S2 build the memory + velocity the LLM can't compute for itself; the judge lands in S3.</p>
     </div>
     <div class="decide">
       <div class="decide-head">Report size <span class="locked">locked</span></div>

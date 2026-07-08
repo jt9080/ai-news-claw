@@ -27,13 +27,14 @@ class TestParseHits(unittest.TestCase):
         self.assertEqual(first.source_id, "42150001")
         self.assertEqual(first.title, "GLM 5.2 and the coming AI margin collapse")
         self.assertEqual(first.url, "https://example.com/glm-5-2")
-        self.assertEqual(first.points, 666)
+        self.assertEqual(first.signal_name, "points")
+        self.assertEqual(first.signal_value, 666)
         self.assertEqual(first.num_comments, 412)
 
-    def test_hn_url_built_from_object_id(self):
+    def test_discussion_url_built_from_object_id(self):
         candidates = parse_hits(self.payload["hits"])
         self.assertEqual(
-            candidates[0].hn_url,
+            candidates[0].discussion_url,
             "https://news.ycombinator.com/item?id=42150001",
         )
 
@@ -44,10 +45,10 @@ class TestParseHits(unittest.TestCase):
             datetime(2026, 7, 6, 4, 40, 0, tzinfo=timezone.utc),
         )
 
-    def test_text_post_url_falls_back_to_hn_url(self):
+    def test_text_post_url_falls_back_to_discussion_url(self):
         candidates = parse_hits(self.payload["hits"])
         ask = next(c for c in candidates if c.source_id == "42150002")
-        self.assertEqual(ask.url, ask.hn_url)
+        self.assertEqual(ask.url, ask.discussion_url)
 
     def test_malformed_hit_is_skipped_not_fatal(self):
         candidates = parse_hits(self.payload["hits"])

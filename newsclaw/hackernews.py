@@ -52,12 +52,13 @@ def parse_hits(hits: list[dict]) -> list[Candidate]:
                 source_id=object_id,
                 title=hit["title"],
                 url=url,
-                hn_url=hn_url,
-                points=int(hit["points"]),
-                num_comments=int(hit.get("num_comments", 0)),
+                signal_name="points",
+                signal_value=int(hit["points"]),
                 created_at=datetime.fromtimestamp(
                     hit["created_at_i"], tz=timezone.utc
                 ),
+                discussion_url=hn_url,
+                num_comments=int(hit.get("num_comments", 0)),
             )
         except (KeyError, TypeError, ValueError):
             # A hit missing required fields is skipped, not fatal.

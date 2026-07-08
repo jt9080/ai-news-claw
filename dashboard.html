@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AI News Monitor — Wed 08 Jul 2026, 13:16</title>
+<title>AI News Monitor — Wed 08 Jul 2026, 14:06</title>
 <style>:root {
   --paper:#FBFBFE; --card:#FFFFFF; --ink:#14161D; --muted:#616677; --line:#E5E7EF;
   --accent:#3355EA; --accent-soft:#E9ECFD; --hot:#C6371F; --hot-bg:#FBE7E2;
@@ -24,12 +24,13 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 .sheet { max-width: 47rem; margin: 0 auto; }
-.mono, .eyebrow, .chip, .signal, .topic, .age { font-family: ui-monospace, 'SF Mono', 'JetBrains Mono', Menlo, Consolas, monospace; }
+.mono, .eyebrow, .chip, .signal, .topic, .age, .vel { font-family: ui-monospace, 'SF Mono', 'JetBrains Mono', Menlo, Consolas, monospace; }
 h1 { font-size: 2.05rem; line-height: 1.12; letter-spacing: -0.02em; margin: 0.4rem 0 0.7rem; text-wrap: balance; font-weight: 700; }
 a { color: var(--accent); text-underline-offset: 2px; }
 .eyebrow { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); }
 .meta { color: var(--muted); font-size: 0.88rem; margin-bottom: 0.4rem; }
-.health { color: var(--muted); font-size: 0.8rem; border-block: 1px solid var(--line); padding: 0.7rem 0; margin-bottom: 2.4rem; display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; }
+.health { color: var(--muted); font-size: 0.8rem; border-block: 1px solid var(--line); padding: 0.7rem 0; margin-bottom: 2.4rem; display: flex; gap: 1.1rem; align-items: center; flex-wrap: wrap; }
+.health .feed { display: inline-flex; gap: 0.4rem; align-items: center; }
 .health .dot { width: 0.55rem; height: 0.55rem; border-radius: 50%; display: inline-block; }
 .health .dot.ok { background: var(--cool); }
 .health .dot.failed { background: var(--hot); }
@@ -43,8 +44,10 @@ a { color: var(--accent); text-underline-offset: 2px; }
 .item h2 a { text-decoration: none; }
 .item h2 a:hover { text-decoration: underline; }
 .line { display: flex; flex-wrap: wrap; gap: 0.5rem 0.7rem; align-items: center; font-size: 0.82rem; }
-.chip { font-size: 0.63rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.15rem 0.5rem; border-radius: 5px; background: var(--warm-bg); color: var(--warm); }
+.chip { font-size: 0.63rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.15rem 0.5rem; border-radius: 5px; background: var(--accent-soft); color: var(--accent); }
+.chip.tag { background: var(--warm-bg); color: var(--warm); }
 .signal { color: var(--ink); font-weight: 600; }
+.vel { color: var(--cool); font-weight: 600; }
 .age { color: var(--muted); }
 .topic { font-size: 0.68rem; padding: 0.12rem 0.45rem; border-radius: 5px; background: var(--accent-soft); color: var(--accent); }
 .disc { color: var(--muted); text-decoration: none; }
@@ -55,9 +58,9 @@ footer { color: var(--muted); font-size: 0.78rem; text-align: center; margin-top
 <main class="sheet">
   <p class="eyebrow">Morning digest</p>
   <h1>AI News Monitor</h1>
-  <p class="meta">Wed 08 Jul 2026, 13:16 SGT &middot; 2 items</p>
-  <p class="meta">Window: Tue 07 Jul 2026, 13:16 → Wed 08 Jul 2026, 13:16 SGT</p>
-  <div class="health"><span class="dot ok"></span>Hacker News &middot; ok &middot; 34 fetched &middot; 2 published</div>
+  <p class="meta">Wed 08 Jul 2026, 14:06 SGT &middot; 8 items</p>
+  <p class="meta">Window: Tue 07 Jul 2026, 14:06 → Wed 08 Jul 2026, 14:06 SGT</p>
+  <div class="health"><span class="feed"><span class="dot ok"></span>Hacker News &middot; ok &middot; 35 fetched</span> <span class="feed"><span class="dot ok"></span>GitHub &middot; ok &middot; 30 fetched</span></div>
   
   
     <article class="item">
@@ -66,7 +69,10 @@ footer { color: var(--muted); font-size: 0.78rem; text-align: center; margin-top
         <h2><a href="https://github.com/rowboatlabs/rowboat">Show HN: Rowboat – Open-source, local-first alternative to Claude Desktop</a></h2>
         <div class="line">
           <span class="chip">HN</span>
-          <span class="signal">125 points &middot; 36 comments</span>
+          <span class="chip tag">new</span>
+          <span class="signal">135 points</span>
+          <span class="age">38 comments</span>
+          <span class="vel">&#9650; 135</span>
           <span class="age">13h ago</span>
           <span class="topic">claude</span>
           <a class="disc" href="https://news.ycombinator.com/item?id=48819808">discussion &rsaquo;</a>
@@ -77,17 +83,116 @@ footer { color: var(--muted); font-size: 0.78rem; text-align: center; margin-top
     <article class="item">
       <div class="rank">2</div>
       <div class="body">
+        <h2><a href="https://github.com/DietrichGebert/ponytail">DietrichGebert/ponytail</a></h2>
+        <div class="line">
+          <span class="chip">GitHub</span>
+          <span class="chip tag">new</span>
+          <span class="signal">77157 stars</span>
+          <span class="vel">&#9650; 2942</span>
+          <span class="age">26d ago</span>
+          <span class="topic">agent</span>
+          
+        </div>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="rank">3</div>
+      <div class="body">
         <h2><a href="https://www.fastcompany.com/91520702/y-combinator-garry-tan-agentic-ai-social-media">YC CEO says he ships 37K LoC AI code per day. A developer looked under the hood</a></h2>
         <div class="line">
           <span class="chip">HN</span>
-          <span class="signal">109 points &middot; 97 comments</span>
-          <span class="age">20h ago</span>
+          <span class="chip tag">new</span>
+          <span class="signal">109 points</span>
+          <span class="age">97 comments</span>
+          <span class="vel">&#9650; 109</span>
+          <span class="age">21h ago</span>
           <span class="topic">agentic</span>
           <a class="disc" href="https://news.ycombinator.com/item?id=48815117">discussion &rsaquo;</a>
         </div>
       </div>
     </article>
-  <footer>Ranked by Hacker News points. Relevance by keyword allowlist &mdash; a Slice 1 stopgap.</footer>
+
+    <article class="item">
+      <div class="rank">4</div>
+      <div class="body">
+        <h2><a href="https://github.com/XiaomiMiMo/MiMo-Code">XiaomiMiMo/MiMo-Code</a></h2>
+        <div class="line">
+          <span class="chip">GitHub</span>
+          <span class="chip tag">new</span>
+          <span class="signal">11604 stars</span>
+          <span class="vel">&#9650; 418</span>
+          <span class="age">27d ago</span>
+          <span class="topic">agent</span>
+          
+        </div>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="rank">5</div>
+      <div class="body">
+        <h2><a href="https://github.com/langchain-ai/openwiki">langchain-ai/openwiki</a></h2>
+        <div class="line">
+          <span class="chip">GitHub</span>
+          <span class="chip tag">new</span>
+          <span class="signal">9289 stars</span>
+          <span class="vel">&#9650; 608</span>
+          <span class="age">15d ago</span>
+          <span class="topic">agent</span>
+          
+        </div>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="rank">6</div>
+      <div class="body">
+        <h2><a href="https://github.com/omnigent-ai/omnigent">omnigent-ai/omnigent</a></h2>
+        <div class="line">
+          <span class="chip">GitHub</span>
+          <span class="chip tag">new</span>
+          <span class="signal">6673 stars</span>
+          <span class="vel">&#9650; 249</span>
+          <span class="age">26d ago</span>
+          <span class="topic">agent</span><span class="topic">claude</span>
+          
+        </div>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="rank">7</div>
+      <div class="body">
+        <h2><a href="https://github.com/cobusgreyling/loop-engineering">cobusgreyling/loop-engineering</a></h2>
+        <div class="line">
+          <span class="chip">GitHub</span>
+          <span class="chip tag">new</span>
+          <span class="signal">6472 stars</span>
+          <span class="vel">&#9650; 223</span>
+          <span class="age">28d ago</span>
+          <span class="topic">agent</span><span class="topic">prompt</span>
+          
+        </div>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="rank">8</div>
+      <div class="body">
+        <h2><a href="https://github.com/BuilderIO/skills">BuilderIO/skills</a></h2>
+        <div class="line">
+          <span class="chip">GitHub</span>
+          <span class="chip tag">new</span>
+          <span class="signal">3521 stars</span>
+          <span class="vel">&#9650; 127</span>
+          <span class="age">27d ago</span>
+          <span class="topic">agent</span><span class="topic">skills</span>
+          
+        </div>
+      </div>
+    </article>
+  <footer>Signals-only stand-in selection &mdash; the LLM judge lands in Slice 3. Relevance by keyword allowlist.</footer>
 </main>
 </body>
 </html>

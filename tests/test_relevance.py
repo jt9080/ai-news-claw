@@ -5,16 +5,18 @@ from newsclaw.models import Candidate
 from newsclaw.relevance import find_topics, filter_relevant
 
 
-def make(title, url="https://example.com/x"):
+def make(title, url="https://example.com/x", summary=None):
     return Candidate(
         source="hackernews",
         source_id="1",
         title=title,
         url=url,
-        hn_url="https://news.ycombinator.com/item?id=1",
-        points=200,
-        num_comments=10,
+        signal_name="points",
+        signal_value=200,
         created_at=datetime(2026, 7, 8, tzinfo=timezone.utc),
+        discussion_url="https://news.ycombinator.com/item?id=1",
+        num_comments=10,
+        summary=summary,
     )
 
 
@@ -57,6 +59,14 @@ class TestFilterRelevant(unittest.TestCase):
 
     def test_drops_all_when_none_relevant(self):
         self.assertEqual(filter_relevant([make("Sourdough bread")]), [])
+
+    def test_matches_keyword_in_summary(self):
+        # a GitHub repo whose name carries no keyword but whose description does
+        repo = make("acme/coolproject", url="https://github.com/acme/coolproject",
+                    summary="An open-source multi-agent framework")
+        kept = filter_relevant([repo])
+        self.assertEqual(len(kept), 1)
+        self.assertIn("agent", kept[0].topics)
 
 
 if __name__ == "__main__":

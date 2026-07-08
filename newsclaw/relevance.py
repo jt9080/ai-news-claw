@@ -34,9 +34,11 @@ _PATTERNS = [
 ]
 
 
-def find_topics(title: str, url: str) -> list[str]:
-    """Return the sorted, unique allowlist terms matching the title or url."""
-    haystack = f"{title} {url}"
+def find_topics(title: str, url: str, summary: str = "") -> list[str]:
+    """Return the sorted, unique allowlist terms matching the title, url, or
+    summary. The summary carries the signal for GitHub repos, whose names rarely
+    contain a keyword."""
+    haystack = f"{title} {url} {summary}"
     matched = {term for term, pattern in _PATTERNS if pattern.search(haystack)}
     return sorted(matched)
 
@@ -45,7 +47,7 @@ def filter_relevant(candidates: list[Candidate]) -> list[Candidate]:
     """Keep only candidates matching the allowlist, tagging each with its topics."""
     kept = []
     for candidate in candidates:
-        topics = find_topics(candidate.title, candidate.url)
+        topics = find_topics(candidate.title, candidate.url, candidate.summary or "")
         if topics:
             candidate.topics = topics
             kept.append(candidate)

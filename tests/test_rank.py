@@ -1,43 +1,81 @@
 import unittest
 from datetime import datetime, timezone
 
-from newsclaw.models import Candidate
-from newsclaw.rank import rank, MAX_ITEMS
+from newsclaw.models import Candidate, SeenRecord
+from newsclaw.rank import select, MAX_ITEMS
+
+NOW = datetime(2026, 7, 8, tzinfo=timezone.utc)
 
 
-def make(points, source_id="1"):
-    return Candidate(
-        source="hackernews",
-        source_id=source_id,
-        title=f"story {source_id}",
-        url="https://example.com/x",
-        hn_url="https://news.ycombinator.com/item?id=1",
-        points=points,
-        num_comments=0,
-        created_at=datetime(2026, 7, 8, tzinfo=timezone.utc),
+def make(source, source_id, value, resurfaced=False):
+    c = Candidate(
+        source=source, source_id=source_id, title=source_id, url="u",
+        signal_name="points" if source == "hackernews" else "stars",
+        signal_value=value, created_at=NOW,
+    )
+    c.resurfaced = resurfaced
+    c.is_new = True
+    return c
+
+
+def rec(source, source_id, value, reported_at=None):
+    return SeenRecord(
+        source=source, source_id=source_id, title=source_id, url="u",
+        signal_name="points", signal_value=value, peak_signal=value,
+        prior_value=value, velocity=0.0, first_seen="x", last_seen="y",
+        reported_at=reported_at,
     )
 
 
-class TestRank(unittest.TestCase):
-    def test_sorts_by_points_descending(self):
-        ranked = rank([make(150, "a"), make(400, "b"), make(200, "c")])
-        self.assertEqual([c.points for c in ranked], [400, 200, 150])
+def state_for(cands):
+    return {f"{c.source}:{c.source_id}": rec(c.source, c.source_id, c.signal_value)
+            for c in cands}
 
-    def test_drops_items_at_or_below_threshold(self):
-        # threshold is > 100; a 100-point item must be excluded
-        ranked = rank([make(400, "a"), make(100, "b"), make(50, "c")])
-        self.assertEqual([c.points for c in ranked], [400])
 
+class TestSuppression(unittest.TestCase):
+    def test_reported_and_not_resurfaced_is_suppressed(self):
+        c = make("hackernews", "a", 300)
+        state = {"hackernews:a": rec("hackernews", "a", 300, reported_at="2026-07-07T00:00:00+00:00")}
+        published = select([c], state, NOW)
+        self.assertEqual(published, [])
+
+    def test_reported_but_resurfaced_is_kept(self):
+        c = make("hackernews", "a", 800, resurfaced=True)
+        state = {"hackernews:a": rec("hackernews", "a", 800, reported_at="2026-07-07T00:00:00+00:00")}
+        published = select([c], state, NOW)
+        self.assertEqual([x.source_id for x in published], ["a"])
+
+    def test_never_reported_is_kept(self):
+        c = make("hackernews", "a", 300)
+        published = select([c], state_for([c]), NOW)
+        self.assertEqual([x.source_id for x in published], ["a"])
+
+
+class TestSelection(unittest.TestCase):
     def test_caps_at_max_items(self):
-        many = [make(200 + i, str(i)) for i in range(20)]
-        ranked = rank(many)
-        self.assertEqual(len(ranked), MAX_ITEMS)
+        cands = [make("hackernews", f"h{i}", 500 - i) for i in range(20)]
+        published = select(cands, state_for(cands), NOW)
+        self.assertEqual(len(published), MAX_ITEMS)
 
-    def test_cap_keeps_the_highest(self):
-        many = [make(200 + i, str(i)) for i in range(20)]
-        ranked = rank(many)
-        self.assertEqual(ranked[0].points, 219)
-        self.assertEqual(ranked[-1].points, 219 - (MAX_ITEMS - 1))
+    def test_interleaves_across_sources(self):
+        cands = [
+            make("hackernews", "h1", 300), make("hackernews", "h2", 200),
+            make("hackernews", "h3", 100),
+            make("github", "g1", 6000), make("github", "g2", 5000),
+            make("github", "g3", 4000),
+        ]
+        published = select(cands, state_for(cands), NOW)[:4]
+        self.assertEqual(
+            [(c.source, c.source_id) for c in published],
+            [("hackernews", "h1"), ("github", "g1"),
+             ("hackernews", "h2"), ("github", "g2")],
+        )
+
+    def test_stamps_reported_at_on_published(self):
+        c = make("hackernews", "a", 300)
+        state = state_for([c])
+        select([c], state, NOW)
+        self.assertEqual(state["hackernews:a"].reported_at, NOW.isoformat())
 
 
 if __name__ == "__main__":

@@ -1,0 +1,33 @@
+{
+  "total_count": 204013,
+  "incomplete_results": false,
+  "items": [
+    {
+      "full_name": "omnigent-ai/omnigent",
+      "html_url": "https://github.com/omnigent-ai/omnigent",
+      "description": "Omnigent is an open-source multi-agent framework",
+      "stargazers_count": 6653,
+      "created_at": "2026-06-14T09:12:00Z",
+      "pushed_at": "2026-07-08T02:40:00Z",
+      "topics": ["agents", "multi-agent", "llm"],
+      "language": "Python"
+    },
+    {
+      "full_name": "acme/quiet-tool",
+      "html_url": "https://github.com/acme/quiet-tool",
+      "description": null,
+      "stargazers_count": 812,
+      "created_at": "2026-07-01T00:00:00Z",
+      "pushed_at": "2026-07-07T00:00:00Z",
+      "topics": [],
+      "language": "Rust"
+    },
+    {
+      "full_name": "broken/norepo",
+      "html_url": "https://github.com/broken/norepo",
+      "description": "missing its star count",
+      "created_at": "2026-07-02T00:00:00Z",
+      "topics": []
+    }
+  ]
+}
