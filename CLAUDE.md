@@ -42,6 +42,17 @@ Full details, verified endpoints, and example responses live in `feeds/`. Key fa
 Not used: **X/Twitter** — API is paid and gated, scraping is fragile and ToS-risky.
 Deliberately out of scope; the newsletters above already digest most X discourse.
 
+## Toolchain & conventions
+
+- **Language:** Python, **standard library only** — no third-party dependencies, so the
+  scheduled GitHub Actions run needs no install step. Target 3.11+, but keep the code
+  3.9-compatible (`from __future__ import annotations`); the current dev machine is 3.9.6.
+- **Entry point:** `python run.py` — writes `dashboard.html` and prints a one-line summary.
+- **Tests:** `python -m unittest` (or `python -m unittest discover -s tests`). Test-first
+  (TDD): every module has a `tests/test_*.py`; fixtures live in `tests/fixtures/`.
+- **Layout:** each feed sits behind a small adapter in `newsclaw/` (`hackernews.py`, …)
+  returning a degraded `FetchResult` on failure rather than raising.
+
 ## Behaviour
 - Don't assume, always ask when unsure.
 - Challenge me and push back where appropriate.

@@ -1,0 +1,35 @@
+{
+  "hits": [
+    {
+      "objectID": "42150001",
+      "title": "GLM 5.2 and the coming AI margin collapse",
+      "url": "https://example.com/glm-5-2",
+      "points": 666,
+      "num_comments": 412,
+      "author": "swyx",
+      "created_at_i": 1783312800,
+      "_tags": ["story", "front_page"]
+    },
+    {
+      "objectID": "42150002",
+      "title": "Ask HN: How are you deploying LLM agents in production?",
+      "url": null,
+      "points": 240,
+      "num_comments": 190,
+      "author": "pg",
+      "created_at_i": 1783309200,
+      "_tags": ["story", "ask_hn"]
+    },
+    {
+      "objectID": "42150003",
+      "title": "This hit is missing its points field",
+      "url": "https://example.com/broken",
+      "num_comments": 5,
+      "author": "nobody",
+      "created_at_i": 1783305600,
+      "_tags": ["story"]
+    }
+  ],
+  "nbHits": 3,
+  "hitsPerPage": 200
+}
