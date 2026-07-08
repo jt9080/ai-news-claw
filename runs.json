@@ -1,0 +1,27 @@
+[
+  {
+    "run_at": "2026-07-08T08:29:23.923902+00:00",
+    "window": {
+      "start": "2026-07-07T00:00:00+00:00",
+      "end": "2026-07-08T00:00:00+00:00"
+    },
+    "feeds": {
+      "hackernews": "ok",
+      "github": "ok",
+      "huggingface": "ok",
+      "arxiv": "ok",
+      "reddit": "ok",
+      "blogs": "ok",
+      "judge": "failed"
+    },
+    "counts": {
+      "candidates": 174,
+      "kept": 119,
+      "new": 119,
+      "resurfaced": 0,
+      "suppressed": 111,
+      "published": 8
+    },
+    "state": "ok"
+  }
+]
