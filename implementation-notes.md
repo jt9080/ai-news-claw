@@ -42,6 +42,17 @@ fallback cards stay title+signal). PRD §6 "full summarization" revised to allow
 this bounded three-sentence block (still not article/paper summaries). No spec
 doc (user opted to skip — straightforward). 95 tests green.
 
+### Remaining feeds — HF, arXiv, Reddit, blogs (2026-07-08)
+Completed the feed catalog. New `feedparse` (stdlib RSS+Atom parser) backs three
+adapters — `arxiv` (cs.MA+cs.AI, first-submission only), `reddit` (3 subs via
+`top/day` RSS, no auth), `blogs` (6 RSS/Atom sources) — plus `huggingface` (JSON:
+trending models + daily_papers). Signal-less feeds carry `signal_value=0` with an
+honest name (`recency`/`top`/`editorial`); the judge weighs them on content.
+`run.py` fetches all six and caps each feed to `PER_FEED_CAP=20` before the judge.
+`render` gained badges + value-0 display (label, not "0 x"). 121 tests green;
+live run: all six feeds ok, 169→116→7, digest spanned HN/GitHub/Reddit/arXiv.
+Design spec: `docs/superpowers/specs/2026-07-08-remaining-feeds-design.md`.
+
 ## Open questions
 
 - **Points threshold (`>100`) and the keyword allowlist** are tuning knobs, not

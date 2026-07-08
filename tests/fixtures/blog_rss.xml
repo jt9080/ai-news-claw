@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<rss version="2.0"><channel>
+  <title>Lab Blog</title>
+  <item>
+    <title>Introducing our new agent SDK</title>
+    <link>https://openai.com/blog/agent-sdk</link>
+    <pubDate>Tue, 07 Jul 2026 17:00:00 GMT</pubDate>
+    <description>Today we release an SDK for building multi-agent systems.</description>
+  </item>
+  <item>
+    <title>Company picnic recap</title>
+    <link>https://openai.com/blog/picnic</link>
+    <pubDate>Mon, 01 Jun 2026 12:00:00 GMT</pubDate>
+    <description>A lovely day out.</description>
+  </item>
+</channel></rss>

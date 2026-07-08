@@ -21,8 +21,10 @@ from newsclaw.models import Candidate, DigestItem
 SGT = ZoneInfo("Asia/Singapore")
 
 # Feed identity → human label + card badge.
-_LABELS = {"hackernews": "Hacker News", "github": "GitHub"}
-_BADGES = {"hackernews": "HN", "github": "GitHub"}
+_LABELS = {"hackernews": "Hacker News", "github": "GitHub", "huggingface": "Hugging Face",
+           "arxiv": "arXiv", "reddit": "Reddit", "blogs": "Blogs"}
+_BADGES = {"hackernews": "HN", "github": "GitHub", "huggingface": "HF",
+           "arxiv": "arXiv", "reddit": "Reddit", "blogs": "Blog"}
 
 _CSS = """
 :root {
@@ -111,10 +113,12 @@ def _tag(item: DigestItem) -> str:
 
 def _source_bits(c: Candidate) -> str:
     """Badge + signal (+ comments/velocity/discussion) for one clustered source."""
-    bits = [
-        f'<span class="chip">{escape(_BADGES.get(c.source, c.source))}</span>',
-        f'<span class="signal">{c.signal_value} {escape(c.signal_name)}</span>',
-    ]
+    bits = [f'<span class="chip">{escape(_BADGES.get(c.source, c.source))}</span>']
+    if c.signal_value > 0:
+        bits.append(f'<span class="signal">{c.signal_value} {escape(c.signal_name)}</span>')
+    else:
+        # signal-less feed (arXiv/Reddit/blogs): show the descriptor, not "0 x"
+        bits.append(f'<span class="age">{escape(c.signal_name)}</span>')
     if c.num_comments is not None:
         bits.append(f'<span class="age">{c.num_comments} comments</span>')
     if c.velocity and c.velocity > 0:

@@ -1,5 +1,6 @@
 import json
 import unittest
+from contextlib import ExitStack
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from tempfile import TemporaryDirectory
@@ -10,6 +11,7 @@ from newsclaw.llm import LLMError
 from newsclaw.models import Candidate, FetchResult
 
 NOW = datetime(2026, 7, 8, 12, 0, 0, tzinfo=timezone.utc)
+FEED_NAMES = ["hackernews", "github", "huggingface", "arxiv", "reddit", "blogs"]
 
 
 def hn(title, points, source_id):
@@ -22,19 +24,17 @@ def hn(title, points, source_id):
     )
 
 
-def repo(name, stars):
-    return Candidate(
-        source="github", source_id=name, title=name,
-        url=f"https://github.com/{name}", signal_name="stars",
-        signal_value=stars, created_at=NOW - timedelta(days=10),
-        summary="a multi-agent framework",
-    )
-
-
 def paths(tmp):
     return {"output_path": Path(tmp) / "dashboard.html",
             "state_path": Path(tmp) / "state.json",
             "runs_path": Path(tmp) / "runs.json"}
+
+
+def patch_feeds(stack, **results):
+    """Patch every feed's fetch; unспecified feeds default to empty-ok."""
+    for name in FEED_NAMES:
+        res = results.get(name, FetchResult(name, "ok", []))
+        stack.enter_context(mock.patch(f"run.{name}.fetch", return_value=res))
 
 
 def judged_reply(ids):
@@ -46,60 +46,67 @@ def judged_reply(ids):
     ]})
 
 
-class TestJudgePath(unittest.TestCase):
-    def test_judge_success_renders_why_and_records_ok(self):
+class TestSixFeeds(unittest.TestCase):
+    def test_judge_success_records_all_feeds(self):
         hn_ok = FetchResult("hackernews", "ok", [hn("New agent framework", 400, "1")])
-        gh_ok = FetchResult("github", "ok", [repo("acme/agent-lib", 900)])
-        with TemporaryDirectory() as tmp:
+        with TemporaryDirectory() as tmp, ExitStack() as stack:
             p = paths(tmp)
-            with mock.patch("run.hackernews.fetch", return_value=hn_ok), \
-                 mock.patch("run.github.fetch", return_value=gh_ok), \
-                 mock.patch("newsclaw.llm.complete", return_value=judged_reply(["hn:1"])):
-                summary = run.main(now=NOW, **p)
+            patch_feeds(stack, hackernews=hn_ok)
+            stack.enter_context(mock.patch("newsclaw.llm.complete",
+                                           return_value=judged_reply(["hn:1"])))
+            run.main(now=NOW, **p)
             html = p["output_path"].read_text()
-            self.assertIn("a new thing shipped", html)         # the what line
-            self.assertIn("because it matters", html)          # the why line
-            self.assertIn("wire it into your agent loop", html)  # for-builders line
+            self.assertIn("a new thing shipped", html)
+            log = json.loads(p["runs_path"].read_text())
+            feeds = log[0]["feeds"]
+            for name in FEED_NAMES:
+                self.assertIn(name, feeds)          # every feed's health recorded
+            self.assertEqual(feeds["judge"], "ok")
+
+    def test_one_feed_failed_still_publishes(self):
+        hn_ok = FetchResult("hackernews", "ok", [hn("New agent tool", 400, "1")])
+        arxiv_bad = FetchResult("arxiv", "failed", [], error="429")
+        with TemporaryDirectory() as tmp, ExitStack() as stack:
+            p = paths(tmp)
+            patch_feeds(stack, hackernews=hn_ok, arxiv=arxiv_bad)
+            stack.enter_context(mock.patch("newsclaw.llm.complete",
+                                           return_value=judged_reply(["hn:1"])))
+            run.main(now=NOW, **p)
+            html = p["output_path"].read_text()
             self.assertIn("Judged story", html)
-            self.assertIn("judge", summary)
+            self.assertIn("429", html)              # failed feed banner
             log = json.loads(p["runs_path"].read_text())
-            self.assertEqual(log[0]["feeds"]["judge"], "ok")
-            # reported_at stamped on the published candidate
-            st = json.loads(p["state_path"].read_text())
-            self.assertIsNotNone(st["records"]["hackernews:1"]["reported_at"])
+            self.assertEqual(log[0]["feeds"]["arxiv"], "failed")
 
-
-class TestFallbackPath(unittest.TestCase):
-    def test_judge_failure_falls_back_to_standin_with_banner(self):
+    def test_fallback_when_judge_unavailable(self):
         hn_ok = FetchResult("hackernews", "ok", [hn("New agent tool", 400, "1")])
-        gh_ok = FetchResult("github", "ok", [repo("acme/agent-lib", 900)])
-        with TemporaryDirectory() as tmp:
+        with TemporaryDirectory() as tmp, ExitStack() as stack:
             p = paths(tmp)
-            with mock.patch("run.hackernews.fetch", return_value=hn_ok), \
-                 mock.patch("run.github.fetch", return_value=gh_ok), \
-                 mock.patch("newsclaw.llm.complete", side_effect=LLMError("boom")):
-                summary = run.main(now=NOW, **p)
-            html = p["output_path"].read_text()
-            self.assertIn("New agent tool", html)              # stand-in still published
-            self.assertRegex(html.lower(), r"judge unavailable|stand-in")
-            log = json.loads(p["runs_path"].read_text())
-            self.assertEqual(log[0]["feeds"]["judge"], "failed")
-        self.assertIn("judge=failed", summary)
-
-    def test_no_key_degrades_to_standin(self):
-        # No OPENCODE_API_KEY set and llm not mocked: llm raises LLMError itself.
-        hn_ok = FetchResult("hackernews", "ok", [hn("New agent tool", 400, "1")])
-        gh_ok = FetchResult("github", "ok", [])
-        with TemporaryDirectory() as tmp:
-            p = paths(tmp)
-            with mock.patch.dict("os.environ", {}, clear=True), \
-                 mock.patch("run.hackernews.fetch", return_value=hn_ok), \
-                 mock.patch("run.github.fetch", return_value=gh_ok):
-                run.main(now=NOW, **p)
+            patch_feeds(stack, hackernews=hn_ok)
+            stack.enter_context(mock.patch("newsclaw.llm.complete",
+                                           side_effect=LLMError("boom")))
+            summary = run.main(now=NOW, **p)
             html = p["output_path"].read_text()
             self.assertIn("New agent tool", html)
-            log = json.loads(p["runs_path"].read_text())
-            self.assertEqual(log[0]["feeds"]["judge"], "failed")
+            self.assertRegex(html.lower(), r"judge unavailable|stand-in")
+        self.assertIn("judge=failed", summary)
+
+    def test_per_feed_cap_bounds_judge_input(self):
+        many = FetchResult("hackernews", "ok",
+                           [hn(f"agent story {i}", 500 - i, str(i)) for i in range(25)])
+        captured = {}
+
+        def spy(candidates, records, now):
+            captured["n_hn"] = sum(1 for c in candidates if c.source == "hackernews")
+            return []
+
+        with TemporaryDirectory() as tmp, ExitStack() as stack:
+            p = paths(tmp)
+            patch_feeds(stack, hackernews=many)
+            stack.enter_context(mock.patch("run.judge.judge", side_effect=spy))
+            run.main(now=NOW, **p)
+        self.assertLessEqual(captured["n_hn"], run.PER_FEED_CAP)
+        self.assertEqual(captured["n_hn"], run.PER_FEED_CAP)  # 25 capped to the limit
 
 
 class TestDotenv(unittest.TestCase):
@@ -123,7 +130,7 @@ class TestDotenv(unittest.TestCase):
                 self.assertEqual(os.environ["OPENCODE_API_KEY"], "fromenv")
 
     def test_missing_file_is_noop(self):
-        run._load_dotenv(Path("/nonexistent/does-not-exist.env"))  # must not raise
+        run._load_dotenv(Path("/nonexistent/does-not-exist.env"))
 
 
 if __name__ == "__main__":

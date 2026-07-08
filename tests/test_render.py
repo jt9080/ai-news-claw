@@ -21,6 +21,16 @@ def hn_c(title="New LLM agent", points=400, comments=120, topics=None,
     return c
 
 
+def zero_c(source="blogs", signal_name="editorial", title="Lab ships agent SDK"):
+    c = Candidate(
+        source=source, source_id="x1", title=title, url="https://lab.example/post",
+        signal_name=signal_name, signal_value=0,
+        created_at=NOW - timedelta(hours=2), topics=["agent"],
+    )
+    c.is_new, c.resurfaced, c.velocity = True, False, 0.0
+    return c
+
+
 def gh_c(name="omnigent-ai/omnigent", stars=6653, velocity=120.0):
     c = Candidate(
         source="github", source_id=name, title=name,
@@ -98,6 +108,17 @@ class TestCards(unittest.TestCase):
         html = render_dashboard([item([hn_c()], resurfaced=True, is_new=False)],
                                 WINDOW, feeds(), NOW)
         self.assertRegex(html.lower(), r"\bback\b")
+
+    def test_zero_signal_feed_shows_label_not_zero(self):
+        html = render_dashboard([item([zero_c(source="blogs", signal_name="editorial")],
+                                      kind="post", what="a release")], WINDOW, feeds(), NOW)
+        self.assertNotRegex(html, r"0\s+editorial")   # no meaningless "0 editorial"
+        self.assertIn("editorial", html)              # the label still shows
+
+    def test_new_source_badges(self):
+        for src, badge in [("arxiv", "arXiv"), ("reddit", "Reddit"), ("blogs", "Blog")]:
+            html = render_dashboard([item([zero_c(source=src)], what="x")], WINDOW, feeds(), NOW)
+            self.assertRegex(html, badge)
 
     def test_velocity_marker_when_positive(self):
         html = render_dashboard([item([gh_c(velocity=250.0)], kind="repo")],

@@ -17,10 +17,17 @@ import os
 from datetime import datetime, timezone
 from pathlib import Path
 
-from newsclaw import github, hackernews, ingest, judge, rank, relevance, state
+from newsclaw import (
+    arxiv, blogs, github, hackernews, huggingface, ingest, judge, rank,
+    reddit, relevance, state,
+)
 from newsclaw.models import DigestItem, Run
 from newsclaw.render import render_dashboard
 from newsclaw.window import compute_window
+
+# Cap each feed's post-relevance contribution to the judge so six firehoses
+# don't blow up the payload (latency/cost). A tunable knob.
+PER_FEED_CAP = 20
 
 _ROOT = Path(__file__).parent
 DEFAULT_OUTPUT = _ROOT / "dashboard.html"
@@ -39,7 +46,14 @@ def main(
 
     start, end = compute_window(now)
 
-    feeds = [hackernews.fetch(start, end), github.fetch(start, end)]
+    feeds = [
+        hackernews.fetch(start, end),
+        github.fetch(start, end),
+        huggingface.fetch(start, end),
+        arxiv.fetch(start, end),
+        reddit.fetch(start, end),
+        blogs.fetch(start, end),
+    ]
     candidates = [c for feed in feeds for c in feed.candidates]
 
     relevant = relevance.filter_relevant(candidates)
@@ -47,16 +61,20 @@ def main(
     records, state_status = state.load_state(state_path)
     ingest.ingest(relevant, records, now)
 
+    # Ingest sees everything (memory stays complete); the judge sees a bounded,
+    # per-feed-capped set so six feeds don't overrun the payload.
+    for_judge = _cap_per_feed(relevant, PER_FEED_CAP)
+
     # The judge makes the editorial calls. If it is unavailable (no key, HTTP
     # error, unparseable output) we fall back to the signal-ranked stand-in so
     # the run still publishes.
     judge_failed = False
-    if not relevant:
+    if not for_judge:
         items = []
         judge_status = "skipped"
     else:
         try:
-            items = judge.judge(relevant, records, now)
+            items = judge.judge(for_judge, records, now)
             judge_status = "ok"
         except judge.JudgeUnavailable:
             judge_failed = True
@@ -104,6 +122,20 @@ def main(
         f"suppressed={counts['suppressed']} published={counts['published']} "
         f"-> {output_path}"
     )
+
+
+def _cap_per_feed(candidates: list, cap: int) -> list:
+    """Keep at most ``cap`` candidates per source — numeric feeds by signal
+    desc, signal-less feeds by recency — so the judge payload stays bounded.
+    Source order follows first appearance."""
+    groups: dict = {}
+    for c in candidates:
+        groups.setdefault(c.source, []).append(c)
+    kept = []
+    for group in groups.values():
+        group.sort(key=lambda c: (c.signal_value, c.created_at), reverse=True)
+        kept.extend(group[:cap])
+    return kept
 
 
 def _load_dotenv(path: Path) -> None:

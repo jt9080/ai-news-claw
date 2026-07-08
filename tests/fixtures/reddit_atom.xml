@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>r/LocalLLaMA top</title>
+  <entry>
+    <title>New open multi-agent framework beats AutoGen on tau-bench</title>
+    <link href="https://www.reddit.com/r/LocalLLaMA/comments/abc123/new_open_framework/"/>
+    <updated>2026-07-08T01:14:00Z</updated>
+    <content type="html">Practitioners discuss a new agent framework.</content>
+  </entry>
+</feed>

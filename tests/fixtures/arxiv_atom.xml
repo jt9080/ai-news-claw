@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>arXiv Query</title>
+  <entry>
+    <title>Emergent Coordination in LLM Multi-Agent Debate</title>
+    <link href="http://arxiv.org/abs/2607.04567v1" rel="alternate"/>
+    <published>2026-07-08T02:00:00Z</published>
+    <summary>We study coordination among LLM agents.</summary>
+    <category term="cs.MA"/>
+  </entry>
+  <entry>
+    <title>Revised: Older Multi-Agent Work</title>
+    <link href="http://arxiv.org/abs/2601.00001v3" rel="alternate"/>
+    <published>2026-07-08T01:00:00Z</published>
+    <summary>A v3 revision resurfacing old work.</summary>
+    <category term="cs.MA"/>
+  </entry>
+  <entry>
+    <title>Too old, outside the window</title>
+    <link href="http://arxiv.org/abs/2606.09999v1" rel="alternate"/>
+    <published>2026-06-01T00:00:00Z</published>
+    <summary>Old preprint.</summary>
+    <category term="cs.AI"/>
+  </entry>
+</feed>
