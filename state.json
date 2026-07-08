@@ -2,7 +2,7 @@
   "records": {
     "arxiv:2607.06413": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 0,
       "prior_value": 0,
       "reported_at": null,
@@ -16,7 +16,7 @@
     },
     "arxiv:2607.06432": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 0,
       "prior_value": 0,
       "reported_at": null,
@@ -30,7 +30,7 @@
     },
     "arxiv:2607.06435": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 0,
       "prior_value": 0,
       "reported_at": null,
@@ -44,7 +44,7 @@
     },
     "arxiv:2607.06445": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 0,
       "prior_value": 0,
       "reported_at": null,
@@ -58,10 +58,10 @@
     },
     "arxiv:2607.06447": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 0,
       "prior_value": 0,
-      "reported_at": null,
+      "reported_at": "2026-07-08T08:41:10.914278+00:00",
       "signal_name": "recency",
       "signal_value": 0,
       "source": "arxiv",
@@ -72,10 +72,10 @@
     },
     "arxiv:2607.06452": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 0,
       "prior_value": 0,
-      "reported_at": null,
+      "reported_at": "2026-07-08T08:41:10.914278+00:00",
       "signal_name": "recency",
       "signal_value": 0,
       "source": "arxiv",
@@ -86,7 +86,7 @@
     },
     "arxiv:2607.06472": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 0,
       "prior_value": 0,
       "reported_at": null,
@@ -100,7 +100,7 @@
     },
     "arxiv:2607.06479": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 0,
       "prior_value": 0,
       "reported_at": null,
@@ -114,7 +114,7 @@
     },
     "arxiv:2607.06481": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 0,
       "prior_value": 0,
       "reported_at": null,
@@ -128,7 +128,7 @@
     },
     "arxiv:2607.06482": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 0,
       "prior_value": 0,
       "reported_at": null,
@@ -142,7 +142,7 @@
     },
     "arxiv:2607.06489": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 0,
       "prior_value": 0,
       "reported_at": null,
@@ -156,7 +156,7 @@
     },
     "arxiv:2607.06495": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 0,
       "prior_value": 0,
       "reported_at": null,
@@ -170,10 +170,10 @@
     },
     "arxiv:2607.06503": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 0,
       "prior_value": 0,
-      "reported_at": null,
+      "reported_at": "2026-07-08T08:41:10.914278+00:00",
       "signal_name": "recency",
       "signal_value": 0,
       "source": "arxiv",
@@ -184,7 +184,7 @@
     },
     "arxiv:2607.06505": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 0,
       "prior_value": 0,
       "reported_at": null,
@@ -198,7 +198,7 @@
     },
     "arxiv:2607.06519": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 0,
       "prior_value": 0,
       "reported_at": null,
@@ -212,7 +212,7 @@
     },
     "arxiv:2607.06522": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 0,
       "prior_value": 0,
       "reported_at": null,
@@ -226,7 +226,7 @@
     },
     "arxiv:2607.06523": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 0,
       "prior_value": 0,
       "reported_at": null,
@@ -240,7 +240,7 @@
     },
     "arxiv:2607.06527": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 0,
       "prior_value": 0,
       "reported_at": null,
@@ -254,7 +254,7 @@
     },
     "arxiv:2607.06531": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 0,
       "prior_value": 0,
       "reported_at": null,
@@ -268,7 +268,7 @@
     },
     "arxiv:2607.06546": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 0,
       "prior_value": 0,
       "reported_at": null,
@@ -282,7 +282,7 @@
     },
     "arxiv:2607.06565": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 0,
       "prior_value": 0,
       "reported_at": "2026-07-08T08:37:23.766408+00:00",
@@ -296,7 +296,7 @@
     },
     "blogs:https://huggingface.co/blog/amazon/one-click-to-sagemaker-studio": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 0,
       "prior_value": 0,
       "reported_at": null,
@@ -310,7 +310,7 @@
     },
     "blogs:https://huggingface.co/blog/lerobot-release-v060": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 0,
       "prior_value": 0,
       "reported_at": null,
@@ -324,7 +324,7 @@
     },
     "blogs:https://huggingface.co/blog/microsoft/foundry-managed-compute": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 0,
       "prior_value": 0,
       "reported_at": null,
@@ -338,7 +338,7 @@
     },
     "blogs:https://huggingface.co/blog/skypilot-hf-storage": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 0,
       "prior_value": 0,
       "reported_at": null,
@@ -352,7 +352,7 @@
     },
     "blogs:https://openai.com/index/australian-payments-plus": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 0,
       "prior_value": 0,
       "reported_at": "2026-07-08T08:37:23.766408+00:00",
@@ -366,7 +366,7 @@
     },
     "blogs:https://openai.com/index/mufg": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 0,
       "prior_value": 0,
       "reported_at": null,
@@ -380,7 +380,7 @@
     },
     "blogs:https://simonwillison.net/2026/Jul/7/github-code-component/#atom-everything": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 0,
       "prior_value": 0,
       "reported_at": null,
@@ -394,7 +394,7 @@
     },
     "blogs:https://simonwillison.net/2026/Jul/7/sqlite-utils-2/#atom-everything": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 0,
       "prior_value": 0,
       "reported_at": null,
@@ -408,7 +408,7 @@
     },
     "blogs:https://simonwillison.net/2026/Jul/7/sqlite-utils-4/#atom-everything": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 0,
       "prior_value": 0,
       "reported_at": null,
@@ -422,7 +422,7 @@
     },
     "blogs:https://www.producthunt.com/products/agents-cli": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 0,
       "prior_value": 0,
       "reported_at": null,
@@ -436,10 +436,10 @@
     },
     "github:BuilderIO/skills": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 3525,
       "prior_value": 3525,
-      "reported_at": null,
+      "reported_at": "2026-07-08T08:41:10.914278+00:00",
       "signal_name": "stars",
       "signal_value": 3525,
       "source": "github",
@@ -450,21 +450,21 @@
     },
     "github:DietrichGebert/ponytail": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
-      "peak_signal": 77304,
-      "prior_value": 77298,
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
+      "peak_signal": 77307,
+      "prior_value": 77304,
       "reported_at": "2026-07-08T08:29:23.923902+00:00",
       "signal_name": "stars",
-      "signal_value": 77304,
+      "signal_value": 77307,
       "source": "github",
       "source_id": "DietrichGebert/ponytail",
       "title": "DietrichGebert/ponytail",
       "url": "https://github.com/DietrichGebert/ponytail",
-      "velocity": 6.0
+      "velocity": 3.0
     },
     "github:Forsy-AI/agent-apprenticeship": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 1301,
       "prior_value": 1301,
       "reported_at": null,
@@ -478,7 +478,7 @@
     },
     "github:Forward-Future/loopy": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 2550,
       "prior_value": 2550,
       "reported_at": null,
@@ -492,7 +492,7 @@
     },
     "github:HUANGCHIHHUNGLeo/claude-real-video": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 1378,
       "prior_value": 1378,
       "reported_at": null,
@@ -506,23 +506,23 @@
     },
     "github:XiaomiMiMo/MiMo-Code": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
-      "peak_signal": 11608,
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
+      "peak_signal": 11609,
       "prior_value": 11608,
       "reported_at": "2026-07-08T08:29:23.923902+00:00",
       "signal_name": "stars",
-      "signal_value": 11608,
+      "signal_value": 11609,
       "source": "github",
       "source_id": "XiaomiMiMo/MiMo-Code",
       "title": "XiaomiMiMo/MiMo-Code",
       "url": "https://github.com/XiaomiMiMo/MiMo-Code",
-      "velocity": 0.0
+      "velocity": 1.0
     },
     "github:amplifthq/opentag": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 923,
-      "prior_value": 922,
+      "prior_value": 923,
       "reported_at": null,
       "signal_name": "stars",
       "signal_value": 923,
@@ -530,14 +530,14 @@
       "source_id": "amplifthq/opentag",
       "title": "amplifthq/opentag",
       "url": "https://github.com/amplifthq/opentag",
-      "velocity": 1.0
+      "velocity": 0.0
     },
     "github:cloudflare/security-audit-skill": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 2341,
       "prior_value": 2341,
-      "reported_at": null,
+      "reported_at": "2026-07-08T08:41:10.914278+00:00",
       "signal_name": "stars",
       "signal_value": 2341,
       "source": "github",
@@ -548,26 +548,26 @@
     },
     "github:cobusgreyling/loop-engineering": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
-      "peak_signal": 6507,
-      "prior_value": 6502,
-      "reported_at": null,
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
+      "peak_signal": 6508,
+      "prior_value": 6507,
+      "reported_at": "2026-07-08T08:41:10.914278+00:00",
       "signal_name": "stars",
-      "signal_value": 6507,
+      "signal_value": 6508,
       "source": "github",
       "source_id": "cobusgreyling/loop-engineering",
       "title": "cobusgreyling/loop-engineering",
       "url": "https://github.com/cobusgreyling/loop-engineering",
-      "velocity": 5.0
+      "velocity": 1.0
     },
     "github:davidondrej/skills": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
-      "peak_signal": 1850,
-      "prior_value": 1849,
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
+      "peak_signal": 1851,
+      "prior_value": 1850,
       "reported_at": null,
       "signal_name": "stars",
-      "signal_value": 1850,
+      "signal_value": 1851,
       "source": "github",
       "source_id": "davidondrej/skills",
       "title": "davidondrej/skills",
@@ -576,21 +576,21 @@
     },
     "github:elder-plinius/T3MP3ST": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
-      "peak_signal": 3522,
-      "prior_value": 3515,
-      "reported_at": null,
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
+      "peak_signal": 3525,
+      "prior_value": 3522,
+      "reported_at": "2026-07-08T08:41:10.914278+00:00",
       "signal_name": "stars",
-      "signal_value": 3522,
+      "signal_value": 3525,
       "source": "github",
       "source_id": "elder-plinius/T3MP3ST",
       "title": "elder-plinius/T3MP3ST",
       "url": "https://github.com/elder-plinius/T3MP3ST",
-      "velocity": 7.0
+      "velocity": 3.0
     },
     "github:fancydirty/mediary-scout": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 997,
       "prior_value": 997,
       "reported_at": null,
@@ -604,9 +604,9 @@
     },
     "github:isjiamu/gzh-design-skill": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 1321,
-      "prior_value": 1319,
+      "prior_value": 1321,
       "reported_at": null,
       "signal_name": "stars",
       "signal_value": 1321,
@@ -614,13 +614,13 @@
       "source_id": "isjiamu/gzh-design-skill",
       "title": "isjiamu/gzh-design-skill",
       "url": "https://github.com/isjiamu/gzh-design-skill",
-      "velocity": 2.0
+      "velocity": 0.0
     },
     "github:jamesob/local-llm": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 1213,
-      "prior_value": 1212,
+      "prior_value": 1213,
       "reported_at": null,
       "signal_name": "stars",
       "signal_value": 1213,
@@ -628,13 +628,13 @@
       "source_id": "jamesob/local-llm",
       "title": "jamesob/local-llm",
       "url": "https://github.com/jamesob/local-llm",
-      "velocity": 1.0
+      "velocity": 0.0
     },
     "github:kunchenguid/firstmate": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 969,
-      "prior_value": 968,
+      "prior_value": 969,
       "reported_at": null,
       "signal_name": "stars",
       "signal_value": 969,
@@ -642,27 +642,27 @@
       "source_id": "kunchenguid/firstmate",
       "title": "kunchenguid/firstmate",
       "url": "https://github.com/kunchenguid/firstmate",
-      "velocity": 1.0
+      "velocity": 0.0
     },
     "github:langchain-ai/openwiki": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
-      "peak_signal": 9427,
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
+      "peak_signal": 9429,
       "prior_value": 9427,
       "reported_at": "2026-07-08T08:37:23.766408+00:00",
       "signal_name": "stars",
-      "signal_value": 9427,
+      "signal_value": 9429,
       "source": "github",
       "source_id": "langchain-ai/openwiki",
       "title": "langchain-ai/openwiki",
       "url": "https://github.com/langchain-ai/openwiki",
-      "velocity": 0.0
+      "velocity": 2.0
     },
     "github:larlarua/AutoCVE": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 1100,
-      "prior_value": 1099,
+      "prior_value": 1100,
       "reported_at": null,
       "signal_name": "stars",
       "signal_value": 1100,
@@ -670,27 +670,27 @@
       "source_id": "larlarua/AutoCVE",
       "title": "larlarua/AutoCVE",
       "url": "https://github.com/larlarua/AutoCVE",
-      "velocity": 1.0
+      "velocity": 0.0
     },
     "github:lyra81604/zhengxi-views": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
-      "peak_signal": 1183,
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
+      "peak_signal": 1184,
       "prior_value": 1183,
       "reported_at": null,
       "signal_name": "stars",
-      "signal_value": 1183,
+      "signal_value": 1184,
       "source": "github",
       "source_id": "lyra81604/zhengxi-views",
       "title": "lyra81604/zhengxi-views",
       "url": "https://github.com/lyra81604/zhengxi-views",
-      "velocity": 0.0
+      "velocity": 1.0
     },
     "github:omnigent-ai/omnigent": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 6694,
-      "prior_value": 6693,
+      "prior_value": 6694,
       "reported_at": "2026-07-08T08:37:23.766408+00:00",
       "signal_name": "stars",
       "signal_value": 6694,
@@ -698,25 +698,25 @@
       "source_id": "omnigent-ai/omnigent",
       "title": "omnigent-ai/omnigent",
       "url": "https://github.com/omnigent-ai/omnigent",
-      "velocity": 1.0
+      "velocity": 0.0
     },
     "github:oomol-lab/open-connector": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
-      "peak_signal": 911,
-      "prior_value": 909,
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
+      "peak_signal": 912,
+      "prior_value": 911,
       "reported_at": null,
       "signal_name": "stars",
-      "signal_value": 911,
+      "signal_value": 912,
       "source": "github",
       "source_id": "oomol-lab/open-connector",
       "title": "oomol-lab/open-connector",
       "url": "https://github.com/oomol-lab/open-connector",
-      "velocity": 2.0
+      "velocity": 1.0
     },
     "github:orange2ai/renwei-writing": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 909,
       "prior_value": 909,
       "reported_at": null,
@@ -730,9 +730,9 @@
     },
     "github:plannotator/effective-html": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 1315,
-      "prior_value": 1313,
+      "prior_value": 1315,
       "reported_at": null,
       "signal_name": "stars",
       "signal_value": 1315,
@@ -740,11 +740,11 @@
       "source_id": "plannotator/effective-html",
       "title": "plannotator/effective-html",
       "url": "https://github.com/plannotator/effective-html",
-      "velocity": 2.0
+      "velocity": 0.0
     },
     "github:rebel0789/codexpro": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 1220,
       "prior_value": 1220,
       "reported_at": null,
@@ -758,21 +758,21 @@
     },
     "github:shepherd-agents/shepherd": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
-      "peak_signal": 1080,
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
+      "peak_signal": 1082,
       "prior_value": 1080,
       "reported_at": null,
       "signal_name": "stars",
-      "signal_value": 1080,
+      "signal_value": 1082,
       "source": "github",
       "source_id": "shepherd-agents/shepherd",
       "title": "shepherd-agents/shepherd",
       "url": "https://github.com/shepherd-agents/shepherd",
-      "velocity": 0.0
+      "velocity": 2.0
     },
     "github:sums001/Windows-Copilot-API": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 1065,
       "prior_value": 1065,
       "reported_at": null,
@@ -786,7 +786,7 @@
     },
     "github:tigicion/dao-code": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 1610,
       "prior_value": 1610,
       "reported_at": null,
@@ -800,9 +800,9 @@
     },
     "github:tutti-os/tutti": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 1149,
-      "prior_value": 1148,
+      "prior_value": 1149,
       "reported_at": null,
       "signal_name": "stars",
       "signal_value": 1149,
@@ -810,14 +810,14 @@
       "source_id": "tutti-os/tutti",
       "title": "tutti-os/tutti",
       "url": "https://github.com/tutti-os/tutti",
-      "velocity": 1.0
+      "velocity": 0.0
     },
     "github:vercel/eve": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 3313,
       "prior_value": 3313,
-      "reported_at": null,
+      "reported_at": "2026-07-08T08:41:10.914278+00:00",
       "signal_name": "stars",
       "signal_value": 3313,
       "source": "github",
@@ -828,7 +828,7 @@
     },
     "hackernews:48815117": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 109,
       "prior_value": 109,
       "reported_at": "2026-07-08T08:37:23.766408+00:00",
@@ -842,7 +842,7 @@
     },
     "hackernews:48819808": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 155,
       "prior_value": 155,
       "reported_at": "2026-07-08T08:29:23.923902+00:00",
@@ -856,12 +856,12 @@
     },
     "hackernews:48827402": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
-      "peak_signal": 172,
-      "prior_value": 170,
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
+      "peak_signal": 174,
+      "prior_value": 172,
       "reported_at": "2026-07-08T08:29:23.923902+00:00",
       "signal_name": "points",
-      "signal_value": 172,
+      "signal_value": 174,
       "source": "hackernews",
       "source_id": "48827402",
       "title": "GPT-5.6 Sol, along with Terra and Luna, will launch publicly this Thursday",
@@ -870,12 +870,12 @@
     },
     "hackernews:48827858": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
-      "peak_signal": 118,
-      "prior_value": 113,
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
+      "peak_signal": 123,
+      "prior_value": 118,
       "reported_at": "2026-07-08T08:37:23.766408+00:00",
       "signal_name": "points",
-      "signal_value": 118,
+      "signal_value": 123,
       "source": "hackernews",
       "source_id": "48827858",
       "title": "GitLost: We Tricked GitHub's AI Agent into Leaking Private Repos",
@@ -884,7 +884,7 @@
     },
     "huggingface:model:AliesTaha/fable-traces": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 186,
       "prior_value": 186,
       "reported_at": null,
@@ -898,7 +898,7 @@
     },
     "huggingface:model:HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 2558,
       "prior_value": 2558,
       "reported_at": null,
@@ -912,7 +912,7 @@
     },
     "huggingface:model:InternScience/Agents-A1": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 382,
       "prior_value": 382,
       "reported_at": null,
@@ -926,7 +926,7 @@
     },
     "huggingface:model:baidu/Unlimited-OCR": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 1843,
       "prior_value": 1843,
       "reported_at": null,
@@ -940,9 +940,9 @@
     },
     "huggingface:model:bottlecapai/ThinkingCap-Qwen3.6-27B": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 116,
-      "prior_value": 115,
+      "prior_value": 116,
       "reported_at": null,
       "signal_name": "likes",
       "signal_value": 116,
@@ -950,11 +950,11 @@
       "source_id": "model:bottlecapai/ThinkingCap-Qwen3.6-27B",
       "title": "bottlecapai/ThinkingCap-Qwen3.6-27B",
       "url": "https://huggingface.co/bottlecapai/ThinkingCap-Qwen3.6-27B",
-      "velocity": 1.0
+      "velocity": 0.0
     },
     "huggingface:model:deepreinforce-ai/Ornith-1.0-35B-GGUF": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 786,
       "prior_value": 786,
       "reported_at": null,
@@ -968,7 +968,7 @@
     },
     "huggingface:model:deepseek-ai/DeepSeek-V4-Pro-DSpark": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 427,
       "prior_value": 427,
       "reported_at": null,
@@ -982,21 +982,21 @@
     },
     "huggingface:model:empero-ai/Qwythos-9B-Claude-Mythos-5-1M": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
-      "peak_signal": 726,
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
+      "peak_signal": 727,
       "prior_value": 726,
       "reported_at": null,
       "signal_name": "likes",
-      "signal_value": 726,
+      "signal_value": 727,
       "source": "huggingface",
       "source_id": "model:empero-ai/Qwythos-9B-Claude-Mythos-5-1M",
       "title": "empero-ai/Qwythos-9B-Claude-Mythos-5-1M",
       "url": "https://huggingface.co/empero-ai/Qwythos-9B-Claude-Mythos-5-1M",
-      "velocity": 0.0
+      "velocity": 1.0
     },
     "huggingface:model:empero-ai/Qwythos-9B-Claude-Mythos-5-1M-GGUF": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 1785,
       "prior_value": 1785,
       "reported_at": null,
@@ -1010,7 +1010,7 @@
     },
     "huggingface:model:eric-venti-seeds/Sun-Direction-Lora-Flux2Klein9B": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 103,
       "prior_value": 103,
       "reported_at": null,
@@ -1024,7 +1024,7 @@
     },
     "huggingface:model:froggeric/Qwen-Fixed-Chat-Templates": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 754,
       "prior_value": 754,
       "reported_at": null,
@@ -1038,7 +1038,7 @@
     },
     "huggingface:model:google/tabfm-1.0.0-pytorch": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 293,
       "prior_value": 293,
       "reported_at": null,
@@ -1052,7 +1052,7 @@
     },
     "huggingface:model:krea/Krea-2-Turbo": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 545,
       "prior_value": 545,
       "reported_at": null,
@@ -1066,7 +1066,7 @@
     },
     "huggingface:model:meituan-longcat/LongCat-2.0": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 145,
       "prior_value": 145,
       "reported_at": null,
@@ -1080,7 +1080,7 @@
     },
     "huggingface:model:mistralai/Leanstral-1.5-119B-A6B": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 161,
       "prior_value": 161,
       "reported_at": null,
@@ -1094,7 +1094,7 @@
     },
     "huggingface:model:nvidia/LocateAnything-3B": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 2662,
       "prior_value": 2662,
       "reported_at": "2026-07-08T08:37:23.766408+00:00",
@@ -1108,7 +1108,7 @@
     },
     "huggingface:model:nvidia/Qwen3.6-27B-NVFP4": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 318,
       "prior_value": 318,
       "reported_at": null,
@@ -1122,7 +1122,7 @@
     },
     "huggingface:model:tencent/Hy3": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 516,
       "prior_value": 516,
       "reported_at": null,
@@ -1136,7 +1136,7 @@
     },
     "huggingface:model:yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 1083,
       "prior_value": 1083,
       "reported_at": null,
@@ -1150,7 +1150,7 @@
     },
     "huggingface:model:zai-org/GLM-5.2": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 3619,
       "prior_value": 3619,
       "reported_at": "2026-07-08T08:29:23.923902+00:00",
@@ -1164,7 +1164,7 @@
     },
     "huggingface:paper:2606.30026": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 2,
       "prior_value": 2,
       "reported_at": null,
@@ -1178,7 +1178,7 @@
     },
     "huggingface:paper:2607.00394": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 2,
       "prior_value": 2,
       "reported_at": null,
@@ -1192,7 +1192,7 @@
     },
     "huggingface:paper:2607.02515": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 3,
       "prior_value": 3,
       "reported_at": null,
@@ -1206,7 +1206,7 @@
     },
     "huggingface:paper:2607.02770": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 13,
       "prior_value": 13,
       "reported_at": null,
@@ -1220,7 +1220,7 @@
     },
     "huggingface:paper:2607.02920": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 1,
       "prior_value": 1,
       "reported_at": null,
@@ -1234,7 +1234,7 @@
     },
     "huggingface:paper:2607.02963": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 16,
       "prior_value": 16,
       "reported_at": null,
@@ -1248,9 +1248,9 @@
     },
     "huggingface:paper:2607.02980": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 21,
-      "prior_value": 19,
+      "prior_value": 21,
       "reported_at": null,
       "signal_name": "upvotes",
       "signal_value": 21,
@@ -1258,11 +1258,11 @@
       "source_id": "paper:2607.02980",
       "title": "Hierarchical Sparse Attention Done Right: Toward Infinite Context Modeling",
       "url": "https://arxiv.org/abs/2607.02980",
-      "velocity": 2.0
+      "velocity": 0.0
     },
     "huggingface:paper:2607.03509": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 2,
       "prior_value": 2,
       "reported_at": null,
@@ -1276,7 +1276,7 @@
     },
     "huggingface:paper:2607.03530": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 9,
       "prior_value": 9,
       "reported_at": null,
@@ -1290,7 +1290,7 @@
     },
     "huggingface:paper:2607.03819": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 1,
       "prior_value": 1,
       "reported_at": null,
@@ -1304,7 +1304,7 @@
     },
     "huggingface:paper:2607.05147": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 7,
       "prior_value": 7,
       "reported_at": null,
@@ -1318,7 +1318,7 @@
     },
     "huggingface:paper:2607.05339": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 6,
       "prior_value": 6,
       "reported_at": null,
@@ -1332,7 +1332,7 @@
     },
     "huggingface:paper:2607.05765": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 0,
       "prior_value": 0,
       "reported_at": null,
@@ -1346,7 +1346,7 @@
     },
     "huggingface:paper:2607.05804": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 7,
       "prior_value": 7,
       "reported_at": null,
@@ -1360,7 +1360,7 @@
     },
     "huggingface:paper:2607.05992": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 1,
       "prior_value": 1,
       "reported_at": null,
@@ -1374,7 +1374,7 @@
     },
     "huggingface:paper:2607.06560": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 21,
       "prior_value": 21,
       "reported_at": null,
@@ -1388,7 +1388,7 @@
     },
     "reddit:1upq1rc": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 0,
       "prior_value": 0,
       "reported_at": null,
@@ -1402,7 +1402,7 @@
     },
     "reddit:1upqmjt": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 0,
       "prior_value": 0,
       "reported_at": null,
@@ -1416,7 +1416,7 @@
     },
     "reddit:1ups1c8": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 0,
       "prior_value": 0,
       "reported_at": null,
@@ -1430,7 +1430,7 @@
     },
     "reddit:1upsdmi": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 0,
       "prior_value": 0,
       "reported_at": null,
@@ -1444,7 +1444,7 @@
     },
     "reddit:1upsezw": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 0,
       "prior_value": 0,
       "reported_at": null,
@@ -1458,7 +1458,7 @@
     },
     "reddit:1uptw9b": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 0,
       "prior_value": 0,
       "reported_at": null,
@@ -1472,7 +1472,7 @@
     },
     "reddit:1upv8bp": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 0,
       "prior_value": 0,
       "reported_at": null,
@@ -1486,7 +1486,7 @@
     },
     "reddit:1upwvxa": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 0,
       "prior_value": 0,
       "reported_at": null,
@@ -1500,7 +1500,7 @@
     },
     "reddit:1upxqq0": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 0,
       "prior_value": 0,
       "reported_at": null,
@@ -1514,7 +1514,7 @@
     },
     "reddit:1upy31x": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 0,
       "prior_value": 0,
       "reported_at": "2026-07-08T08:37:23.766408+00:00",
@@ -1528,7 +1528,7 @@
     },
     "reddit:1upynpt": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 0,
       "prior_value": 0,
       "reported_at": null,
@@ -1542,7 +1542,7 @@
     },
     "reddit:1uq0fpe": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 0,
       "prior_value": 0,
       "reported_at": null,
@@ -1556,7 +1556,7 @@
     },
     "reddit:1uq0h4o": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 0,
       "prior_value": 0,
       "reported_at": null,
@@ -1570,7 +1570,7 @@
     },
     "reddit:1uq10cw": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 0,
       "prior_value": 0,
       "reported_at": null,
@@ -1584,7 +1584,7 @@
     },
     "reddit:1uq2ouy": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 0,
       "prior_value": 0,
       "reported_at": null,
@@ -1598,7 +1598,7 @@
     },
     "reddit:1uq4as2": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 0,
       "prior_value": 0,
       "reported_at": null,
@@ -1612,7 +1612,7 @@
     },
     "reddit:1uq4oeg": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 0,
       "prior_value": 0,
       "reported_at": null,
@@ -1626,7 +1626,7 @@
     },
     "reddit:1uq5qqs": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 0,
       "prior_value": 0,
       "reported_at": null,
@@ -1640,7 +1640,7 @@
     },
     "reddit:1uq9krm": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 0,
       "prior_value": 0,
       "reported_at": null,
@@ -1654,7 +1654,7 @@
     },
     "reddit:1uqbug5": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
-      "last_seen": "2026-07-08T08:37:23.766408+00:00",
+      "last_seen": "2026-07-08T08:41:10.914278+00:00",
       "peak_signal": 0,
       "prior_value": 0,
       "reported_at": null,
