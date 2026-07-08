@@ -68,6 +68,29 @@ class TestComplete(unittest.TestCase):
         self.assertTrue(captured["url"].startswith(llm.DEFAULT_BASE_URL))
         self.assertEqual(captured["body"]["model"], llm.DEFAULT_MODEL)
 
+    def test_whitespace_padded_env_is_stripped(self):
+        # Pasted repo vars/secrets often carry a leading space; it must not
+        # corrupt the URL, model, or auth header.
+        captured = {}
+
+        def spy(req, timeout=None):
+            captured["url"] = req.full_url
+            captured["auth"] = req.get_header("Authorization")
+            captured["body"] = json.loads(req.data.decode("utf-8"))
+            cm = mock.MagicMock()
+            cm.__enter__.return_value = fake_completion("ok")
+            return cm
+
+        env = {"OPENCODE_API_KEY": "  sk-x  ",
+               "LLM_MODEL": " deepseek-v4-pro",
+               "LLM_BASE_URL": " https://opencode.ai/zen/go/v1"}
+        with mock.patch.dict("os.environ", env, clear=True):
+            with mock.patch("newsclaw.llm.urlopen", side_effect=spy):
+                llm.complete("s", "u")
+        self.assertEqual(captured["url"], "https://opencode.ai/zen/go/v1/chat/completions")
+        self.assertEqual(captured["auth"], "Bearer sk-x")
+        self.assertEqual(captured["body"]["model"], "deepseek-v4-pro")
+
     def test_http_error_raises_llmerror(self):
         with mock.patch.dict("os.environ", {"OPENCODE_API_KEY": "sk-x"}, clear=True):
             err = HTTPError("u", 429, "rate limit", {}, None)
