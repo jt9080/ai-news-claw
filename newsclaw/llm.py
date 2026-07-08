@@ -16,9 +16,13 @@ import os
 from urllib.request import Request, urlopen
 
 DEFAULT_BASE_URL = "https://opencode.ai/zen/v1"
-DEFAULT_MODEL = "gpt-5.4-mini"
+# Free Zen model — no account credits required. Override with LLM_MODEL to use a
+# paid model (e.g. gpt-5.4-mini, claude-haiku-4-5) once the workspace is funded.
+DEFAULT_MODEL = "deepseek-v4-flash-free"
 USER_AGENT = "ai-news-monitor/0.1 (+https://github.com/jt9080/ai-news-claw)"
-TIMEOUT_SECONDS = 60
+# Free/trial models can be slow on a full digest payload; give them room. This
+# is a daily batch call with no interactive user waiting.
+TIMEOUT_SECONDS = 120
 
 
 class LLMError(Exception):

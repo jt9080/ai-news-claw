@@ -13,6 +13,7 @@ velocity plumbing the judge will consume.
 
 from __future__ import annotations
 
+import os
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -105,5 +106,24 @@ def main(
     )
 
 
+def _load_dotenv(path: Path) -> None:
+    """Load KEY=VALUE lines from a .env file into the environment without
+    overriding anything already set. Keeps the API key out of the shell — the
+    process reads its own config. A missing file is a no-op."""
+    try:
+        text = Path(path).read_text(encoding="utf-8")
+    except OSError:
+        return
+    for line in text.splitlines():
+        line = line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, _, value = line.partition("=")
+        key, value = key.strip(), value.strip().strip('"').strip("'")
+        if key and key not in os.environ:
+            os.environ[key] = value
+
+
 if __name__ == "__main__":
+    _load_dotenv(_ROOT / ".env")
     print(main())

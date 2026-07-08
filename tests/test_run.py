@@ -98,5 +98,29 @@ class TestFallbackPath(unittest.TestCase):
             self.assertEqual(log[0]["feeds"]["judge"], "failed")
 
 
+class TestDotenv(unittest.TestCase):
+    def test_sets_missing_keys_from_file(self):
+        import os
+        with TemporaryDirectory() as tmp:
+            env = Path(tmp) / ".env"
+            env.write_text("# a comment\nOPENCODE_API_KEY=sk-abc\nLLM_MODEL=foo\n\n")
+            with mock.patch.dict("os.environ", {}, clear=True):
+                run._load_dotenv(env)
+                self.assertEqual(os.environ["OPENCODE_API_KEY"], "sk-abc")
+                self.assertEqual(os.environ["LLM_MODEL"], "foo")
+
+    def test_does_not_override_existing_env(self):
+        import os
+        with TemporaryDirectory() as tmp:
+            env = Path(tmp) / ".env"
+            env.write_text("OPENCODE_API_KEY=fromfile\n")
+            with mock.patch.dict("os.environ", {"OPENCODE_API_KEY": "fromenv"}, clear=True):
+                run._load_dotenv(env)
+                self.assertEqual(os.environ["OPENCODE_API_KEY"], "fromenv")
+
+    def test_missing_file_is_noop(self):
+        run._load_dotenv(Path("/nonexistent/does-not-exist.env"))  # must not raise
+
+
 if __name__ == "__main__":
     unittest.main()

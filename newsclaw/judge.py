@@ -44,6 +44,11 @@ Respond with ONLY a JSON object, no prose, in exactly this shape:
 Use only ids present in the input. Order the list best-first."""
 
 
+# Free/trial models are slow and intermittently error; one retry before falling
+# back to the stand-in absorbs most transient timeouts.
+MAX_ATTEMPTS = 2
+
+
 class JudgeUnavailable(Exception):
     """The judge could not produce a usable digest; caller should fall back."""
 
@@ -84,10 +89,16 @@ def judge(candidates: list, records: dict, now: datetime) -> list:
         return []
 
     system, user = build_messages(candidates, records, now)
-    try:
-        text = llm.complete(system, user)
-    except llm.LLMError as exc:
-        raise JudgeUnavailable(str(exc)) from exc
+    text = None
+    last_error = None
+    for _ in range(MAX_ATTEMPTS):
+        try:
+            text = llm.complete(system, user)
+            break
+        except llm.LLMError as exc:
+            last_error = exc
+    if text is None:
+        raise JudgeUnavailable(str(last_error)) from last_error
 
     data = _extract_json(text)
     if data is None or not isinstance(data.get("items"), list):

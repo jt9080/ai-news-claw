@@ -96,6 +96,16 @@ class TestJudge(unittest.TestCase):
             with self.assertRaises(judge.JudgeUnavailable):
                 judge.judge([cand("hackernews", "42")], {}, NOW)
 
+    def test_retries_once_on_llm_error_then_succeeds(self):
+        from newsclaw.llm import LLMError
+        cs = [cand("hackernews", "42")]
+        good = reply([{"ids": ["hn:42"], "title": "t", "url": "u", "why": "w"}])
+        with mock.patch("newsclaw.llm.complete",
+                        side_effect=[LLMError("timeout"), good]) as m:
+            items = judge.judge(cs, {}, NOW)
+        self.assertEqual(len(items), 1)
+        self.assertEqual(m.call_count, 2)
+
     def test_no_candidates_returns_empty_without_calling_llm(self):
         with mock.patch("newsclaw.llm.complete") as m:
             self.assertEqual(judge.judge([], {}, NOW), [])

@@ -91,5 +91,14 @@ confirmed the fallback. Design spec:
   but they are now judge *inputs*; the LLM decides what a material jump is.
 - **`runs.json` `judge` status** (`ok` / `failed` / `skipped`) is stored in the `feeds`
   dict (skipped = no relevant candidates to judge).
-- **Provider is OpenCode Zen** (OpenAI-compatible), default model `gpt-5.4-mini`, all
-  env-overridable (`OPENCODE_API_KEY`, `LLM_BASE_URL`, `LLM_MODEL`). No SDK — stdlib only.
+- **Provider is OpenCode Zen** (OpenAI-compatible), all env-overridable
+  (`OPENCODE_API_KEY`, `LLM_BASE_URL`, `LLM_MODEL`). No SDK — stdlib only.
+- **Default model is `deepseek-v4-flash-free`** (a free Zen model), not the paid
+  `gpt-5.4-mini` the brainstorm picked. The live account had no credits (paid models
+  return `401 CreditsError`); the free model produced a strong agent-dev judged digest,
+  so it is the zero-cost default. Override `LLM_MODEL` for a paid/Claude model once the
+  workspace is funded. Auth is `Authorization: Bearer` (confirmed — `x-api-key` returns
+  "Missing API key").
+- **`.env` is loaded in-process** by `run.py` at the CLI entry (`_load_dotenv`), not via
+  shell `source` (a guardrail blocks sourcing secrets). Keeps the key out of the shell;
+  `.env` is gitignored.
