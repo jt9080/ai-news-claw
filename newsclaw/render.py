@@ -16,7 +16,7 @@ from datetime import datetime
 from html import escape
 from zoneinfo import ZoneInfo
 
-from newsclaw.models import Candidate
+from newsclaw.models import Candidate, DigestItem
 
 SGT = ZoneInfo("Asia/Singapore")
 
@@ -64,6 +64,11 @@ a { color: var(--accent); text-underline-offset: 2px; }
 .item h2 { font-size: 1.08rem; line-height: 1.3; margin: 0 0 0.4rem; font-weight: 620; letter-spacing: -0.01em; }
 .item h2 a { text-decoration: none; }
 .item h2 a:hover { text-decoration: underline; }
+.what { color: var(--ink); font-size: 0.96rem; margin: 0 0 0.4rem; }
+.why { color: var(--ink); font-size: 0.92rem; margin: 0 0 0.35rem; }
+.fb { color: var(--muted); font-size: 0.9rem; margin: 0 0 0.55rem; }
+.lbl { font-family: ui-monospace, Menlo, monospace; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--accent); margin-right: 0.4rem; }
+.kind { font-size: 0.63rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.15rem 0.5rem; border-radius: 5px; border: 1px solid var(--line); color: var(--muted); }
 .line { display: flex; flex-wrap: wrap; gap: 0.5rem 0.7rem; align-items: center; font-size: 0.82rem; }
 .chip { font-size: 0.63rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.15rem 0.5rem; border-radius: 5px; background: var(--accent-soft); color: var(--accent); }
 .chip.tag { background: var(--warm-bg); color: var(--warm); }
@@ -96,7 +101,7 @@ def _fmt_sgt(dt: datetime) -> str:
     return dt.astimezone(SGT).strftime("%a %d %b %Y, %H:%M")
 
 
-def _tag(item: Candidate) -> str:
+def _tag(item: DigestItem) -> str:
     if item.resurfaced:
         return '<span class="chip tag">back</span>'
     if item.is_new:
@@ -104,56 +109,77 @@ def _tag(item: Candidate) -> str:
     return ""
 
 
-def _signal_bits(item: Candidate) -> str:
-    bits = [f'<span class="signal">{item.signal_value} {escape(item.signal_name)}</span>']
-    if item.num_comments is not None:
-        bits.append(f'<span class="age">{item.num_comments} comments</span>')
-    if item.velocity and item.velocity > 0:
-        bits.append(f'<span class="vel">&#9650; {int(item.velocity)}</span>')
+def _source_bits(c: Candidate) -> str:
+    """Badge + signal (+ comments/velocity/discussion) for one clustered source."""
+    bits = [
+        f'<span class="chip">{escape(_BADGES.get(c.source, c.source))}</span>',
+        f'<span class="signal">{c.signal_value} {escape(c.signal_name)}</span>',
+    ]
+    if c.num_comments is not None:
+        bits.append(f'<span class="age">{c.num_comments} comments</span>')
+    if c.velocity and c.velocity > 0:
+        bits.append(f'<span class="vel">&#9650; {int(c.velocity)}</span>')
+    if c.discussion_url:
+        bits.append(f'<a class="disc" href="{escape(c.discussion_url)}">discussion &rsaquo;</a>')
     return "\n          ".join(bits)
 
 
-def _discussion(item: Candidate) -> str:
-    if item.discussion_url:
-        return f'<a class="disc" href="{escape(item.discussion_url)}">discussion &rsaquo;</a>'
-    return ""
+def _text_block(item: DigestItem) -> str:
+    """What / Why / For-builders lines, each shown only when non-empty (the
+    stand-in fallback leaves them blank, so its cards stay title + signal)."""
+    parts = []
+    if item.what:
+        parts.append(f'<p class="what">{escape(item.what)}</p>')
+    if item.why:
+        parts.append(f'<p class="why"><span class="lbl">Why</span>{escape(item.why)}</p>')
+    if item.for_builders:
+        parts.append(f'<p class="fb"><span class="lbl">For builders</span>{escape(item.for_builders)}</p>')
+    return ("\n        " + "\n        ".join(parts)) if parts else ""
 
 
-def _render_item(rank_num: int, item: Candidate, now: datetime) -> str:
+def _render_item(rank_num: int, item: DigestItem, now: datetime) -> str:
     topics = "".join(f'<span class="topic">{escape(t)}</span>' for t in item.topics)
-    badge = escape(_BADGES.get(item.source, item.source))
+    sources = "\n          ".join(_source_bits(c) for c in item.sources)
+    primary = item.sources[0]
     return f"""
     <article class="item">
       <div class="rank">{rank_num}</div>
       <div class="body">
-        <h2><a href="{escape(item.url)}">{escape(item.title)}</a></h2>
+        <h2><a href="{escape(item.url)}">{escape(item.title)}</a></h2>{_text_block(item)}
         <div class="line">
-          <span class="chip">{badge}</span>
           {_tag(item)}
-          {_signal_bits(item)}
-          <span class="age">{escape(relative_age(item.created_at, now))}</span>
+          <span class="kind">{escape(item.kind)}</span>
+          {sources}
+          <span class="age">{escape(relative_age(primary.created_at, now))}</span>
           {topics}
-          {_discussion(item)}
         </div>
       </div>
     </article>"""
 
 
-def render_dashboard(items, window, feeds, now: datetime) -> str:
+def render_dashboard(items, window, feeds, now: datetime, judge_failed: bool = False) -> str:
     """Return the complete dashboard.html document as a string.
 
-    ``feeds`` is the list of every feed's FetchResult, so health and the failure
-    banner cover all sources, not just one."""
+    ``items`` are DigestItems (from the judge, or the stand-in wrapped). ``feeds``
+    is every feed's FetchResult so health + banner cover all sources. When
+    ``judge_failed`` is set, a banner explains the digest is the signal-ranked
+    stand-in."""
     start, end = window
     date_line = _fmt_sgt(now)
     window_line = f"{_fmt_sgt(start)} → {_fmt_sgt(end)} SGT"
 
     failed = [f for f in feeds if f.status == "failed"]
     banner = ""
+    if judge_failed:
+        banner += """
+    <div class="banner">
+      <strong>LLM judge unavailable</strong>
+      Showing the signal-ranked stand-in instead of the judged digest — relevance and the &ldquo;why it matters&rdquo; lines are absent this run.
+    </div>"""
     if failed:
         names = ", ".join(_LABELS.get(f.source, f.source) for f in failed)
         errors = "; ".join(escape(f.error or "unknown error") for f in failed)
-        banner = f"""
+        banner += f"""
     <div class="banner">
       <strong>Feed unavailable</strong>
       {escape(names)} unavailable this run — its stories are missing from the digest. Error: {errors}
@@ -191,7 +217,7 @@ def render_dashboard(items, window, feeds, now: datetime) -> str:
   <div class="health">{health}</div>
   {banner}
   {body}
-  <footer>Signals-only stand-in selection &mdash; the LLM judge lands in Slice 3. Relevance by keyword allowlist.</footer>
+  <footer>{"Signal-ranked stand-in (LLM judge unavailable)." if judge_failed else "Curated by an LLM judge over 24h signals + memory."}</footer>
 </main>
 </body>
 </html>

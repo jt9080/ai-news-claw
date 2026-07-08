@@ -1,7 +1,7 @@
 import unittest
 from datetime import datetime, timezone
 
-from newsclaw.models import Candidate, SeenRecord, Run, FetchResult
+from newsclaw.models import Candidate, SeenRecord, Run, FetchResult, DigestItem
 
 
 class TestCandidate(unittest.TestCase):
@@ -60,6 +60,31 @@ class TestRun(unittest.TestCase):
         )
         restored = Run.from_dict(run.to_dict())
         self.assertEqual(restored, run)
+
+
+class TestDigestItem(unittest.TestCase):
+    def _cand(self, source="github"):
+        c = Candidate(
+            source=source, source_id="omni", title="Omni", url="u",
+            signal_name="stars", signal_value=10,
+            created_at=datetime(2026, 7, 8, tzinfo=timezone.utc),
+            topics=["agent"],
+        )
+        c.resurfaced, c.is_new = False, True
+        return c
+
+    def test_from_candidate_wraps_with_empty_text_fields(self):
+        item = DigestItem.from_candidate(self._cand("github"))
+        self.assertEqual(item.what, "")
+        self.assertEqual(item.why, "")
+        self.assertEqual(item.for_builders, "")
+        self.assertEqual(item.kind, "repo")
+        self.assertEqual(item.title, "Omni")
+        self.assertEqual(item.sources, [self._cand("github")])
+
+    def test_from_candidate_kind_for_hn_is_post(self):
+        item = DigestItem.from_candidate(self._cand("hackernews"))
+        self.assertEqual(item.kind, "post")
 
 
 class TestFetchResult(unittest.TestCase):

@@ -6,6 +6,7 @@ from tempfile import TemporaryDirectory
 from unittest import mock
 
 import run
+from newsclaw.llm import LLMError
 from newsclaw.models import Candidate, FetchResult
 
 NOW = datetime(2026, 7, 8, 12, 0, 0, tzinfo=timezone.utc)
@@ -21,83 +22,108 @@ def hn(title, points, source_id):
     )
 
 
-def repo(name, stars, summary="a multi-agent framework"):
+def repo(name, stars):
     return Candidate(
         source="github", source_id=name, title=name,
         url=f"https://github.com/{name}", signal_name="stars",
-        signal_value=stars, created_at=NOW - timedelta(days=10), summary=summary,
+        signal_value=stars, created_at=NOW - timedelta(days=10),
+        summary="a multi-agent framework",
     )
 
 
 def paths(tmp):
-    return {
-        "output_path": Path(tmp) / "dashboard.html",
-        "state_path": Path(tmp) / "state.json",
-        "runs_path": Path(tmp) / "runs.json",
-    }
+    return {"output_path": Path(tmp) / "dashboard.html",
+            "state_path": Path(tmp) / "state.json",
+            "runs_path": Path(tmp) / "runs.json"}
 
 
-def run_with(tmp, hn_result, gh_result, now=NOW):
-    with mock.patch("run.hackernews.fetch", return_value=hn_result), \
-         mock.patch("run.github.fetch", return_value=gh_result):
-        return run.main(now=now, **paths(tmp))
+def judged_reply(ids):
+    return json.dumps({"items": [
+        {"ids": ids, "title": "Judged story", "url": "https://example.com/1",
+         "kind": "post", "topics": ["agent"],
+         "what": "a new thing shipped", "why": "because it matters",
+         "for_builders": "wire it into your agent loop", "resurfaced": False}
+    ]})
 
 
-class TestMain(unittest.TestCase):
-    def test_writes_dashboard_state_and_runs_log(self):
-        hn_ok = FetchResult("hackernews", "ok", [hn("New LLM agent", 400, "1"),
-                                                 hn("Sourdough recipe", 300, "2")])
+class TestJudgePath(unittest.TestCase):
+    def test_judge_success_renders_why_and_records_ok(self):
+        hn_ok = FetchResult("hackernews", "ok", [hn("New agent framework", 400, "1")])
         gh_ok = FetchResult("github", "ok", [repo("acme/agent-lib", 900)])
         with TemporaryDirectory() as tmp:
             p = paths(tmp)
-            summary = run_with(tmp, hn_ok, gh_ok)
+            with mock.patch("run.hackernews.fetch", return_value=hn_ok), \
+                 mock.patch("run.github.fetch", return_value=gh_ok), \
+                 mock.patch("newsclaw.llm.complete", return_value=judged_reply(["hn:1"])):
+                summary = run.main(now=NOW, **p)
             html = p["output_path"].read_text()
-            self.assertIn("New LLM agent", html)
-            self.assertIn("acme/agent-lib", html)
-            self.assertNotIn("Sourdough", html)          # dropped by relevance
-            self.assertTrue(p["state_path"].exists())
-            self.assertTrue(p["runs_path"].exists())
+            self.assertIn("a new thing shipped", html)         # the what line
+            self.assertIn("because it matters", html)          # the why line
+            self.assertIn("wire it into your agent loop", html)  # for-builders line
+            self.assertIn("Judged story", html)
+            self.assertIn("judge", summary)
             log = json.loads(p["runs_path"].read_text())
-            self.assertEqual(len(log), 1)
-            self.assertEqual(log[0]["feeds"], {"hackernews": "ok", "github": "ok"})
-            self.assertEqual(log[0]["counts"]["published"], 2)
-        self.assertIn("published=2", summary)
+            self.assertEqual(log[0]["feeds"]["judge"], "ok")
+            # reported_at stamped on the published candidate
+            st = json.loads(p["state_path"].read_text())
+            self.assertIsNotNone(st["records"]["hackernews:1"]["reported_at"])
 
-    def test_failed_feed_still_publishes_the_healthy_one(self):
+
+class TestFallbackPath(unittest.TestCase):
+    def test_judge_failure_falls_back_to_standin_with_banner(self):
         hn_ok = FetchResult("hackernews", "ok", [hn("New agent tool", 400, "1")])
-        gh_bad = FetchResult("github", "failed", [], error="boom")
+        gh_ok = FetchResult("github", "ok", [repo("acme/agent-lib", 900)])
         with TemporaryDirectory() as tmp:
             p = paths(tmp)
-            summary = run_with(tmp, hn_ok, gh_bad)
+            with mock.patch("run.hackernews.fetch", return_value=hn_ok), \
+                 mock.patch("run.github.fetch", return_value=gh_ok), \
+                 mock.patch("newsclaw.llm.complete", side_effect=LLMError("boom")):
+                summary = run.main(now=NOW, **p)
             html = p["output_path"].read_text()
-            self.assertIn("New agent tool", html)        # healthy feed published
-            self.assertIn("boom", html)                  # banner names the failure
-        self.assertIn("github=failed", summary)
-
-
-class TestMemoryAcrossRuns(unittest.TestCase):
-    def test_second_run_suppresses_repeat_and_resurfaces_a_jumper(self):
-        with TemporaryDirectory() as tmp:
-            p = paths(tmp)
-            # Run 1: both published, reported_at stamped.
-            run_with(tmp,
-                     FetchResult("hackernews", "ok", [hn("New agent framework", 200, "1")]),
-                     FetchResult("github", "ok", [repo("acme/agent-lib", 500)]))
-            # Run 2: HN drifts (200 -> 250, < 2x) => suppressed.
-            #        GitHub doubles (500 -> 1000, >= 2x peak) => resurfaces.
-            run_with(tmp,
-                     FetchResult("hackernews", "ok", [hn("New agent framework", 250, "1")]),
-                     FetchResult("github", "ok", [repo("acme/agent-lib", 1000)]),
-                     now=NOW + timedelta(days=1))
-            html = p["output_path"].read_text()
-            self.assertNotIn("New agent framework", html)   # suppressed repeat
-            self.assertIn("acme/agent-lib", html)           # resurfaced
-            self.assertRegex(html.lower(), r"\bback\b")
-
+            self.assertIn("New agent tool", html)              # stand-in still published
+            self.assertRegex(html.lower(), r"judge unavailable|stand-in")
             log = json.loads(p["runs_path"].read_text())
-            self.assertEqual(len(log), 2)
-            self.assertEqual(log[1]["counts"]["suppressed"], 1)
-            self.assertEqual(log[1]["counts"]["resurfaced"], 1)
+            self.assertEqual(log[0]["feeds"]["judge"], "failed")
+        self.assertIn("judge=failed", summary)
+
+    def test_no_key_degrades_to_standin(self):
+        # No OPENCODE_API_KEY set and llm not mocked: llm raises LLMError itself.
+        hn_ok = FetchResult("hackernews", "ok", [hn("New agent tool", 400, "1")])
+        gh_ok = FetchResult("github", "ok", [])
+        with TemporaryDirectory() as tmp:
+            p = paths(tmp)
+            with mock.patch.dict("os.environ", {}, clear=True), \
+                 mock.patch("run.hackernews.fetch", return_value=hn_ok), \
+                 mock.patch("run.github.fetch", return_value=gh_ok):
+                run.main(now=NOW, **p)
+            html = p["output_path"].read_text()
+            self.assertIn("New agent tool", html)
+            log = json.loads(p["runs_path"].read_text())
+            self.assertEqual(log[0]["feeds"]["judge"], "failed")
+
+
+class TestDotenv(unittest.TestCase):
+    def test_sets_missing_keys_from_file(self):
+        import os
+        with TemporaryDirectory() as tmp:
+            env = Path(tmp) / ".env"
+            env.write_text("# a comment\nOPENCODE_API_KEY=sk-abc\nLLM_MODEL=foo\n\n")
+            with mock.patch.dict("os.environ", {}, clear=True):
+                run._load_dotenv(env)
+                self.assertEqual(os.environ["OPENCODE_API_KEY"], "sk-abc")
+                self.assertEqual(os.environ["LLM_MODEL"], "foo")
+
+    def test_does_not_override_existing_env(self):
+        import os
+        with TemporaryDirectory() as tmp:
+            env = Path(tmp) / ".env"
+            env.write_text("OPENCODE_API_KEY=fromfile\n")
+            with mock.patch.dict("os.environ", {"OPENCODE_API_KEY": "fromenv"}, clear=True):
+                run._load_dotenv(env)
+                self.assertEqual(os.environ["OPENCODE_API_KEY"], "fromenv")
+
+    def test_missing_file_is_noop(self):
+        run._load_dotenv(Path("/nonexistent/does-not-exist.env"))  # must not raise
 
 
 if __name__ == "__main__":

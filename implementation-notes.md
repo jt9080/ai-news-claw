@@ -21,6 +21,27 @@ published; a second run suppressed all 8 repeats. Design spec:
 `docs/superpowers/specs/2026-07-08-slice-2-feeds-memory-design.md`. Roadmap
 revised in `prd.html` §4/§7 (LLM decides everything; signals are a pre-filter).
 
+### Slice 3 — The LLM judge (2026-07-08)
+Replaced the stand-in with a real LLM judge via OpenCode Zen (OpenAI-compatible
+`/chat/completions`, stdlib `urllib`). New modules: `llm` (client, env-configured
+key/base-url/model, default `gpt-5.4-mini`), `judge` (prompt + robust JSON parse
+→ `DigestItem`s). `render` now shows the judge's `why` + `kind` and consumes a
+uniform `DigestItem`; `rank` became the fallback selector. On any judge failure
+`run.py` degrades to the stand-in + banner and records `judge: failed`. 87 tests
+green on 3.9.6 (HTTP fully mocked — no key needed in CI). Keyless live run
+confirmed the fallback. Design spec:
+`docs/superpowers/specs/2026-07-08-slice-3-llm-judge-design.md`.
+
+### Slice 3 — richer cards (2026-07-08, folded into PR #6)
+Expanded each judged item from a single one-line `why` to three one-sentence
+fields: `what` (what the news is), `why` (why it matters), `for_builders` (the
+agent-builder takeaway). `DigestItem` carries all three; `judge` requires
+`what`+`why` (drops the item otherwise) and treats `for_builders` as optional;
+`render` shows three labeled lines, each omitted when blank (so stand-in
+fallback cards stay title+signal). PRD §6 "full summarization" revised to allow
+this bounded three-sentence block (still not article/paper summaries). No spec
+doc (user opted to skip — straightforward). 95 tests green.
+
 ## Open questions
 
 - **Points threshold (`>100`) and the keyword allowlist** are tuning knobs, not
@@ -67,4 +88,30 @@ revised in `prd.html` §4/§7 (LLM decides everything; signals are a pre-filter)
 - **`Candidate.summary`** added so GitHub repos match the keyword pre-filter on their
   description (repo names rarely contain "agent"/"llm").
 - **Stand-in selector is deliberately dumb** (round-robin interleave, no cross-source
-  normalization) and is deleted in S3 when the LLM owns selection.
+  normalization). *Update (S3):* not deleted — it is now the judge's fallback path.
+
+### Slice 3
+- **Stand-in kept as the judge fallback**, not deleted as the S2 spec anticipated. Judge
+  failure (no key / HTTP / bad JSON) degrades to it with a banner, so the run always
+  publishes.
+- **No persisted `Item` / cluster ids.** Clustering is ephemeral per run; the LLM decides
+  suppression from the per-candidate memory we feed it, and `run.py` stamps `reported_at`
+  on published member records. State stays record-level.
+- **Mechanical 2×-peak resurface retired.** `ingest` still stores `peak_signal`/`velocity`,
+  but they are now judge *inputs*; the LLM decides what a material jump is.
+- **`runs.json` `judge` status** (`ok` / `failed` / `skipped`) is stored in the `feeds`
+  dict (skipped = no relevant candidates to judge).
+- **Provider is OpenCode Zen** (OpenAI-compatible), all env-overridable
+  (`OPENCODE_API_KEY`, `LLM_BASE_URL`, `LLM_MODEL`). No SDK — stdlib only.
+- **Provider endpoint is OpenCode Go** (`https://opencode.ai/zen/go/v1`), a flat-rate
+  subscription, default model `deepseek-v4-pro`. The plain Zen endpoint's paid models are
+  per-token and the account had no credits (`401 CreditsError`); the Go subscription
+  covers a set of open reasoning models (deepseek-v4-pro, glm-5.2, qwen3.7-max,
+  kimi-k2.7-code…) at no marginal cost. Model ids are **bare** (the `opencode-go/` prefix
+  from their config is rejected by the raw API). Auth is `Authorization: Bearer`.
+- **Timeout is 240s.** The Go reasoning models take ~80-95s on the full digest payload
+  and vary; 120s was too tight (caused a live judge failure). It's a daily batch call, so
+  a long timeout is fine, and the stand-in fallback still covers a genuine hang.
+- **`.env` is loaded in-process** by `run.py` at the CLI entry (`_load_dotenv`), not via
+  shell `source` (a guardrail blocks sourcing secrets). Keeps the key out of the shell;
+  `.env` is gitignored.

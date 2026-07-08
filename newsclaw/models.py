@@ -72,6 +72,36 @@ class SeenRecord:
 
 
 @dataclass
+class DigestItem:
+    """One rendered story in the digest.
+
+    The judge produces these (clustering one or more candidates and adding the
+    ``why``/``kind``); the stand-in fallback wraps each published candidate into
+    one via ``from_candidate`` so ``render`` consumes a single uniform shape.
+    """
+
+    title: str
+    url: str
+    what: str           # one sentence: what the news is; "" on the fallback path
+    why: str            # one sentence: why it matters; "" on the fallback path
+    for_builders: str   # one sentence: takeaway for agent builders; may be ""
+    kind: str           # model|repo|paper|tool|post|discussion
+    topics: list
+    resurfaced: bool
+    is_new: bool
+    sources: list       # the clustered Candidates (for signal/age/links)
+
+    @classmethod
+    def from_candidate(cls, c) -> "DigestItem":
+        kind = "repo" if c.source == "github" else "post"
+        return cls(
+            title=c.title, url=c.url, what="", why="", for_builders="", kind=kind,
+            topics=list(c.topics), resurfaced=c.resurfaced,
+            is_new=c.is_new, sources=[c],
+        )
+
+
+@dataclass
 class Run:
     """One entry in the append-only runs.json health log — the trust artefact."""
 

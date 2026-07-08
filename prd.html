@@ -409,7 +409,7 @@ Run {
       <li><strong>Real-time alerting.</strong> A morning digest, not a pager. No push notifications, no intra-day runs.</li>
       <li><strong>Push delivery (email / Telegram).</strong> Deferred by decision — HTML output now, channel chosen in a later slice once the digest looks right.</li>
       <li><strong>LLM judge in early slices.</strong> Ranking starts mechanical (signals only); the judge lands in S3.</li>
-      <li><strong>Full summarization.</strong> A one-line "why it matters", not article or paper summaries.</li>
+      <li><strong>Full summarization.</strong> A bounded three-sentence block per item &mdash; <em>what</em> it is, <em>why</em> it matters, and the <em>for-builders</em> takeaway (revised 2026-07-08 from a single one-liner) &mdash; never article or paper summaries.</li>
       <li><strong>Anthropic scraping.</strong> No native feed; flagged as a gap rather than met with a brittle scraper.</li>
       <li><strong>Historical analytics.</strong> No trends or archive beyond the single-run diff that velocity and suppression require.</li>
       <li><strong>Users &amp; infrastructure.</strong> No auth, no backend, no database — <code>dashboard.html</code> is a static file in the repo.</li>
