@@ -1,0 +1,55 @@
+# Morning sitrep — the AI News Monitor, running itself.
+#
+# run.py is self-contained (fetch -> filter -> ingest -> LLM judge over HTTP ->
+# render), so the job is simply: check out, run, publish. No change-detector and
+# no headless model CLI — the earlier scaffold's shape predates that design.
+#
+# Publishes the digest to GitHub Pages (index.html) and commits its memory
+# (state.json/runs.json) back so suppression and velocity work across days.
+
+name: Morning sitrep
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    # 00:00 UTC = 08:00 Asia/Singapore. Cron is always UTC.
+    - cron: "0 0 * * *"
+
+# Never let two runs race the commit-back.
+concurrency:
+  group: morning-sitrep
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  sitrep:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Build the digest
+        env:
+          OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
+          # Optional overrides; ignored if unset.
+          LLM_MODEL: ${{ vars.LLM_MODEL }}
+          LLM_BASE_URL: ${{ vars.LLM_BASE_URL }}
+        run: python run.py
+
+      - name: Publish + persist
+        run: |
+          cp dashboard.html index.html
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "No changes — nothing to publish."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add dashboard.html index.html state.json runs.json
+          git commit -m "chore: morning digest $(date -u +%Y-%m-%d) [skip ci]"
+          git push

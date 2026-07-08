@@ -53,6 +53,19 @@ honest name (`recency`/`top`/`editorial`); the judge weighs them on content.
 live run: all six feeds ok, 169→116→7, digest spanned HN/GitHub/Reddit/arXiv.
 Design spec: `docs/superpowers/specs/2026-07-08-remaining-feeds-design.md`.
 
+### Slice 4 — Run unattended (2026-07-08)
+Scheduled GitHub Action (`.github/workflows/sitrep.yml`, cron `0 0 * * *` = 08:00
+SGT, + `workflow_dispatch`) runs `python run.py` with `OPENCODE_API_KEY` from a
+repo secret, then commits `dashboard.html`/`index.html`/`state.json`/`runs.json`
+back with `[skip ci]`. GitHub Pages (deploy-from-branch, main/root; `.nojekyll`)
+serves `index.html` at the Pages URL. `state.json`/`runs.json` un-gitignored so
+memory persists across runs (first CI run seeds them). `window.py` switched to
+the fixed UTC-day boundary. Cross-check + corrections deferred. 122 tests green;
+local smoke run confirmed the fixed window + all six feeds. Spec:
+`docs/superpowers/specs/2026-07-08-slice-4-unattended-design.md`.
+Manual steps for the user: add the `OPENCODE_API_KEY` repo secret; enable Pages
+(Settings → Pages → main/root).
+
 ## Open questions
 
 - **Points threshold (`>100`) and the keyword allowlist** are tuning knobs, not

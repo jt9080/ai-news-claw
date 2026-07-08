@@ -5,10 +5,8 @@ reports/
 # dashboard.html is the exception: it is the product, and it is committed.
 !dashboard.html
 
-# Agent memory + health log. These persist between runs on the local filesystem;
-# whether to commit them back for scheduled-run persistence is an S4 decision.
-state.json
-runs.json
+# Agent memory + health log are COMMITTED (Slice 4): the scheduled Action writes
+# them back so suppression/velocity persist across unattended runs.
 
 # Secrets stay out of the repo and out of the agent's context.
 .env
