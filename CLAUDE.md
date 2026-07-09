@@ -56,5 +56,6 @@ Deliberately out of scope; the newsletters above already digest most X discourse
 ## Behaviour
 - Don't assume, always ask when unsure.
 - Challenge me and push back where appropriate.
+- Avoid overly verbose comments.
 - Every source sits behind a small adapter so one flaky feed degrades the digest
   instead of crashing the run. Always record per-feed health, even on a quiet day.

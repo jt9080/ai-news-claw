@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HADR Monitor — SITREP 000: Pre-operational briefing</title>
+<style>
+  :root {
+    --paper: #f5f8fa;
+    --panel: #ffffff;
+    --ink: #12242f;
+    --ink-soft: #43596633;
+    --muted: #5a707d;
+    --blue: #0072ce;
+    --blue-deep: #00477e;
+    --green: #4e9a4a;
+    --orange: #e0851c;
+    --red: #bf3a2b;
+    --rule: #ccd9e2;
+    --chip-bg: #e8f0f6;
+    --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    --serif: Charter, Georgia, "Times New Roman", serif;
+    --disp: "Avenir Next Condensed", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #0f1a21;
+      --panel: #16232c;
+      --ink: #dbe7ee;
+      --ink-soft: #dbe7ee33;
+      --muted: #8ba0ac;
+      --blue: #4da3e8;
+      --blue-deep: #9cc9ef;
+      --green: #6fb46b;
+      --orange: #e89b45;
+      --red: #d95f50;
+      --rule: #2a3b47;
+      --chip-bg: #1e3040;
+    }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 1.0625rem;
+    line-height: 1.62;
+  }
+  a { color: var(--blue); }
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--blue);
+    outline-offset: 2px;
+  }
+  .sheet {
+    max-width: 62rem;
+    margin: 0 auto;
+    padding: 0 1.25rem 6rem;
+  }
+  code {
+    font-family: var(--mono);
+    font-size: 0.82em;
+    background: var(--chip-bg);
+    padding: 0.1em 0.35em;
+    border-radius: 3px;
+    white-space: nowrap;
+  }
+  pre code { white-space: pre; padding: 0; background: none; }
+
+  /* ---------- Masthead ---------- */
+  header {
+    border-bottom: 3px solid var(--ink);
+    padding: 2.75rem 0 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+  .org-line {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.6rem;
+  }
+  .alert-scale { display: inline-flex; gap: 0.3rem; align-items: center; }
+  .alert-scale i {
+    width: 0.72rem; height: 0.72rem; display: inline-block; border-radius: 2px;
+  }
+  .alert-scale .g { background: var(--green); }
+  .alert-scale .o { background: var(--orange); }
+  .alert-scale .r { background: var(--red); }
+  h1 {
+    font-family: var(--disp);
+    font-weight: 700;
+    font-size: clamp(2.6rem, 7.5vw, 4.6rem);
+    line-height: 0.98;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+  }
+  h1 .sitrep-no { color: var(--blue); }
+  .subtitle {
+    font-family: var(--disp);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: clamp(1.05rem, 2.6vw, 1.45rem);
+    color: var(--muted);
+    margin-top: 0.4rem;
+  }
+  .meta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 0.75rem 0 3.5rem;
+    background: var(--panel);
+  }
+  .meta-grid > div {
+    padding: 0.7rem 0.9rem;
+    border-right: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    margin: 0 -1px -1px 0;
+  }
+  .meta-grid dt {
+    font-family: var(--mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.25rem;
+  }
+  .meta-grid dd { font-family: var(--mono); font-size: 0.85rem; }
+  .status-flag { color: var(--orange); font-weight: 600; }
+
+  /* ---------- Sections ---------- */
+  section { margin-top: 4.25rem; }
+  .sec-head {
+    display: flex;
+    align-items: baseline;
+    gap: 0.9rem;
+    border-left: 6px solid var(--blue);
+    padding-left: 1rem;
+    margin-bottom: 1.6rem;
+  }
+  .sec-head .no {
+    font-family: var(--mono);
+    font-size: 0.85rem;
+    color: var(--blue);
+    letter-spacing: 0.08em;
+  }
+  h2 {
+    font-family: var(--disp);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-size: clamp(1.5rem, 3.4vw, 2.1rem);
+    line-height: 1.05;
+  }
+  .sec-brief {
+    font-size: 1.15rem;
+    max-width: 44rem;
+    margin-bottom: 1.75rem;
+  }
+  p + p { margin-top: 0.9rem; }
+  .prose { max-width: 44rem; }
+  .prose strong { color: var(--blue-deep); }
+
+  /* ---------- Inventory table ---------- */
+  .tbl-wrap { overflow-x: auto; border: 1px solid var(--rule); border-radius: 6px; background: var(--panel); }
+  table { border-collapse: collapse; width: 100%; font-size: 0.95rem; }
+  th {
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-align: left;
+    color: var(--muted);
+    padding: 0.75rem 1rem;
+    border-bottom: 2px solid var(--rule);
+  }
+  td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: top;
+  }
+  tr:last-child td { border-bottom: none; }
+  td .path { font-family: var(--mono); font-size: 0.82rem; white-space: nowrap; }
+
+  .feed-tag {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    padding: 0.15rem 0.5rem;
+    border-radius: 3px;
+    background: var(--chip-bg);
+    color: var(--blue-deep);
+    white-space: nowrap;
+  }
+
+  /* ---------- Slice steps ---------- */
+  .slice {
+    counter-reset: step;
+    list-style: none;
+    max-width: 46rem;
+    margin-top: 1.25rem;
+  }
+  .slice li {
+    counter-increment: step;
+    position: relative;
+    padding: 0 0 1.4rem 3.4rem;
+    border-left: 1px solid var(--rule);
+    margin-left: 1.1rem;
+  }
+  .slice li:last-child { border-left-color: transparent; padding-bottom: 0; }
+  .slice li::before {
+    content: counter(step);
+    position: absolute;
+    left: -1.15rem;
+    top: -0.1rem;
+    width: 2.2rem; height: 2.2rem;
+    border-radius: 50%;
+    background: var(--panel);
+    border: 2px solid var(--blue);
+    color: var(--blue);
+    font-family: var(--disp);
+    font-weight: 700;
+    font-size: 1.05rem;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .slice h3 {
+    font-family: var(--disp);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+  }
+  .slice p { font-size: 0.98rem; color: var(--ink); }
+  .aside-note {
+    border: 1px solid var(--rule);
+    border-left: 6px solid var(--orange);
+    border-radius: 6px;
+    background: var(--panel);
+    padding: 1rem 1.25rem;
+    max-width: 46rem;
+    margin-top: 2rem;
+    font-size: 0.98rem;
+  }
+  .aside-note .label {
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--orange);
+    display: block;
+    margin-bottom: 0.35rem;
+  }
+
+  /* ---------- RFI list ---------- */
+  .rfi-list { list-style: none; counter-reset: rfi; }
+  .rfi {
+    counter-increment: rfi;
+    display: grid;
+    grid-template-columns: 4.4rem 1fr;
+    gap: 0 1.4rem;
+    padding: 1.35rem 0;
+    border-top: 1px solid var(--rule);
+  }
+  .rfi:last-child { border-bottom: 1px solid var(--rule); }
+  .rfi-no {
+    font-family: var(--disp);
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: var(--blue);
+    line-height: 1;
+  }
+  .rfi-no::before { content: "RFI\2013"counter(rfi, decimal-leading-zero); font-size: 0.62rem; font-family: var(--mono); font-weight: 400; letter-spacing: 0.1em; color: var(--muted); display: block; margin-bottom: 0.3rem; }
+  .rfi h3 { font-size: 1.12rem; font-weight: 700; margin-bottom: 0.3rem; font-family: var(--serif); }
+  .rfi p { font-size: 0.97rem; max-width: 42rem; }
+  .rfi .blocks {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 0.55rem;
+  }
+  .rfi .blocks b { font-weight: 400; }
+  .rfi .blocks .sev { padding: 0.1rem 0.45rem; border-radius: 3px; color: #fff; margin-right: 0.4rem; }
+  .sev-red { background: var(--red); }
+  .sev-orange { background: var(--orange); }
+  .sev-green { background: var(--green); }
+  @media (prefers-color-scheme: dark) {
+    .sev-red, .sev-orange, .sev-green { color: #0f1a21; }
+  }
+
+  footer {
+    margin-top: 5rem;
+    border-top: 3px solid var(--ink);
+    padding-top: 1rem;
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  @media (max-width: 40rem) {
+    .rfi { grid-template-columns: 1fr; gap: 0.4rem; }
+    .slice li { padding-left: 2.6rem; }
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+<header>
+  <div class="org-line">
+    <span>HADR Monitor · jt9080/hadr-starter</span>
+    <span class="alert-scale" aria-label="GDACS alert scale: green, orange, red"><i class="g"></i><i class="o"></i><i class="r"></i>&nbsp;alert scale in use</span>
+  </div>
+  <h1>Sitrep <span class="sitrep-no">000</span></h1>
+  <p class="subtitle">Pre-operational briefing — issued before the system exists</p>
+</header>
+
+<dl class="meta-grid">
+  <div><dt>Issued</dt><dd>07 Jul 2026 · Asia/Singapore</dd></div>
+  <div><dt>Prepared by</dt><dd>Claude (repo read-through)</dd></div>
+  <div><dt>System status</dt><dd class="status-flag">Not yet operational</dd></div>
+  <div><dt>Target</dt><dd>dashboard.html · daily 08:30 SGT</dd></div>
+  <div><dt>Deadline</dt><dd>Wednesday PM · day 3 demo</dd></div>
+</dl>
+
+<!-- ============ 1. SITUATION ============ -->
+<section id="situation">
+  <div class="sec-head"><span class="no">§1</span><h2>Situation — what this codebase is</h2></div>
+  <p class="sec-brief">
+    This repository is the starter for a three-day course exercise. The application does not exist yet;
+    what exists is the brief, the raw material, and one architectural decision already taken.
+  </p>
+  <div class="prose">
+    <p>
+      The end state, per the README: an agent that <strong>watches three live disaster feeds</strong>
+      (GDACS, USGS, ReliefWeb), <strong>filters out noise and assesses what remains</strong> — what
+      happened, where, how bad, who is affected — and <strong>publishes a morning situation report</strong>
+      to <code>dashboard.html</code> at 08:30 Singapore time. It runs on a schedule, unattended, and
+      stays quiet when nothing has changed. How it does any of that is deliberately unspecified — that is the course.
+    </p>
+    <p>
+      One decision <em>is</em> already encoded, in the disabled workflow
+      <code>.github/workflows/sitrep.yml.disabled</code>: a deterministic script decides whether anything
+      changed, and a headless model call runs only if it did. In the file's own words —
+      <strong>the model never decides whether to wake up.</strong> Everything built this week has to fit that shape.
+    </p>
+  </div>
+
+  <section style="margin-top:2.5rem">
+    <h2 style="font-size:1.15rem; margin-bottom:0.9rem">Ground truth on hand</h2>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Asset</th><th>What it holds</th><th>Watch out for</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><span class="feed-tag">GDACS</span><br><span class="path">feeds/gdacs.md</span></td>
+            <td>Multi-hazard GeoJSON event list (EU/UN). Colour-coded alert levels and scores per event. No auth.</td>
+            <td>Event vs episode alert levels differ; colours can change after you have reported. No published rate limits.</td>
+          </tr>
+          <tr>
+            <td><span class="feed-tag">USGS</span><br><span class="path">feeds/usgs.md</span></td>
+            <td>Real-time earthquake GeoJSON, regenerated every minute, rolling windows (<code>all_day</code>, <code>4.5_week</code>, …).</td>
+            <td>~200 events/day, mostly tiny. Events get revised or deleted after publication. Same quakes also appear in GDACS under different IDs.</td>
+          </tr>
+          <tr>
+            <td><span class="feed-tag">RELIEFWEB</span><br><span class="path">feeds/reliefweb.md</span></td>
+            <td>UN OCHA's curated disaster list — slower, human-vetted, richer context.</td>
+            <td>v2 API needs a <strong>pre-approved appname</strong> (403 without; approval by email form). v1 is gone (410). RSS feed needs no approval.</td>
+          </tr>
+          <tr>
+            <td><span class="path">scripts/ · skills/</span></td>
+            <td>Both empty. Deterministic checks belong in <code>scripts/</code>; Day-2 skills in <code>skills/</code>, one folder each.</td>
+            <td>"Anything that must give the same answer twice does not belong in a prompt."</td>
+          </tr>
+          <tr>
+            <td><span class="path">docs/solutions/</span></td>
+            <td>One-learning-per-file debugging memory. Grep it before re-debugging anything.</td>
+            <td>Only the worked example so far (follow redirects with <code>curl -L</code>).</td>
+          </tr>
+          <tr>
+            <td><span class="path">Artefacts due</span></td>
+            <td><code>prd.html</code> · <code>system-view.html</code> · <code>dashboard.html</code> · <code>goal.md</code> · <code>implementation-notes.md</code> · ≥1 skill</td>
+            <td>None exist yet. <code>implementation-notes.md</code> is scaffolded but empty.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</section>
+
+<!-- ============ 2. COURSE OF ACTION ============ -->
+<section id="course-of-action">
+  <div class="sec-head"><span class="no">§2</span><h2>Course of action — what I would build first</h2></div>
+  <p class="sec-brief">
+    First slice: <strong>GDACS only, end to end</strong> — fetch, filter to Orange/Red, render the dashboard,
+    detect change. Thin, but it exercises every joint the final system needs.
+  </p>
+  <div class="prose">
+    <p>
+      Why GDACS and not the others: it is multi-hazard (the mission is HADR, not seismology), needs no
+      approval or keys, and every event arrives with an alert level — a severity filter we get for free
+      instead of inventing one. USGS is an earthquakes-only firehose that mostly needs discarding, and
+      ReliefWeb's API is blocked on an appname approval that may not arrive this week. Both join later
+      as their own slices.
+    </p>
+  </div>
+
+  <ol class="slice">
+    <li>
+      <h3>Fetch &amp; normalise</h3>
+      <p><code>scripts/fetch-gdacs</code> pulls the event list (following redirects — the one lesson already in <code>docs/solutions/</code>), and writes a small, stable, normalised <code>state/events.json</code>. Raw feed in, boring JSON out, no model anywhere.</p>
+    </li>
+    <li>
+      <h3>Filter to signal</h3>
+      <p>Keep Orange and Red alerts only — a defensible default until RFI–03 below is answered. The filter lives in the script as data, not in a prompt.</p>
+    </li>
+    <li>
+      <h3>Render the dashboard</h3>
+      <p>Generate <code>dashboard.html</code> deterministically from the normalised state: date, event count, one row per event — what, where, alert level, source link. Ugly is fine; honest is required.</p>
+    </li>
+    <li>
+      <h3>Detect change</h3>
+      <p>Diff the new normalised state against the last committed one and exit accordingly. This exact exit code is what <code>sitrep.yml</code>'s TODO&nbsp;1 is waiting for — the deterministic gate in front of any model call.</p>
+    </li>
+    <li>
+      <h3>Prove idempotence</h3>
+      <p>Definition of done: run the pipeline twice against an unchanged feed and get a byte-identical <code>dashboard.html</code> plus a "no change" exit. Checkable by a reviewer in under two minutes, as the slice template demands.</p>
+    </li>
+  </ol>
+
+  <div class="aside-note">
+    <span class="label">Deliberately out of scope for slice 1</span>
+    USGS and ReliefWeb ingestion · cross-feed deduplication · model-written prose in the report ·
+    the cron schedule itself. Each is its own slice, sequenced after the walking skeleton works.
+    Recorded here so nobody — human or agent — helpfully builds them anyway.
+  </div>
+</section>
+
+<!-- ============ 3. REQUESTS FOR INFORMATION ============ -->
+<section id="rfi">
+  <div class="sec-head"><span class="no">§3</span><h2>Requests for information — ten questions before starting</h2></div>
+  <p class="sec-brief">
+    Colour codes follow the GDACS convention: <span style="color:var(--red); font-weight:700">red</span> blocks the
+    first slice, <span style="color:var(--orange); font-weight:700">orange</span> blocks a later slice,
+    <span style="color:var(--green); font-weight:700">green</span> shapes quality but blocks nothing.
+  </p>
+
+  <ol class="rfi-list">
+    <li class="rfi">
+      <div class="rfi-no" aria-hidden="true"></div>
+      <div>
+        <h3>Who reads the 08:30 report, and what decision does it drive?</h3>
+        <p>A duty officer deciding whether to escalate reads differently from a team wanting ambient awareness. Tone, length, and what counts as "assessed" all hang on this.</p>
+        <p class="blocks"><span class="sev sev-red">red</span><b>Blocks the PRD and every wording choice in the dashboard.</b></p>
+      </div>
+    </li>
+    <li class="rfi">
+      <div class="rfi-no" aria-hidden="true"></div>
+      <div>
+        <h3>Is coverage global, or weighted to a region?</h3>
+        <p>The feeds are global; the reader probably is not. A Singapore-anchored view (Asia-Pacific first, rest of world below the fold) changes the filter and the layout.</p>
+        <p class="blocks"><span class="sev sev-red">red</span><b>Blocks the noise filter — "signal" is undefined without a scope.</b></p>
+      </div>
+    </li>
+    <li class="rfi">
+      <div class="rfi-no" aria-hidden="true"></div>
+      <div>
+        <h3>What is the reportable-severity threshold, and who owns it?</h3>
+        <p>Slice 1 assumes GDACS Orange+. Is that right? What is the equivalent line for USGS (magnitude? the <code>sig</code> score? tsunami flag?) — and is the threshold config a human edits, or judgment the model applies?</p>
+        <p class="blocks"><span class="sev sev-red">red</span><b>Blocks the filter; the Orange+ default stands until answered.</b></p>
+      </div>
+    </li>
+    <li class="rfi">
+      <div class="rfi-no" aria-hidden="true"></div>
+      <div>
+        <h3>What exactly does "stays quiet when nothing has changed" mean?</h3>
+        <p>An untouched <code>dashboard.html</code>? A fresh page that says "no change as of 08:30"? Is there ever a push notification to a human, or is publishing the page the whole output?</p>
+        <p class="blocks"><span class="sev sev-red">red</span><b>Blocks the change-detection contract in slice 1, step 4.</b></p>
+      </div>
+    </li>
+    <li class="rfi">
+      <div class="rfi-no" aria-hidden="true"></div>
+      <div>
+        <h3>How much event identity do we owe in three days?</h3>
+        <p>The same earthquake arrives from GDACS and USGS under different IDs, and both feeds revise or delete events after publication. Is single-feed-at-a-time acceptable for the demo, or is cross-feed dedup part of the definition of done?</p>
+        <p class="blocks"><span class="sev sev-orange">orange</span><b>Blocks the multi-feed slice and the data model's key choice.</b></p>
+      </div>
+    </li>
+    <li class="rfi">
+      <div class="rfi-no" aria-hidden="true"></div>
+      <div>
+        <h3>Has a ReliefWeb appname been requested yet?</h3>
+        <p>Approval arrives by email on someone else's clock. If it will not land this week, is the no-approval RSS feed an acceptable stand-in for the demo — knowing it lacks the API's structured fields?</p>
+        <p class="blocks"><span class="sev sev-orange">orange</span><b>Blocks the ReliefWeb slice; request should go out today either way.</b></p>
+      </div>
+    </li>
+    <li class="rfi">
+      <div class="rfi-no" aria-hidden="true"></div>
+      <div>
+        <h3>Where does state live, and does history matter?</h3>
+        <p>The obvious three-day answer is committed JSON — git as the database, every morning's state reviewable in the log. Is that acceptable, and do past sitreps need to remain retrievable, or does today's page overwrite yesterday's?</p>
+        <p class="blocks"><span class="sev sev-orange">orange</span><b>Blocks change detection design and the repo's growth rate.</b></p>
+      </div>
+    </li>
+    <li class="rfi">
+      <div class="rfi-no" aria-hidden="true"></div>
+      <div>
+        <h3>Confirm the runtime: GitHub Actions, and which secrets?</h3>
+        <p>The disabled workflow implies Actions is the venue. Is an Anthropic API key available as a repo secret for the headless <code>claude -p</code> step, is there a spend ceiling — and what should 08:30 publish on a morning a feed is down or the run fails?</p>
+        <p class="blocks"><span class="sev sev-orange">orange</span><b>Blocks the scheduling slice and the failure-morning behaviour.</b></p>
+      </div>
+    </li>
+    <li class="rfi">
+      <div class="rfi-no" aria-hidden="true"></div>
+      <div>
+        <h3>How deep should "who is affected" go?</h3>
+        <p>The feeds carry population-impact hints (GDACS alert scores, per-event detail URLs). May the assessment step fetch those detail endpoints, or is it the model reasoning over the summary state only? Where is the line between deterministic rendering and model judgment in the report body?</p>
+        <p class="blocks"><span class="sev sev-green">green</span><b>Shapes assessment quality; slice 1 ships without it.</b></p>
+      </div>
+    </li>
+    <li class="rfi">
+      <div class="rfi-no" aria-hidden="true"></div>
+      <div>
+        <h3>What does Wednesday's demo actually have to show?</h3>
+        <p>A live run on stage, or the artefact trail of unattended overnight runs — commits at 08:30, a dashboard that updated itself, quiet days staying quiet? Which artefacts are assessed, and what separates "done" from "impressive"?</p>
+        <p class="blocks"><span class="sev sev-green">green</span><b>Shapes sequencing of days 2–3; nothing in slice 1 waits on it.</b></p>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<footer>
+  <span>End of SITREP 000 · next report follows the first slice</span>
+  <span>Sources: README · feeds/ · scripts/ · skills/ · docs/solutions/ · .github/</span>
+</footer>
+
+</div>
+</body>
+</html>
