@@ -69,12 +69,13 @@ def main(
     # error, unparseable output) we fall back to the signal-ranked stand-in so
     # the run still publishes.
     judge_failed = False
+    assignment = None
     if not for_judge:
         items = []
         judge_status = "skipped"
     else:
         try:
-            items = judge.judge(for_judge, records, now)
+            items, assignment = judge.judge(for_judge, records, now)
             judge_status = "ok"
         except judge.JudgeUnavailable:
             judge_failed = True
@@ -89,7 +90,7 @@ def main(
             if rec is not None:
                 rec.reported_at = now_iso
 
-    html = render_dashboard(items, (start, end), feeds, now, judge_failed)
+    html = render_dashboard(items, (start, end), feeds, now, judge_failed, assignment=assignment)
     output_path.write_text(html, encoding="utf-8")
 
     state.save_state(state_path, records)

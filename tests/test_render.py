@@ -1,7 +1,7 @@
 import unittest
 from datetime import datetime, timedelta, timezone
 
-from newsclaw.models import Candidate, DigestItem, FetchResult
+from newsclaw.models import Assignment, Candidate, DigestItem, FetchResult
 from newsclaw.render import render_dashboard, relative_age
 
 NOW = datetime(2026, 7, 8, 12, 0, 0, tzinfo=timezone.utc)
@@ -162,8 +162,71 @@ class TestHealthAndBanners(unittest.TestCase):
 
     def test_header_and_doctype(self):
         html = render_dashboard([item([hn_c()])], WINDOW, feeds(), NOW)
-        self.assertIn("AI News Monitor", html)
+        self.assertIn("The Morning Claw", html)
         self.assertTrue(html.strip().lower().startswith("<!doctype html>"))
+
+
+class TestNewspaperChrome(unittest.TestCase):
+    def test_masthead_and_dateline(self):
+        html = render_dashboard([item([hn_c()])], WINDOW, feeds(), NOW)
+        self.assertIn("The Morning Claw", html)
+        self.assertRegex(html.lower(), r"morning edition")
+
+    def test_rail_lists_feeds_with_logos(self):
+        html = render_dashboard([item([hn_c()])], WINDOW, feeds(), NOW)
+        self.assertRegex(html.lower(), r"wire services")
+        # every feed row carries an inline SVG mark
+        self.assertGreaterEqual(html.count("<svg"), len(feeds()))
+
+    def test_source_chip_carries_logo(self):
+        html = render_dashboard([item([hn_c()])], WINDOW, feeds(), NOW)
+        self.assertRegex(html, r'<svg[^>]*>.*?</svg>\s*HN')
+
+    def test_hero_treatment_for_first_story_only(self):
+        html = render_dashboard(
+            [item([hn_c()], what="lead"), item([gh_c()], kind="repo", what="second")],
+            WINDOW, feeds(), NOW)
+        self.assertEqual(html.count('class="story hero"'), 1)
+        self.assertLess(html.index('class="story hero"'),
+                        html.index("second"))
+
+    def test_lead_story_labelled_others_unnumbered(self):
+        html = render_dashboard(
+            [item([hn_c()]), item([gh_c()], kind="repo")], WINDOW, feeds(), NOW)
+        self.assertEqual(html.count("Lead story"), 1)
+        self.assertNotRegex(html, r"No\.\s*\d")
+
+    def test_no_new_tag_but_back_survives(self):
+        html = render_dashboard([item([hn_c()])], WINDOW, feeds(), NOW)
+        self.assertNotIn(">new<", html.replace(" ", ""))
+
+    def test_masthead_carries_claw_emblem_and_favicon(self):
+        html = render_dashboard([item([hn_c()])], WINDOW, feeds(), NOW)
+        self.assertIn('class="mastlogo"', html)
+        self.assertIn('rel="icon"', html)
+
+    def test_fleuron_separates_stories(self):
+        html = render_dashboard(
+            [item([hn_c()]), item([gh_c()], kind="repo")], WINDOW, feeds(), NOW)
+        self.assertIn("2766", html)  # ❦ printer's ornament in the story divider
+
+    def test_assignment_card_in_rail(self):
+        a = Assignment(title="acme/loop-audit", url="https://github.com/acme/loop-audit",
+                       text="Clone it and run the audit against one of your own agents.")
+        html = render_dashboard([item([hn_c()])], WINDOW, feeds(), NOW, assignment=a)
+        self.assertIn("The Assignment", html)
+        self.assertIn("Clone it and run the audit", html)
+        self.assertIn("https://github.com/acme/loop-audit", html)
+
+    def test_no_assignment_card_when_absent(self):
+        html = render_dashboard([item([hn_c()])], WINDOW, feeds(), NOW)
+        self.assertNotIn("The Assignment", html)
+
+    def test_assignment_text_is_escaped(self):
+        a = Assignment(title="<b>t</b>", url="https://x.example/a",
+                       text="<script>alert(1)</script>")
+        html = render_dashboard([item([hn_c()])], WINDOW, feeds(), NOW, assignment=a)
+        self.assertNotIn("<script>alert", html)
 
 
 if __name__ == "__main__":
