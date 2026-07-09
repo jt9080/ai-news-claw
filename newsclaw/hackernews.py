@@ -29,10 +29,16 @@ _HN_ITEM = "https://news.ycombinator.com/item?id="
 
 
 def _build_url(window_start: datetime) -> str:
+    # HN's Algolia index no longer exposes `points` (or `num_comments`) in
+    # numericAttributesForFiltering, so filtering on them returns HTTP 400.
+    # Only `created_at_i` is filterable. We use the relevance-sorted `search`
+    # endpoint (not `search_by_date`) because it returns hits points-descending,
+    # so every story above the threshold lands within the first page — the
+    # points cut is then applied client-side in fetch().
     start_unix = int(window_start.timestamp())
-    numeric = f"points>{POINTS_THRESHOLD},created_at_i>{start_unix}"
+    numeric = f"created_at_i>{start_unix}"
     return (
-        "https://hn.algolia.com/api/v1/search_by_date"
+        "https://hn.algolia.com/api/v1/search"
         "?tags=story"
         f"&numericFilters={quote(numeric)}"
         "&hitsPerPage=200"
@@ -74,7 +80,11 @@ def fetch(window_start: datetime, window_end: datetime) -> FetchResult:
     try:
         with urlopen(request, timeout=TIMEOUT_SECONDS) as response:
             payload = json.loads(response.read().decode("utf-8"))
-        candidates = parse_hits(payload.get("hits", []))
+        candidates = [
+            c
+            for c in parse_hits(payload.get("hits", []))
+            if c.signal_value > POINTS_THRESHOLD
+        ]
     except Exception as exc:  # network, HTTP, decode, JSON — all degrade
         return FetchResult(source=SOURCE, status="failed", candidates=[], error=str(exc))
     return FetchResult(source=SOURCE, status="ok", candidates=candidates)

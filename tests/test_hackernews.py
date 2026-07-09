@@ -6,7 +6,7 @@ from pathlib import Path
 from unittest import mock
 from urllib.error import URLError
 
-from newsclaw.hackernews import fetch, parse_hits
+from newsclaw.hackernews import _build_url, fetch, parse_hits
 from newsclaw.window import compute_window
 
 FIXTURE = Path(__file__).parent / "fixtures" / "hn_search.json"
@@ -57,7 +57,60 @@ class TestParseHits(unittest.TestCase):
         self.assertEqual(len(candidates), 2)
 
 
+class TestBuildUrl(unittest.TestCase):
+    def test_uses_relevance_search_endpoint(self):
+        # search_by_date sorts newest-first (points=1); the relevance `search`
+        # endpoint sorts points-descending, so the window's top stories land on
+        # the first page.
+        start, _ = compute_window(datetime(2026, 7, 8, 12, 0, 0, tzinfo=timezone.utc))
+        url = _build_url(start)
+        self.assertIn("/api/v1/search?", url)
+        self.assertNotIn("search_by_date", url)
+
+    def test_does_not_filter_by_points(self):
+        # HN's Algolia index no longer allows filtering by `points`; sending it
+        # returns HTTP 400 and takes the whole feed down. The window filter on
+        # created_at_i is the only server-side numeric filter that works.
+        start, _ = compute_window(datetime(2026, 7, 8, 12, 0, 0, tzinfo=timezone.utc))
+        url = _build_url(start)
+        self.assertNotIn("points", url)
+        self.assertIn("created_at_i", url)
+
+
 class TestFetch(unittest.TestCase):
+    def test_below_threshold_stories_filtered_client_side(self):
+        # Points can't be filtered server-side, so fetch() must drop stories at
+        # or below the threshold itself.
+        payload = json.dumps(
+            {
+                "hits": [
+                    {
+                        "objectID": "900",
+                        "title": "Above threshold",
+                        "url": "https://example.com/a",
+                        "points": 250,
+                        "num_comments": 10,
+                        "created_at_i": 1783312800,
+                    },
+                    {
+                        "objectID": "901",
+                        "title": "Below threshold",
+                        "url": "https://example.com/b",
+                        "points": 40,
+                        "num_comments": 2,
+                        "created_at_i": 1783312800,
+                    },
+                ]
+            }
+        ).encode("utf-8")
+        start, end = compute_window(datetime(2026, 7, 8, 12, 0, 0, tzinfo=timezone.utc))
+        with mock.patch("newsclaw.hackernews.urlopen") as m:
+            m.return_value.__enter__.return_value = io.BytesIO(payload)
+            result = fetch(start, end)
+        ids = [c.source_id for c in result.candidates]
+        self.assertIn("900", ids)
+        self.assertNotIn("901", ids)
+
     def test_successful_fetch_returns_ok_result(self):
         start, end = compute_window(datetime(2026, 7, 8, 12, 0, 0, tzinfo=timezone.utc))
         with mock.patch("newsclaw.hackernews.urlopen") as m:
