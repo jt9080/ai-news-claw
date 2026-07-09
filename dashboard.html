@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AI News Monitor — Wed 08 Jul 2026, 16:41</title>
+<title>AI News Monitor — Thu 09 Jul 2026, 09:25</title>
 <style>:root {
   --paper:#FBFBFE; --card:#FFFFFF; --ink:#14161D; --muted:#616677; --line:#E5E7EF;
   --accent:#3355EA; --accent-soft:#E9ECFD; --hot:#C6371F; --hot-bg:#FBE7E2;
@@ -63,25 +63,29 @@ footer { color: var(--muted); font-size: 0.78rem; text-align: center; margin-top
 <main class="sheet">
   <p class="eyebrow">Morning digest</p>
   <h1>AI News Monitor</h1>
-  <p class="meta">Wed 08 Jul 2026, 16:41 SGT &middot; 8 items</p>
-  <p class="meta">Window: Tue 07 Jul 2026, 08:00 → Wed 08 Jul 2026, 08:00 SGT</p>
-  <div class="health"><span class="feed"><span class="dot ok"></span>Hacker News &middot; ok &middot; 41 fetched</span> <span class="feed"><span class="dot ok"></span>GitHub &middot; ok &middot; 30 fetched</span> <span class="feed"><span class="dot ok"></span>Hugging Face &middot; ok &middot; 40 fetched</span> <span class="feed"><span class="dot ok"></span>arXiv &middot; ok &middot; 25 fetched</span> <span class="feed"><span class="dot ok"></span>Reddit &middot; ok &middot; 23 fetched</span> <span class="feed"><span class="dot ok"></span>Blogs &middot; ok &middot; 15 fetched</span></div>
+  <p class="meta">Thu 09 Jul 2026, 09:25 SGT &middot; 8 items</p>
+  <p class="meta">Window: Wed 08 Jul 2026, 08:00 → Thu 09 Jul 2026, 08:00 SGT</p>
+  <div class="health"><span class="feed"><span class="dot failed"></span>Hacker News &middot; failed &middot; 0 fetched</span> <span class="feed"><span class="dot ok"></span>GitHub &middot; ok &middot; 30 fetched</span> <span class="feed"><span class="dot ok"></span>Hugging Face &middot; ok &middot; 40 fetched</span> <span class="feed"><span class="dot ok"></span>arXiv &middot; ok &middot; 25 fetched</span> <span class="feed"><span class="dot ok"></span>Reddit &middot; ok &middot; 24 fetched</span> <span class="feed"><span class="dot ok"></span>Blogs &middot; ok &middot; 13 fetched</span></div>
   
+    <div class="banner">
+      <strong>Feed unavailable</strong>
+      Hacker News unavailable this run — its stories are missing from the digest. Error: HTTP Error 400: Bad Request
+    </div>
   
     <article class="item">
       <div class="rank">1</div>
       <div class="body">
-        <h2><a href="https://arxiv.org/abs/2607.06447">Danus: Orchestrating Mathematical Reasoning Agents with Fact-Graph Memory</a></h2>
-        <p class="what">Danus is an open-source system that orchestrates multiple LLM agents with a shared fact graph for research-level mathematical proofs.</p>
-        <p class="why"><span class="lbl">Why</span>It shows how a global memory structure can coordinate parallel proof search while maintaining logical dependency chains.</p>
-        <p class="fb"><span class="lbl">For builders</span>Use a shared fact graph as a central memory to let multiple agents propose, verify, and build on each other&#x27;s claims.</p>
+        <h2><a href="https://simonwillison.net/2026/Jul/8/rewriting-bun-in-rust/#atom-everything">Bun Rewritten from Zig to Rust Using Multi-Agent Orchestration</a></h2>
+        <p class="what">Jarred Sumner used Claude-powered agents to rewrite the Bun runtime from Zig to Rust, guided by the existing TypeScript test suite.</p>
+        <p class="why"><span class="lbl">Why</span>It shows frontier models can now handle large-scale, multi-day agentic rewrites, altering the risk calculus for full rewrites.</p>
+        <p class="fb"><span class="lbl">For builders</span>Use language-independent test suites as conformance suites to guide agent code generation and safely merge large AI-authored changes.</p>
         <div class="line">
-          
-          <span class="kind">paper</span>
-          <span class="chip">arXiv</span>
-          <span class="age">recency</span>
-          <span class="age">16h ago</span>
-          <span class="topic">multiagent</span><span class="topic">memory</span><span class="topic">planning</span>
+          <span class="chip tag">new</span>
+          <span class="kind">post</span>
+          <span class="chip">Blog</span>
+          <span class="age">editorial</span>
+          <span class="age">1h ago</span>
+          <span class="topic">multiagent</span><span class="topic">agentic</span><span class="topic">claude</span><span class="topic">llm</span>
         </div>
       </div>
     </article>
@@ -89,17 +93,17 @@ footer { color: var(--muted); font-size: 0.78rem; text-align: center; margin-top
     <article class="item">
       <div class="rank">2</div>
       <div class="body">
-        <h2><a href="https://arxiv.org/abs/2607.06503">Doomed from the Start: Early Abort of LLM Agent Episodes</a></h2>
-        <p class="what">Researchers show that lightweight probes on LLM activations can predict agent task failure early, saving compute when aborting doomed episodes.</p>
-        <p class="why"><span class="lbl">Why</span>This can cut wasted inference by up to 47% while meeting user-specified recall targets.</p>
-        <p class="fb"><span class="lbl">For builders</span>Integrate early-exit failure detectors into agent loops to reduce cost without sacrificing task success.</p>
+        <h2><a href="https://arxiv.org/abs/2607.07690">Agon: Competitive Cross-Model RL Improves Reasoning without Process Labels</a></h2>
+        <p class="what">Agon trains two models to solve problems competitively, with each rewarded for out-solving the other, eliminating the need for process labels.</p>
+        <p class="why"><span class="lbl">Why</span>It doubles GRPO&#x27;s pass@1 on hard math by having models learn to out-reason each other, improving reasoning without external grading.</p>
+        <p class="fb"><span class="lbl">For builders</span>Implement adversarial training between two comparable models to boost reasoning capabilities in deployed agents without manual labeling.</p>
         <div class="line">
-          
+          <span class="chip tag">new</span>
           <span class="kind">paper</span>
           <span class="chip">arXiv</span>
           <span class="age">recency</span>
-          <span class="age">15h ago</span>
-          <span class="topic">agent</span><span class="topic">inference</span>
+          <span class="age">7h ago</span>
+          <span class="topic">multiagent</span><span class="topic">inference</span><span class="topic">reasoning</span><span class="topic">rl</span>
         </div>
       </div>
     </article>
@@ -107,18 +111,17 @@ footer { color: var(--muted); font-size: 0.78rem; text-align: center; margin-top
     <article class="item">
       <div class="rank">3</div>
       <div class="body">
-        <h2><a href="https://github.com/cobusgreyling/loop-engineering">loop-engineering: Practical patterns and CLI tools for AI coding agent workflows</a></h2>
-        <p class="what">loop-engineering is a repo of practical patterns, CLI tools, and starters for designing AI coding agent workflows.</p>
-        <p class="why"><span class="lbl">Why</span>It provides reusable components for constructing reliable loop-based agent systems and measuring their cost.</p>
-        <p class="fb"><span class="lbl">For builders</span>Use its loop-audit and loop-cost tools to analyze and optimize your agentic coding pipelines.</p>
+        <h2><a href="https://arxiv.org/abs/2607.07676">SkillCenter: 216K Source-Grounded Skills for Autonomous Agents</a></h2>
+        <p class="what">SkillCenter provides 216,938 source-grounded skills from journals, arXiv, and community, searchable via SQLite FTS5 bundles.</p>
+        <p class="why"><span class="lbl">Why</span>It gives agents the largest open library of verified, attributable skills, improving correctness, security, and maintainability of outputs.</p>
+        <p class="fb"><span class="lbl">For builders</span>Integrate SkillCenter&#x27;s offline, versioned skill bundles to equip agents with pre-verified domain skills that cite exact sources.</p>
         <div class="line">
-          
-          <span class="kind">repo</span>
-          <span class="chip">GitHub</span>
-          <span class="signal">6508 stars</span>
-          <span class="vel">&#9650; 1</span>
-          <span class="age">29d ago</span>
-          <span class="topic">agent</span><span class="topic">prompt</span>
+          <span class="chip tag">new</span>
+          <span class="kind">paper</span>
+          <span class="chip">arXiv</span>
+          <span class="age">recency</span>
+          <span class="age">7h ago</span>
+          <span class="topic">skills</span><span class="topic">agent</span><span class="topic">llm</span>
         </div>
       </div>
     </article>
@@ -126,18 +129,17 @@ footer { color: var(--muted); font-size: 0.78rem; text-align: center; margin-top
     <article class="item">
       <div class="rank">4</div>
       <div class="body">
-        <h2><a href="https://github.com/elder-plinius/T3MP3ST">T3MP3ST: Multi-Agent Offensive Security Platform</a></h2>
-        <p class="what">T3MP3ST is an open-source multi-agent platform for autonomous offensive security red teaming.</p>
-        <p class="why"><span class="lbl">Why</span>It demonstrates how coordinating specialized agents can automate complex adversarial testing workflows.</p>
-        <p class="fb"><span class="lbl">For builders</span>Adapt its multi-agent orchestration pattern to build collaborative security or testing agents.</p>
+        <h2><a href="https://arxiv.org/abs/2607.07666">Hierarchical Memory Architecture Overcomes Context Limits in Long-Horizon Multi-Agent Workflows</a></h2>
+        <p class="what">Ensemble QSP&#x27;s three-layer memory caps project state at 4,050 tokens, enabling five specialist agents to run continuously without context overflow.</p>
+        <p class="why"><span class="lbl">Why</span>It solves the context-length limitation for long-horizon multi-agent tasks, enabling week-long autonomous research workflows.</p>
+        <p class="fb"><span class="lbl">For builders</span>Implement bounded hierarchical memory with eviction policies to keep context constant in persistent multi-agent systems.</p>
         <div class="line">
-          
-          <span class="kind">repo</span>
-          <span class="chip">GitHub</span>
-          <span class="signal">3525 stars</span>
-          <span class="vel">&#9650; 3</span>
-          <span class="age">5d ago</span>
-          <span class="topic">multiagent</span>
+          <span class="chip tag">new</span>
+          <span class="kind">paper</span>
+          <span class="chip">arXiv</span>
+          <span class="age">recency</span>
+          <span class="age">8h ago</span>
+          <span class="topic">multiagent</span><span class="topic">memory</span><span class="topic">llm</span>
         </div>
       </div>
     </article>
@@ -145,17 +147,17 @@ footer { color: var(--muted); font-size: 0.78rem; text-align: center; margin-top
     <article class="item">
       <div class="rank">5</div>
       <div class="body">
-        <h2><a href="https://github.com/BuilderIO/skills">BuilderIO/skills: Reusable skills for coding agents</a></h2>
-        <p class="what">BuilderIO/skills is a repository of reusable skills for coding agents, covering tasks like code review and testing.</p>
-        <p class="why"><span class="lbl">Why</span>Skills are becoming a standard way to equip agents with specialized capabilities without retraining.</p>
-        <p class="fb"><span class="lbl">For builders</span>Incorporate these pre-built skills into your agent to quickly add domain-specific behaviors.</p>
+        <h2><a href="https://arxiv.org/abs/2607.07508">SAO: Stable Asynchronous RL for Training Agentic LLMs</a></h2>
+        <p class="what">SAO uses single-rollout GRPO and double-side token-level clipping to stabilize asynchronous RL for agentic tasks like SWE-Bench.</p>
+        <p class="why"><span class="lbl">Why</span>It enabled training the open GLM-5.2 model, outperforming standard GRPO on coding benchmarks and demonstrating stable online learning.</p>
+        <p class="fb"><span class="lbl">For builders</span>Replace group-wise sampling with single-rollout and apply token-level clipping to fine-tune your agent models stably.</p>
         <div class="line">
-          
-          <span class="kind">repo</span>
-          <span class="chip">GitHub</span>
-          <span class="signal">3525 stars</span>
-          <span class="age">27d ago</span>
-          <span class="topic">agent</span><span class="topic">skills</span>
+          <span class="chip tag">new</span>
+          <span class="kind">paper</span>
+          <span class="chip">arXiv</span>
+          <span class="age">recency</span>
+          <span class="age">10h ago</span>
+          <span class="topic">agentic</span><span class="topic">rl</span><span class="topic">llm</span>
         </div>
       </div>
     </article>
@@ -163,17 +165,17 @@ footer { color: var(--muted); font-size: 0.78rem; text-align: center; margin-top
     <article class="item">
       <div class="rank">6</div>
       <div class="body">
-        <h2><a href="https://github.com/cloudflare/security-audit-skill">Cloudflare security-audit-skill: Multi-phase security audit as an agent skill</a></h2>
-        <p class="what">Cloudflare&#x27;s security-audit-skill is an agent skill that performs multi-phase security audits with machine-readable results.</p>
-        <p class="why"><span class="lbl">Why</span>It shows how to wrap a complex, multi-step process into a single reusable agent capability.</p>
-        <p class="fb"><span class="lbl">For builders</span>Use it as a template for packaging other audit or review processes into agent skills.</p>
+        <h2><a href="https://arxiv.org/abs/2607.07695">Institutional Red-Teaming: Deployment Rules Causally Shape Multi-Agent Safety</a></h2>
+        <p class="what">Varying only the consequence-allocation rule in multi-agent games shifted mean fatality by 22–58 points across all model populations.</p>
+        <p class="why"><span class="lbl">Why</span>Deployment rules, not just model choice, causally determine collective safety, so rule testing is as critical as model testing.</p>
+        <p class="fb"><span class="lbl">For builders</span>Test your multi-agent deployment rules with systematic red-teaming to identify and prevent unintended harmful collective behaviors.</p>
         <div class="line">
-          
-          <span class="kind">repo</span>
-          <span class="chip">GitHub</span>
-          <span class="signal">2341 stars</span>
-          <span class="age">19d ago</span>
-          <span class="topic">agent</span>
+          <span class="chip tag">new</span>
+          <span class="kind">paper</span>
+          <span class="chip">arXiv</span>
+          <span class="age">recency</span>
+          <span class="age">7h ago</span>
+          <span class="topic">multiagent</span><span class="topic">safety</span>
         </div>
       </div>
     </article>
@@ -181,17 +183,21 @@ footer { color: var(--muted); font-size: 0.78rem; text-align: center; margin-top
     <article class="item">
       <div class="rank">7</div>
       <div class="body">
-        <h2><a href="https://github.com/vercel/eve">Vercel Eve: Framework for Building Agents</a></h2>
-        <p class="what">Eve by Vercel is a framework for building AI agents with structured tool use and multi-step reasoning.</p>
-        <p class="why"><span class="lbl">Why</span>It offers a production-ready foundation for developing agentic applications with built-in memory and execution abstractions.</p>
-        <p class="fb"><span class="lbl">For builders</span>Scaffold new agents rapidly using Eve&#x27;s conventions for tools, memory, and task loops.</p>
+        <h2><a href="https://www.reddit.com/r/LocalLLaMA/comments/1ur41ou/4bit_glm52_753b_moe_on_4_dgx_spark_708_on/">Running 753B GLM-5.2 on 4× DGX Spark for Agentic Coding: 70.8% Terminal-Bench</a></h2>
+        <p class="what">Community members ran GLM-5.2 (753B MoE) on 4× DGX Spark/GB10 with 4-bit quantization, achieving 70.8% on the agentic Terminal-Bench 2.1.</p>
+        <p class="why"><span class="lbl">Why</span>Demonstrates that frontier agentic models can be self-hosted on ~$16K consumer hardware, closing the gap with datacenter performance.</p>
+        <p class="fb"><span class="lbl">For builders</span>With quantization and optimized inference stacks, you can deploy large agentic models on multi-GPU setups for private, cost-effective use.</p>
         <div class="line">
-          
-          <span class="kind">repo</span>
-          <span class="chip">GitHub</span>
-          <span class="signal">3313 stars</span>
-          <span class="age">21d ago</span>
-          <span class="topic">agent</span>
+          <span class="chip tag">new</span>
+          <span class="kind">post</span>
+          <span class="chip">Reddit</span>
+          <span class="age">top</span>
+          <a class="disc" href="https://www.reddit.com/r/LocalLLaMA/comments/1ur41ou/4bit_glm52_753b_moe_on_4_dgx_spark_708_on/">discussion &rsaquo;</a>
+          <span class="chip">Reddit</span>
+          <span class="age">top</span>
+          <a class="disc" href="https://www.reddit.com/r/LocalLLaMA/comments/1ur022r/running_glm_52_on_4xgb10_with_a_100g_switch_330k/">discussion &rsaquo;</a>
+          <span class="age">5h ago</span>
+          <span class="topic">agentic</span><span class="topic">llm</span>
         </div>
       </div>
     </article>
@@ -199,17 +205,18 @@ footer { color: var(--muted); font-size: 0.78rem; text-align: center; margin-top
     <article class="item">
       <div class="rank">8</div>
       <div class="body">
-        <h2><a href="https://arxiv.org/abs/2607.06452">From Voting to Agent Collaboration: Answer-Type-Aware LLM Pipelines for BioASQ</a></h2>
-        <p class="what">A question-type-specific LLM pipeline uses multi-agent collaboration with evidence extraction, candidate generation, and verification for biomedical QA.</p>
-        <p class="why"><span class="lbl">Why</span>It demonstrates that specialist agents with answer-type routing and verification can outperform monolithic models.</p>
-        <p class="fb"><span class="lbl">For builders</span>Design agent ensembles that route queries to specialized sub-agents and aggregate verified results.</p>
+        <h2><a href="https://www.reddit.com/r/LocalLLaMA/comments/1ur71hq/grok_45_released_glm52_shows_up_in_xais_own/">Grok 4.5 Released, Open GLM-5.2 Just 2.6 Points Behind on SWE-Bench Pro</a></h2>
+        <p class="what">xAI released Grok 4.5, a closed model scoring 64.7% on SWE-Bench Pro, only 2.6 points ahead of the open-weight GLM-5.2.</p>
+        <p class="why"><span class="lbl">Why</span>Shows that open-weight agentic coders are nearly matching proprietary frontier models, reducing reliance on paid APIs for complex tasks.</p>
+        <p class="fb"><span class="lbl">For builders</span>Evaluate open models like GLM-5.2 for agentic coding benchmarks to achieve competitive performance without per-token costs.</p>
         <div class="line">
-          
-          <span class="kind">paper</span>
-          <span class="chip">arXiv</span>
-          <span class="age">recency</span>
-          <span class="age">16h ago</span>
-          <span class="topic">multiagent</span><span class="topic">llm</span>
+          <span class="chip tag">new</span>
+          <span class="kind">post</span>
+          <span class="chip">Reddit</span>
+          <span class="age">top</span>
+          <a class="disc" href="https://www.reddit.com/r/LocalLLaMA/comments/1ur71hq/grok_45_released_glm52_shows_up_in_xais_own/">discussion &rsaquo;</a>
+          <span class="age">3h ago</span>
+          <span class="topic">agentic</span><span class="topic">llm</span>
         </div>
       </div>
     </article>
