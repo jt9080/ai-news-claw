@@ -9,13 +9,15 @@ at 08:00 Singapore time (Asia/Singapore). It runs on a schedule, unattended.
 
 The reader has five minutes. The digest answers one question: **what shipped or broke
 through in the last 24 hours that someone building agentic systems should know about?**
-Agent-development news (multiagent, subagents, skills, geospatial agents) is ranked
-first; the rest of AI follows.
+Agent-development news (multiagent, subagents, skills, geospatial agents, agent
+evaluation, production-ready agents, defense-tech agents) is ranked first for its
+one reader — an AI engineer who builds agentic systems; the rest of AI follows.
 
 The hard part is not fetching — it is **ranking**. Every source is a firehose, so the
 product is the filter: hard signals (stars/velocity, HN points, upvotes, paper
-attention) build a shortlist, later refined by an LLM judge. A normal day yields 5–8
-items, not fifty. Anything already reported is suppressed unless it materially jumps
+attention) build a shortlist, later refined by an LLM judge. A day yields 4–8 items
+(fewer on a quiet day — the bar is "substantially worth going to read", not a quota),
+not fifty. Anything already reported is suppressed unless it materially jumps
 (major version, big new capability, order-of-magnitude signal change).
 
 ## Data feeds

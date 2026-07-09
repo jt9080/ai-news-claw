@@ -59,6 +59,14 @@ class TestBuildMessages(unittest.TestCase):
         self.assertIn("why", low)
         self.assertRegex(low, r"builder")
 
+    def test_system_prompt_names_audience_and_priority_topics(self):
+        system, _ = judge.build_messages([cand("hackernews", "1")], {}, NOW)
+        low = system.lower()
+        self.assertIn("ai engineer", low)  # the explicit single target reader
+        for topic in ("geospatial", "evaluation", "production", "defense"):
+            self.assertIn(topic, low)
+        self.assertIn("4-8", system)  # relaxed lower bound / raised bar
+
 
 class TestJudge(unittest.TestCase):
     def test_maps_three_text_fields_in_order(self):
