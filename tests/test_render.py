@@ -200,6 +200,16 @@ class TestNewspaperChrome(unittest.TestCase):
         html = render_dashboard([item([hn_c()])], WINDOW, feeds(), NOW)
         self.assertNotIn(">new<", html.replace(" ", ""))
 
+    def test_masthead_carries_claw_emblem_and_favicon(self):
+        html = render_dashboard([item([hn_c()])], WINDOW, feeds(), NOW)
+        self.assertIn('class="mastlogo"', html)
+        self.assertIn('rel="icon"', html)
+
+    def test_fleuron_separates_stories(self):
+        html = render_dashboard(
+            [item([hn_c()]), item([gh_c()], kind="repo")], WINDOW, feeds(), NOW)
+        self.assertIn("2766", html)  # ❦ printer's ornament in the story divider
+
 
 if __name__ == "__main__":
     unittest.main()

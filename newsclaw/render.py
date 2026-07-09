@@ -16,6 +16,7 @@ from __future__ import annotations
 
 from datetime import datetime
 from html import escape
+from urllib.parse import quote
 from zoneinfo import ZoneInfo
 
 from newsclaw.models import Candidate, DigestItem
@@ -40,6 +41,22 @@ _LOGOS = {
     "reddit": '<svg class="slogo" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#FF4500"/><path d="M12 10.2V6.6l3.4-.9" stroke="#fff" stroke-width="1.4" fill="none" stroke-linecap="round"/><circle cx="15.9" cy="5.4" r="1.2" fill="#fff"/><circle cx="5.7" cy="11.6" r="1.6" fill="#fff"/><circle cx="18.3" cy="11.6" r="1.6" fill="#fff"/><ellipse cx="12" cy="14.4" rx="6.7" ry="4.4" fill="#fff"/><circle cx="9.6" cy="13.7" r="1.1" fill="#FF4500"/><circle cx="14.4" cy="13.7" r="1.1" fill="#FF4500"/><path d="M9.8 16.2c.7.6 1.4.9 2.2.9s1.5-.3 2.2-.9" stroke="#FF4500" stroke-width="1.1" fill="none" stroke-linecap="round"/></svg>',
     "blogs": '<svg class="slogo" viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="4" fill="#F26522"/><circle cx="7.4" cy="16.6" r="2" fill="#fff"/><path d="M5.5 10.6a8 8 0 0 1 7.9 7.9M5.5 5.6a13 13 0 0 1 12.9 12.9" stroke="#fff" stroke-width="2.3" fill="none" stroke-linecap="round"/></svg>',
 }
+
+# The paper's emblem: three tapered claret talon slashes. Reused inline beside
+# the masthead and, URL-encoded, as the favicon.
+_CLAW_PATHS = (
+    '<g fill="#990F3D">'
+    '<path d="M16 10 Q34 40 44 88 Q40 92 36 90 Q22 48 10 16 Q12 10 16 10z"/>'
+    '<path d="M40 4 Q54 36 62 80 Q58 84 54 82 Q44 42 34 10 Q36 4 40 4z"/>'
+    '<path d="M62 12 Q72 38 76 70 Q72 74 68 72 Q60 42 54 18 Q57 12 62 12z"/>'
+    '</g>'
+)
+_CLAW_LOGO = f'<svg class="mastlogo" viewBox="0 0 80 100" aria-hidden="true">{_CLAW_PATHS}</svg>'
+_FAVICON = (
+    '<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,'
+    + quote(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 100">{_CLAW_PATHS}</svg>')
+    + '">'
+)
 
 _FONTS = (
     '<link rel="preconnect" href="https://fonts.googleapis.com">\n'
@@ -69,6 +86,8 @@ a { color: var(--claret); text-underline-offset: 3px; }
 a:focus-visible { outline: 2px solid var(--claret); outline-offset: 2px; }
 
 .masthead { text-align: center; padding: 0.4rem 0 1.15rem; border-bottom: 1px solid var(--rule); }
+.mastrow { display: flex; align-items: center; justify-content: center; gap: 1.1rem; }
+.mastlogo { width: 2.7rem; height: auto; flex: 0 0 auto; }
 .masthead h1 {
   font-family: 'Playfair Display', Georgia, serif; font-weight: 600;
   font-size: clamp(2.3rem, 5.5vw, 3.4rem); line-height: 1.1;
@@ -93,7 +112,11 @@ a:focus-visible { outline: 2px solid var(--claret); outline-offset: 2px; }
 .notice strong { display: block; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 0.62rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 0.3rem; }
 
 .story { padding: 1.45rem 0 1.6rem; }
-.story + .story { border-top: 1px solid var(--hairline); }
+.story + .story { padding-top: 0.55rem; }
+.story + .story::before {
+  content: "\\2766"; display: block; text-align: center;
+  color: #C9B39F; font-size: 0.95rem; line-height: 1; padding-bottom: 1.35rem;
+}
 .story.hero { padding-top: 0.2rem; }
 .kicker { font-size: 0.66rem; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--claret); margin: 0 0 0.55rem; }
 .story h2 {
@@ -129,6 +152,7 @@ footer {
   .rail { border-right: none; border-bottom: 1px solid var(--hairline); padding: 0 0 0.6rem; display: flex; flex-wrap: wrap; gap: 0 2.4rem; }
   .rail section { margin-bottom: 1.1rem; }
   .story.hero h2 { font-size: 1.55rem; }
+  .mastlogo { width: 1.9rem; }
 }
 """.strip()
 
@@ -303,13 +327,17 @@ def render_dashboard(items, window, feeds, now: datetime, judge_failed: bool = F
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{MASTHEAD} — {escape(date_line)}</title>
+{_FAVICON}
 {_FONTS}
 <style>{_CSS}</style>
 </head>
 <body>
 <div class="edition">
   <header class="masthead">
-    <h1>{MASTHEAD}</h1>
+    <div class="mastrow">
+      {_CLAW_LOGO}
+      <h1>{MASTHEAD}</h1>
+    </div>
     <p class="dateline">{escape(dateline)} &middot; Morning Edition &middot; {n} {stories_word}</p>
   </header>
   <div class="frame">
