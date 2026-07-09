@@ -18,7 +18,7 @@ import json
 from datetime import datetime
 
 from newsclaw import llm
-from newsclaw.models import Candidate, DigestItem
+from newsclaw.models import Assignment, Candidate, DigestItem
 
 _SOURCE_PREFIX = {"hackernews": "hn", "github": "gh"}
 
@@ -41,11 +41,18 @@ For each item write three fields, each ONE factual sentence (<= 25 words, no hyp
 - `why`: why it matters.
 - `for_builders`: the concrete takeaway for someone building agentic systems.
 
+Also pick ONE candidate as the day's assignment — the single thing most worth an \
+hour of hands-on time (prefer something runnable: a repo, tool, or model over a \
+paper). Write `assignment.text`: 1-2 sentences (<= 40 words) telling the reader \
+concretely what to do with it and what they will learn. It may be an item you \
+did not include in the digest.
+
 Respond with ONLY a JSON object, no prose, in exactly this shape:
 {"items": [{"ids": ["hn:123","gh:owner/repo"], "title": "...", "url": "...", \
 "kind": "model|repo|paper|tool|post|discussion", "topics": ["multiagent"], \
 "what": "one sentence", "why": "one sentence", "for_builders": "one sentence", \
-"resurfaced": false}]}
+"resurfaced": false}], \
+"assignment": {"id": "gh:owner/repo", "text": "1-2 sentences"}}
 Use only ids present in the input. Order the list best-first."""
 
 
@@ -88,10 +95,11 @@ def build_messages(candidates: list, records: dict, now: datetime):
     return SYSTEM_PROMPT, user
 
 
-def judge(candidates: list, records: dict, now: datetime) -> list:
-    """Return the judged digest as DigestItems, or raise JudgeUnavailable."""
+def judge(candidates: list, records: dict, now: datetime) -> tuple:
+    """Return ``(items, assignment)`` — the judged digest as DigestItems plus
+    the day's Assignment (or None) — or raise JudgeUnavailable."""
     if not candidates:
-        return []
+        return [], None
 
     system, user = build_messages(candidates, records, now)
     text = None
@@ -110,7 +118,7 @@ def judge(candidates: list, records: dict, now: datetime) -> list:
         raise JudgeUnavailable("model did not return the expected JSON shape")
 
     by_id = {_cand_id(c): c for c in candidates}
-    return _to_items(data["items"], by_id)
+    return _to_items(data["items"], by_id), _to_assignment(data.get("assignment"), by_id)
 
 
 def _to_items(entries: list, by_id: dict) -> list:
@@ -137,6 +145,18 @@ def _to_items(entries: list, by_id: dict) -> list:
             sources=sources,
         ))
     return items
+
+
+def _to_assignment(entry, by_id: dict):
+    """Ground the judge's pick in a real candidate; anything malformed is just
+    no assignment today, never a failure."""
+    if not isinstance(entry, dict):
+        return None
+    c = by_id.get(entry.get("id"))
+    text = entry.get("text")
+    if c is None or not text:
+        return None
+    return Assignment(title=c.title, url=c.url, text=str(text))
 
 
 def _extract_json(text: str):

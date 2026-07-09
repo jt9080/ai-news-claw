@@ -37,13 +37,16 @@ def patch_feeds(stack, **results):
         stack.enter_context(mock.patch(f"run.{name}.fetch", return_value=res))
 
 
-def judged_reply(ids):
-    return json.dumps({"items": [
+def judged_reply(ids, assignment=None):
+    body = {"items": [
         {"ids": ids, "title": "Judged story", "url": "https://example.com/1",
          "kind": "post", "topics": ["agent"],
          "what": "a new thing shipped", "why": "because it matters",
          "for_builders": "wire it into your agent loop", "resurfaced": False}
-    ]})
+    ]}
+    if assignment is not None:
+        body["assignment"] = assignment
+    return json.dumps(body)
 
 
 class TestSixFeeds(unittest.TestCase):
@@ -78,6 +81,20 @@ class TestSixFeeds(unittest.TestCase):
             log = json.loads(p["runs_path"].read_text())
             self.assertEqual(log[0]["feeds"]["arxiv"], "failed")
 
+    def test_assignment_flows_to_dashboard(self):
+        hn_ok = FetchResult("hackernews", "ok", [hn("New agent framework", 400, "1")])
+        with TemporaryDirectory() as tmp, ExitStack() as stack:
+            p = paths(tmp)
+            patch_feeds(stack, hackernews=hn_ok)
+            stack.enter_context(mock.patch(
+                "newsclaw.llm.complete",
+                return_value=judged_reply(["hn:1"], assignment={
+                    "id": "hn:1", "text": "Read it and try the demo."})))
+            run.main(now=NOW, **p)
+            html = p["output_path"].read_text()
+            self.assertIn("The Assignment", html)
+            self.assertIn("Read it and try the demo.", html)
+
     def test_fallback_when_judge_unavailable(self):
         hn_ok = FetchResult("hackernews", "ok", [hn("New agent tool", 400, "1")])
         with TemporaryDirectory() as tmp, ExitStack() as stack:
@@ -98,7 +115,7 @@ class TestSixFeeds(unittest.TestCase):
 
         def spy(candidates, records, now):
             captured["n_hn"] = sum(1 for c in candidates if c.source == "hackernews")
-            return []
+            return [], None
 
         with TemporaryDirectory() as tmp, ExitStack() as stack:
             p = paths(tmp)

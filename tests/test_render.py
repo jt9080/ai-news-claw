@@ -1,7 +1,7 @@
 import unittest
 from datetime import datetime, timedelta, timezone
 
-from newsclaw.models import Candidate, DigestItem, FetchResult
+from newsclaw.models import Assignment, Candidate, DigestItem, FetchResult
 from newsclaw.render import render_dashboard, relative_age
 
 NOW = datetime(2026, 7, 8, 12, 0, 0, tzinfo=timezone.utc)
@@ -209,6 +209,24 @@ class TestNewspaperChrome(unittest.TestCase):
         html = render_dashboard(
             [item([hn_c()]), item([gh_c()], kind="repo")], WINDOW, feeds(), NOW)
         self.assertIn("2766", html)  # ❦ printer's ornament in the story divider
+
+    def test_assignment_card_in_rail(self):
+        a = Assignment(title="acme/loop-audit", url="https://github.com/acme/loop-audit",
+                       text="Clone it and run the audit against one of your own agents.")
+        html = render_dashboard([item([hn_c()])], WINDOW, feeds(), NOW, assignment=a)
+        self.assertIn("The Assignment", html)
+        self.assertIn("Clone it and run the audit", html)
+        self.assertIn("https://github.com/acme/loop-audit", html)
+
+    def test_no_assignment_card_when_absent(self):
+        html = render_dashboard([item([hn_c()])], WINDOW, feeds(), NOW)
+        self.assertNotIn("The Assignment", html)
+
+    def test_assignment_text_is_escaped(self):
+        a = Assignment(title="<b>t</b>", url="https://x.example/a",
+                       text="<script>alert(1)</script>")
+        html = render_dashboard([item([hn_c()])], WINDOW, feeds(), NOW, assignment=a)
+        self.assertNotIn("<script>alert", html)
 
 
 if __name__ == "__main__":

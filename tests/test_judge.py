@@ -32,8 +32,11 @@ def mkitem(ids, **over):
     return {k: v for k, v in d.items() if v is not None}
 
 
-def reply(items):
-    return json.dumps({"items": items})
+def reply(items, assignment=None):
+    body = {"items": items}
+    if assignment is not None:
+        body["assignment"] = assignment
+    return json.dumps(body)
 
 
 class TestBuildMessages(unittest.TestCase):
@@ -67,7 +70,7 @@ class TestJudge(unittest.TestCase):
                    why="fills a gap", for_builders="try it for orchestration"),
         ])
         with mock.patch("newsclaw.llm.complete", return_value=resp):
-            items = judge.judge(cs, {}, NOW)
+            items, _ = judge.judge(cs, {}, NOW)
         self.assertEqual([i.title for i in items], ["Thread", "acme/lib"])
         self.assertEqual(items[0].what, "devs discuss agents")
         self.assertEqual(items[0].why, "signals interest")
@@ -77,7 +80,7 @@ class TestJudge(unittest.TestCase):
         cs = [cand("hackernews", "42")]
         with mock.patch("newsclaw.llm.complete",
                         return_value=reply([mkitem(["hn:42"], for_builders=None)])):
-            items = judge.judge(cs, {}, NOW)
+            items, _ = judge.judge(cs, {}, NOW)
         self.assertEqual(len(items), 1)
         self.assertEqual(items[0].for_builders, "")
 
@@ -85,13 +88,13 @@ class TestJudge(unittest.TestCase):
         cs = [cand("hackernews", "42")]
         with mock.patch("newsclaw.llm.complete",
                         return_value=reply([mkitem(["hn:42"], what=None)])):
-            self.assertEqual(judge.judge(cs, {}, NOW), [])
+            self.assertEqual(judge.judge(cs, {}, NOW), ([], None))
 
     def test_missing_why_is_dropped(self):
         cs = [cand("hackernews", "42")]
         with mock.patch("newsclaw.llm.complete",
                         return_value=reply([mkitem(["hn:42"], why=None)])):
-            self.assertEqual(judge.judge(cs, {}, NOW), [])
+            self.assertEqual(judge.judge(cs, {}, NOW), ([], None))
 
     def test_unknown_ids_are_dropped(self):
         cs = [cand("hackernews", "42")]
@@ -100,7 +103,7 @@ class TestJudge(unittest.TestCase):
             mkitem(["hn:42", "gh:ghost"], title="keep"),
         ])
         with mock.patch("newsclaw.llm.complete", return_value=resp):
-            items = judge.judge(cs, {}, NOW)
+            items, _ = judge.judge(cs, {}, NOW)
         self.assertEqual([i.title for i in items], ["keep"])
         self.assertEqual(len(items[0].sources), 1)
 
@@ -108,7 +111,7 @@ class TestJudge(unittest.TestCase):
         cs = [cand("hackernews", "42")]
         fenced = "```json\n" + reply([mkitem(["hn:42"])]) + "\n```"
         with mock.patch("newsclaw.llm.complete", return_value=fenced):
-            self.assertEqual(len(judge.judge(cs, {}, NOW)), 1)
+            self.assertEqual(len(judge.judge(cs, {}, NOW)[0]), 1)
 
     def test_malformed_json_raises_judge_unavailable(self):
         with mock.patch("newsclaw.llm.complete", return_value="not json at all"):
@@ -131,14 +134,53 @@ class TestJudge(unittest.TestCase):
         cs = [cand("hackernews", "42")]
         with mock.patch("newsclaw.llm.complete",
                         side_effect=[LLMError("timeout"), reply([mkitem(["hn:42"])])]) as m:
-            items = judge.judge(cs, {}, NOW)
+            items, _ = judge.judge(cs, {}, NOW)
         self.assertEqual(len(items), 1)
         self.assertEqual(m.call_count, 2)
 
     def test_no_candidates_returns_empty_without_calling_llm(self):
         with mock.patch("newsclaw.llm.complete") as m:
-            self.assertEqual(judge.judge([], {}, NOW), [])
+            self.assertEqual(judge.judge([], {}, NOW), ([], None))
             m.assert_not_called()
+
+
+class TestAssignment(unittest.TestCase):
+    def test_assignment_resolves_to_candidate_title_and_url(self):
+        cs = [cand("github", "acme/lib", "acme/lib"), cand("hackernews", "42")]
+        resp = reply([mkitem(["hn:42"])],
+                     assignment={"id": "gh:acme/lib",
+                                 "text": "Clone it and run the audit against your own agent."})
+        with mock.patch("newsclaw.llm.complete", return_value=resp):
+            _, assignment = judge.judge(cs, {}, NOW)
+        self.assertEqual(assignment.title, "acme/lib")
+        self.assertEqual(assignment.url, "https://example.com/acme/lib")
+        self.assertIn("Clone it", assignment.text)
+
+    def test_assignment_with_unknown_id_is_dropped(self):
+        cs = [cand("hackernews", "42")]
+        resp = reply([mkitem(["hn:42"])],
+                     assignment={"id": "gh:ghost", "text": "do a thing"})
+        with mock.patch("newsclaw.llm.complete", return_value=resp):
+            _, assignment = judge.judge(cs, {}, NOW)
+        self.assertIsNone(assignment)
+
+    def test_assignment_without_text_is_dropped(self):
+        cs = [cand("hackernews", "42")]
+        resp = reply([mkitem(["hn:42"])], assignment={"id": "hn:42"})
+        with mock.patch("newsclaw.llm.complete", return_value=resp):
+            _, assignment = judge.judge(cs, {}, NOW)
+        self.assertIsNone(assignment)
+
+    def test_missing_assignment_is_none_not_error(self):
+        cs = [cand("hackernews", "42")]
+        with mock.patch("newsclaw.llm.complete", return_value=reply([mkitem(["hn:42"])])):
+            items, assignment = judge.judge(cs, {}, NOW)
+        self.assertEqual(len(items), 1)
+        self.assertIsNone(assignment)
+
+    def test_system_prompt_asks_for_assignment(self):
+        system, _ = judge.build_messages([cand("hackernews", "1")], {}, NOW)
+        self.assertIn("assignment", system.lower())
 
 
 if __name__ == "__main__":

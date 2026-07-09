@@ -98,6 +98,12 @@ a:focus-visible { outline: 2px solid var(--claret); outline-offset: 2px; }
 .frame { display: grid; grid-template-columns: 14.5rem minmax(0, 1fr); gap: 0 2.4rem; padding-top: 1.7rem; }
 .rail { border-right: 1px solid var(--hairline); padding-right: 2.4rem; }
 .rail section { margin-bottom: 1.8rem; }
+.rail section.assignment { border: 1px solid var(--claret); padding: 0.85rem 1rem 0.95rem; }
+.assignment .railhead { color: var(--claret); }
+.atext { font-size: 0.95rem; font-style: italic; line-height: 1.55; margin: 0 0 0.65rem; }
+.alink { font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 0.68rem; margin: 0; overflow-wrap: anywhere; }
+.alink a { color: var(--claret); text-decoration: none; }
+.alink a:hover { text-decoration: underline; }
 .railhead { font-size: 0.62rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin: 0 0 0.65rem; }
 .wires { list-style: none; margin: 0; padding: 0; }
 .wire { display: flex; align-items: center; gap: 0.5rem; padding: 0.34rem 0; font-size: 0.74rem; }
@@ -245,7 +251,18 @@ def _render_item(item: DigestItem, now: datetime, hero: bool = False) -> str:
     </article>"""
 
 
-def _render_rail(feeds, window_line: str, items) -> str:
+def _render_assignment(assignment) -> str:
+    if assignment is None:
+        return ""
+    return f"""<section class="assignment">
+      <h3 class="railhead">The Assignment</h3>
+      <p class="atext">{escape(assignment.text)}</p>
+      <p class="alink"><a href="{escape(assignment.url)}">&rarr; {escape(assignment.title)}</a></p>
+    </section>
+    """
+
+
+def _render_rail(feeds, window_line: str, items, assignment=None) -> str:
     wires = "\n        ".join(
         f'<li class="wire{"" if f.status == "ok" else " failed"}">'
         f'{_LOGOS.get(f.source, "")}'
@@ -262,7 +279,7 @@ def _render_rail(feeds, window_line: str, items) -> str:
       <p class="edition-topics">{" &middot; ".join(escape(t) for t in topics)}</p>
     </section>"""
     return f"""<aside class="rail">
-    <section>
+    {_render_assignment(assignment)}<section>
       <h3 class="railhead">Wire services</h3>
       <ul class="wires">
         {wires}
@@ -275,13 +292,14 @@ def _render_rail(feeds, window_line: str, items) -> str:
   </aside>"""
 
 
-def render_dashboard(items, window, feeds, now: datetime, judge_failed: bool = False) -> str:
+def render_dashboard(items, window, feeds, now: datetime, judge_failed: bool = False,
+                     assignment=None) -> str:
     """Return the complete dashboard.html document as a string.
 
     ``items`` are DigestItems (from the judge, or the stand-in wrapped). ``feeds``
     is every feed's FetchResult so the rail + notices cover all sources. When
     ``judge_failed`` is set, a notice explains the digest is the signal-ranked
-    stand-in."""
+    stand-in. ``assignment`` (an Assignment or None) draws the rail card."""
     start, end = window
     date_line = _fmt_sgt(now)
     dateline = _fmt_dateline(now)
@@ -341,7 +359,7 @@ def render_dashboard(items, window, feeds, now: datetime, judge_failed: bool = F
     <p class="dateline">{escape(dateline)} &middot; Morning Edition &middot; {n} {stories_word}</p>
   </header>
   <div class="frame">
-  {_render_rail(feeds, window_line, items)}
+  {_render_rail(feeds, window_line, items, assignment)}
   <section class="stories">{notices}{body}
   </section>
   </div>

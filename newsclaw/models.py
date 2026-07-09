@@ -102,6 +102,18 @@ class DigestItem:
 
 
 @dataclass
+class Assignment:
+    """The judge's one 'if you have an hour today' pick, shown as a rail card.
+
+    ``title``/``url`` come from the referenced candidate (grounded, never
+    model-invented); ``text`` is the judge's instruction to the reader."""
+
+    title: str
+    url: str
+    text: str
+
+
+@dataclass
 class Run:
     """One entry in the append-only runs.json health log — the trust artefact."""
 
