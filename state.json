@@ -8540,6 +8540,20 @@
       "url": "https://huggingface.co/blog/nvidia/cosmos3edge",
       "velocity": 0.0
     },
+    "blogs:https://huggingface.co/blog/nvidia/how-to-use-nvidia-warp-and-mjwarp": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 0,
+      "prior_value": 0,
+      "reported_at": null,
+      "signal_name": "editorial",
+      "signal_value": 0,
+      "source": "blogs",
+      "source_id": "https://huggingface.co/blog/nvidia/how-to-use-nvidia-warp-and-mjwarp",
+      "title": "How to Use NVIDIA Warp and MjWarp to Accelerate Robotics Simulation and Learning Workflows",
+      "url": "https://huggingface.co/blog/nvidia/how-to-use-nvidia-warp-and-mjwarp",
+      "velocity": 0.0
+    },
     "blogs:https://huggingface.co/blog/nvidia/magpie-tts-multilingual-voice-agents": {
       "first_seen": "2026-08-11T02:19:41.890036+00:00",
       "last_seen": "2026-08-11T02:19:41.890036+00:00",
@@ -9156,6 +9170,20 @@
       "url": "https://openai.com/index/ai-policy-window",
       "velocity": 0.0
     },
+    "blogs:https://openai.com/index/airbnb-gpt-6-astra": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 0,
+      "prior_value": 0,
+      "reported_at": null,
+      "signal_name": "editorial",
+      "signal_value": 0,
+      "source": "blogs",
+      "source_id": "https://openai.com/index/airbnb-gpt-6-astra",
+      "title": "Airbnb widens access to GPT-6 Astra and OpenAI frontier models",
+      "url": "https://openai.com/index/airbnb-gpt-6-astra",
+      "velocity": 0.0
+    },
     "blogs:https://openai.com/index/an-alien-mind": {
       "first_seen": "2026-09-07T04:21:20.391895+00:00",
       "last_seen": "2026-09-07T04:21:20.391895+00:00",
@@ -9364,6 +9392,20 @@
       "source_id": "https://openai.com/index/cars24",
       "title": "How Cars24 scales conversations and builds faster with OpenAI",
       "url": "https://openai.com/index/cars24",
+      "velocity": 0.0
+    },
+    "blogs:https://openai.com/index/chatgpt-ads-expands-southeast-asia-taiwan": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 0,
+      "prior_value": 0,
+      "reported_at": null,
+      "signal_name": "editorial",
+      "signal_value": 0,
+      "source": "blogs",
+      "source_id": "https://openai.com/index/chatgpt-ads-expands-southeast-asia-taiwan",
+      "title": "ChatGPT Ads expands to Southeast Asia and Taiwan",
+      "url": "https://openai.com/index/chatgpt-ads-expands-southeast-asia-taiwan",
       "velocity": 0.0
     },
     "blogs:https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources": {
@@ -9772,6 +9814,34 @@
       "url": "https://openai.com/index/gpt-6-astra-next-generation-work",
       "velocity": 0.0
     },
+    "blogs:https://openai.com/index/grab-openai-ai-skills-southeast-asia": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 0,
+      "prior_value": 0,
+      "reported_at": null,
+      "signal_name": "editorial",
+      "signal_value": 0,
+      "source": "blogs",
+      "source_id": "https://openai.com/index/grab-openai-ai-skills-southeast-asia",
+      "title": "Grab and OpenAI bring practical AI skills to Southeast Asia",
+      "url": "https://openai.com/index/grab-openai-ai-skills-southeast-asia",
+      "velocity": 0.0
+    },
+    "blogs:https://openai.com/index/harvey-from-context-to-confidence-with-astra": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 0,
+      "prior_value": 0,
+      "reported_at": null,
+      "signal_name": "editorial",
+      "signal_value": 0,
+      "source": "blogs",
+      "source_id": "https://openai.com/index/harvey-from-context-to-confidence-with-astra",
+      "title": "Harvey turns legal context into stronger drafts with GPT-6 Astra",
+      "url": "https://openai.com/index/harvey-from-context-to-confidence-with-astra",
+      "velocity": 0.0
+    },
     "blogs:https://openai.com/index/health-in-chatgpt": {
       "first_seen": "2026-07-24T03:33:47.885970+00:00",
       "last_seen": "2026-07-24T03:33:47.885970+00:00",
@@ -10066,6 +10136,20 @@
       "url": "https://openai.com/index/introducing-gpt-live-1-in-the-api",
       "velocity": 0.0
     },
+    "blogs:https://openai.com/index/introducing-mentalhealthbench": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 0,
+      "prior_value": 0,
+      "reported_at": null,
+      "signal_name": "editorial",
+      "signal_value": 0,
+      "source": "blogs",
+      "source_id": "https://openai.com/index/introducing-mentalhealthbench",
+      "title": "Introducing MentalHealthBench",
+      "url": "https://openai.com/index/introducing-mentalhealthbench",
+      "velocity": 0.0
+    },
     "blogs:https://openai.com/index/introducing-openai-presence": {
       "first_seen": "2026-07-23T03:36:52.011144+00:00",
       "last_seen": "2026-07-23T03:36:52.011144+00:00",
@@ -10092,6 +10176,20 @@
       "source_id": "https://openai.com/index/introducing-the-agents-api",
       "title": "Introducing the Agents API",
       "url": "https://openai.com/index/introducing-the-agents-api",
+      "velocity": 0.0
+    },
+    "blogs:https://openai.com/index/invideo-builds-with-gpt-6-astra": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 0,
+      "prior_value": 0,
+      "reported_at": null,
+      "signal_name": "editorial",
+      "signal_value": 0,
+      "source": "blogs",
+      "source_id": "https://openai.com/index/invideo-builds-with-gpt-6-astra",
+      "title": "How invideo improves color grading 3x with GPT\u20116 Astra",
+      "url": "https://openai.com/index/invideo-builds-with-gpt-6-astra",
       "velocity": 0.0
     },
     "blogs:https://openai.com/index/jalapeno-first-results": {
@@ -10316,6 +10414,20 @@
       "source_id": "https://openai.com/index/openai-and-apa-partner-to-advance-responsible-ai",
       "title": "Working with the American Psychological Association on youth mental health and AI",
       "url": "https://openai.com/index/openai-and-apa-partner-to-advance-responsible-ai",
+      "velocity": 0.0
+    },
+    "blogs:https://openai.com/index/openai-extends-cyber-access-to-ukraine-for-civilian-defense": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 0,
+      "prior_value": 0,
+      "reported_at": null,
+      "signal_name": "editorial",
+      "signal_value": 0,
+      "source": "blogs",
+      "source_id": "https://openai.com/index/openai-extends-cyber-access-to-ukraine-for-civilian-defense",
+      "title": "OpenAI extends cyber access to Ukraine for civilian defense",
+      "url": "https://openai.com/index/openai-extends-cyber-access-to-ukraine-for-civilian-defense",
       "velocity": 0.0
     },
     "blogs:https://openai.com/index/openai-joins-ports-pike-project": {
@@ -10612,6 +10724,20 @@
       "url": "https://openai.com/index/ringcentral",
       "velocity": 0.0
     },
+    "blogs:https://openai.com/index/ringg": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 0,
+      "prior_value": 0,
+      "reported_at": null,
+      "signal_name": "editorial",
+      "signal_value": 0,
+      "source": "blogs",
+      "source_id": "https://openai.com/index/ringg",
+      "title": "Ringg\u2019s AI agents resolve up to 65% of customer calls with OpenAI",
+      "url": "https://openai.com/index/ringg",
+      "velocity": 0.0
+    },
     "blogs:https://openai.com/index/safety-alignment-long-horizon-models": {
       "first_seen": "2026-07-21T03:33:42.164747+00:00",
       "last_seen": "2026-07-21T03:33:42.164747+00:00",
@@ -10638,6 +10764,20 @@
       "source_id": "https://openai.com/index/safety-overview-gpt-6-astra",
       "title": "Safety overview: GPT-6 Astra",
       "url": "https://openai.com/index/safety-overview-gpt-6-astra",
+      "velocity": 0.0
+    },
+    "blogs:https://openai.com/index/sam-altman-un-security-council-remarks": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 0,
+      "prior_value": 0,
+      "reported_at": null,
+      "signal_name": "editorial",
+      "signal_value": 0,
+      "source": "blogs",
+      "source_id": "https://openai.com/index/sam-altman-un-security-council-remarks",
+      "title": "Sam Altman\u2019s remarks at the United Nations Security Council",
+      "url": "https://openai.com/index/sam-altman-un-security-council-remarks",
       "velocity": 0.0
     },
     "blogs:https://openai.com/index/scaling-storage-one-billion-users-part-one": {
@@ -10848,6 +10988,20 @@
       "source_id": "https://openai.com/index/third-party-cyber-evaluations-involving-openai-models",
       "title": "Third-party cyber evaluations involving OpenAI models",
       "url": "https://openai.com/index/third-party-cyber-evaluations-involving-openai-models",
+      "velocity": 0.0
+    },
+    "blogs:https://openai.com/index/two-years-of-openai-academy": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 0,
+      "prior_value": 0,
+      "reported_at": "2026-09-24T04:32:21.357148+00:00",
+      "signal_name": "editorial",
+      "signal_value": 0,
+      "source": "blogs",
+      "source_id": "https://openai.com/index/two-years-of-openai-academy",
+      "title": "Two years of OpenAI Academy",
+      "url": "https://openai.com/index/two-years-of-openai-academy",
       "velocity": 0.0
     },
     "blogs:https://openai.com/index/unive": {
@@ -13258,6 +13412,48 @@
       "url": "https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/",
       "velocity": 0.0
     },
+    "blogs:https://simonwillison.net/2026/Sep/23/bof-agentic-engineering/": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 0,
+      "prior_value": 0,
+      "reported_at": null,
+      "signal_name": "editorial",
+      "signal_value": 0,
+      "source": "blogs",
+      "source_id": "https://simonwillison.net/2026/Sep/23/bof-agentic-engineering/",
+      "title": "SF October 14th: A Birds of a Feather Session on Agentic Engineering",
+      "url": "https://simonwillison.net/2026/Sep/23/bof-agentic-engineering/",
+      "velocity": 0.0
+    },
+    "blogs:https://simonwillison.net/2026/Sep/23/gemini-tts-playground/": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 0,
+      "prior_value": 0,
+      "reported_at": null,
+      "signal_name": "editorial",
+      "signal_value": 0,
+      "source": "blogs",
+      "source_id": "https://simonwillison.net/2026/Sep/23/gemini-tts-playground/",
+      "title": "Gemini 3.8 TTS Playground",
+      "url": "https://simonwillison.net/2026/Sep/23/gemini-tts-playground/",
+      "velocity": 0.0
+    },
+    "blogs:https://simonwillison.net/2026/Sep/23/shadow-roots/": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 0,
+      "prior_value": 0,
+      "reported_at": null,
+      "signal_name": "editorial",
+      "signal_value": 0,
+      "source": "blogs",
+      "source_id": "https://simonwillison.net/2026/Sep/23/shadow-roots/",
+      "title": "Shadow roots, explained with live examples",
+      "url": "https://simonwillison.net/2026/Sep/23/shadow-roots/",
+      "velocity": 0.0
+    },
     "blogs:https://simonwillison.net/2026/Sep/3/gpt6-astra/": {
       "first_seen": "2026-09-04T04:18:04.014033+00:00",
       "last_seen": "2026-09-04T04:18:04.014033+00:00",
@@ -13536,6 +13732,20 @@
       "source_id": "https://www.latent.space/p/ainews-claude-opus-5-fable-level",
       "title": "[AINews] Claude Opus 5: Fable-level performance at Opus price (half Fable)",
       "url": "https://www.latent.space/p/ainews-claude-opus-5-fable-level",
+      "velocity": 0.0
+    },
+    "blogs:https://www.latent.space/p/ainews-claude-opus-55-the-new-default": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 0,
+      "prior_value": 0,
+      "reported_at": null,
+      "signal_name": "editorial",
+      "signal_value": 0,
+      "source": "blogs",
+      "source_id": "https://www.latent.space/p/ainews-claude-opus-55-the-new-default",
+      "title": "[AINews] Claude Opus 5.5, the new default model for AINews \u2014 and everybody cuts prices 40-50%",
+      "url": "https://www.latent.space/p/ainews-claude-opus-55-the-new-default",
       "velocity": 0.0
     },
     "blogs:https://www.latent.space/p/ainews-codex-usage-up-10x-in-6-months": {
@@ -13858,6 +14068,20 @@
       "source_id": "https://www.latent.space/p/attention-interface",
       "title": "The Evolution of the Agent Harness",
       "url": "https://www.latent.space/p/attention-interface",
+      "velocity": 0.0
+    },
+    "blogs:https://www.latent.space/p/bio-security-is-an-ai-arms-race-eric": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 0,
+      "prior_value": 0,
+      "reported_at": null,
+      "signal_name": "editorial",
+      "signal_value": 0,
+      "source": "blogs",
+      "source_id": "https://www.latent.space/p/bio-security-is-an-ai-arms-race-eric",
+      "title": "\ud83d\udd2cBio-security is an AI Arms Race - Eric Nguyen (CEO, Radical Numerics)",
+      "url": "https://www.latent.space/p/bio-security-is-an-ai-arms-race-eric",
       "velocity": 0.0
     },
     "blogs:https://www.latent.space/p/chatgpt-work": {
@@ -14702,17 +14926,17 @@
     },
     "github:2akouwu/reverify": {
       "first_seen": "2026-09-07T04:21:20.391895+00:00",
-      "last_seen": "2026-09-23T04:34:29.608150+00:00",
-      "peak_signal": 1240,
-      "prior_value": 1238,
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 1245,
+      "prior_value": 1240,
       "reported_at": "2026-09-08T04:21:52.308887+00:00",
       "signal_name": "stars",
-      "signal_value": 1240,
+      "signal_value": 1245,
       "source": "github",
       "source_id": "2akouwu/reverify",
       "title": "2akouwu/reverify",
       "url": "https://github.com/2akouwu/reverify",
-      "velocity": 2.0
+      "velocity": 5.0
     },
     "github:AMAP-ML/LongHorizon-Harness": {
       "first_seen": "2026-08-24T01:50:21.585366+00:00",
@@ -14898,17 +15122,17 @@
     },
     "github:CopilotKit/openmuse": {
       "first_seen": "2026-09-23T04:34:29.608150+00:00",
-      "last_seen": "2026-09-23T04:34:29.608150+00:00",
-      "peak_signal": 1075,
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 1863,
       "prior_value": 1075,
       "reported_at": "2026-09-23T04:34:29.608150+00:00",
       "signal_name": "stars",
-      "signal_value": 1075,
+      "signal_value": 1863,
       "source": "github",
       "source_id": "CopilotKit/openmuse",
       "title": "CopilotKit/openmuse",
       "url": "https://github.com/CopilotKit/openmuse",
-      "velocity": 142.95
+      "velocity": 788.0
     },
     "github:DietrichGebert/ponytail": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
@@ -15010,17 +15234,17 @@
     },
     "github:Human-Agent-Society/reef": {
       "first_seen": "2026-09-11T04:24:04.034197+00:00",
-      "last_seen": "2026-09-23T04:34:29.608150+00:00",
-      "peak_signal": 4134,
-      "prior_value": 3950,
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 4393,
+      "prior_value": 4134,
       "reported_at": "2026-09-13T04:35:48.732232+00:00",
       "signal_name": "stars",
-      "signal_value": 4134,
+      "signal_value": 4393,
       "source": "github",
       "source_id": "Human-Agent-Society/reef",
       "title": "Human-Agent-Society/reef",
       "url": "https://github.com/Human-Agent-Society/reef",
-      "velocity": 184.0
+      "velocity": 259.0
     },
     "github:Jakubantalik/thinking-orbs": {
       "first_seen": "2026-07-25T03:31:05.952108+00:00",
@@ -15038,17 +15262,17 @@
     },
     "github:KevinLiss/ApeAdmin": {
       "first_seen": "2026-09-19T04:25:48.508660+00:00",
-      "last_seen": "2026-09-23T04:34:29.608150+00:00",
-      "peak_signal": 1005,
-      "prior_value": 1004,
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 1007,
+      "prior_value": 1005,
       "reported_at": "2026-09-19T04:25:48.508660+00:00",
       "signal_name": "stars",
-      "signal_value": 1005,
+      "signal_value": 1007,
       "source": "github",
       "source_id": "KevinLiss/ApeAdmin",
       "title": "KevinLiss/ApeAdmin",
       "url": "https://github.com/KevinLiss/ApeAdmin",
-      "velocity": 1.0
+      "velocity": 2.0
     },
     "github:Kritt-ai/open-kritt": {
       "first_seen": "2026-08-03T03:44:42.176087+00:00",
@@ -15150,31 +15374,31 @@
     },
     "github:NVlabs/SoL-Pi": {
       "first_seen": "2026-09-12T04:22:09.409419+00:00",
-      "last_seen": "2026-09-23T04:34:29.608150+00:00",
-      "peak_signal": 2914,
-      "prior_value": 2828,
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 3002,
+      "prior_value": 2914,
       "reported_at": "2026-09-12T04:22:09.409419+00:00",
       "signal_name": "stars",
-      "signal_value": 2914,
+      "signal_value": 3002,
       "source": "github",
       "source_id": "NVlabs/SoL-Pi",
       "title": "NVlabs/SoL-Pi",
       "url": "https://github.com/NVlabs/SoL-Pi",
-      "velocity": 86.0
+      "velocity": 88.0
     },
     "github:Nanako0129/sepia": {
       "first_seen": "2026-08-31T05:19:21.270028+00:00",
-      "last_seen": "2026-09-23T04:34:29.608150+00:00",
-      "peak_signal": 2784,
-      "prior_value": 2766,
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 2812,
+      "prior_value": 2784,
       "reported_at": "2026-08-31T05:19:21.270028+00:00",
       "signal_name": "stars",
-      "signal_value": 2784,
+      "signal_value": 2812,
       "source": "github",
       "source_id": "Nanako0129/sepia",
       "title": "Nanako0129/sepia",
       "url": "https://github.com/Nanako0129/sepia",
-      "velocity": 18.0
+      "velocity": 28.0
     },
     "github:NanmiCoder/dsh-agent-teams": {
       "first_seen": "2026-08-27T09:23:56.730381+00:00",
@@ -15220,17 +15444,17 @@
     },
     "github:Player-YN/BrowserKitten": {
       "first_seen": "2026-09-21T04:42:30.135508+00:00",
-      "last_seen": "2026-09-23T04:34:29.608150+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
       "peak_signal": 2907,
-      "prior_value": 2907,
+      "prior_value": 2906,
       "reported_at": "2026-09-21T04:42:30.135508+00:00",
       "signal_name": "stars",
-      "signal_value": 2906,
+      "signal_value": 2858,
       "source": "github",
       "source_id": "Player-YN/BrowserKitten",
       "title": "Player-YN/BrowserKitten",
       "url": "https://github.com/Player-YN/BrowserKitten",
-      "velocity": -1.0
+      "velocity": -48.0
     },
     "github:Player-YN/PawWork_ZhuaZhua": {
       "first_seen": "2026-09-05T04:13:36.940109+00:00",
@@ -15346,17 +15570,17 @@
     },
     "github:Ryze-AI-Adgent/open-seo-mcp-skills": {
       "first_seen": "2026-09-17T04:42:27.043340+00:00",
-      "last_seen": "2026-09-23T04:34:29.608150+00:00",
-      "peak_signal": 1150,
-      "prior_value": 1121,
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 1229,
+      "prior_value": 1150,
       "reported_at": "2026-09-17T04:42:27.043340+00:00",
       "signal_name": "stars",
-      "signal_value": 1150,
+      "signal_value": 1229,
       "source": "github",
       "source_id": "Ryze-AI-Adgent/open-seo-mcp-skills",
       "title": "Ryze-AI-Adgent/open-seo-mcp-skills",
       "url": "https://github.com/Ryze-AI-Adgent/open-seo-mcp-skills",
-      "velocity": 29.0
+      "velocity": 79.0
     },
     "github:Sahir619/fable-method": {
       "first_seen": "2026-07-16T03:27:47.718940+00:00",
@@ -15470,6 +15694,20 @@
       "url": "https://github.com/Tencent-Hunyuan/Hunyuan3D-WorldClaw",
       "velocity": 5.0
     },
+    "github:To3akaRin/mac-computer-use": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 965,
+      "prior_value": 965,
+      "reported_at": "2026-09-24T04:32:21.357148+00:00",
+      "signal_name": "stars",
+      "signal_value": 965,
+      "source": "github",
+      "source_id": "To3akaRin/mac-computer-use",
+      "title": "To3akaRin/mac-computer-use",
+      "url": "https://github.com/To3akaRin/mac-computer-use",
+      "velocity": 61.05
+    },
     "github:VictorTaelin/OptMem": {
       "first_seen": "2026-07-30T03:15:38.096363+00:00",
       "last_seen": "2026-08-24T01:50:21.585366+00:00",
@@ -15556,17 +15794,17 @@
     },
     "github:ZJU-REAL/Easel": {
       "first_seen": "2026-09-13T04:35:48.732232+00:00",
-      "last_seen": "2026-09-23T04:34:29.608150+00:00",
-      "peak_signal": 1303,
-      "prior_value": 1286,
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 1313,
+      "prior_value": 1303,
       "reported_at": "2026-09-13T04:35:48.732232+00:00",
       "signal_name": "stars",
-      "signal_value": 1303,
+      "signal_value": 1313,
       "source": "github",
       "source_id": "ZJU-REAL/Easel",
       "title": "ZJU-REAL/Easel",
       "url": "https://github.com/ZJU-REAL/Easel",
-      "velocity": 17.0
+      "velocity": 10.0
     },
     "github:Zyrexnn/Cybermes": {
       "first_seen": "2026-09-18T04:28:26.304386+00:00",
@@ -15598,23 +15836,23 @@
     },
     "github:achimala/dream-loop": {
       "first_seen": "2026-09-13T04:35:48.732232+00:00",
-      "last_seen": "2026-09-23T04:34:29.608150+00:00",
-      "peak_signal": 1515,
-      "prior_value": 1496,
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 1532,
+      "prior_value": 1515,
       "reported_at": "2026-09-16T04:37:45.343168+00:00",
       "signal_name": "stars",
-      "signal_value": 1515,
+      "signal_value": 1532,
       "source": "github",
       "source_id": "achimala/dream-loop",
       "title": "achimala/dream-loop",
       "url": "https://github.com/achimala/dream-loop",
-      "velocity": 19.0
+      "velocity": 17.0
     },
     "github:agentverse-os/AgentVerse-OS": {
       "first_seen": "2026-09-20T04:43:37.398992+00:00",
-      "last_seen": "2026-09-23T04:34:29.608150+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
       "peak_signal": 977,
-      "prior_value": 971,
+      "prior_value": 977,
       "reported_at": "2026-09-20T04:43:37.398992+00:00",
       "signal_name": "stars",
       "signal_value": 977,
@@ -15622,7 +15860,7 @@
       "source_id": "agentverse-os/AgentVerse-OS",
       "title": "agentverse-os/AgentVerse-OS",
       "url": "https://github.com/agentverse-os/AgentVerse-OS",
-      "velocity": 6.0
+      "velocity": 0.0
     },
     "github:ai4s-research/open-science": {
       "first_seen": "2026-07-18T03:18:58.124038+00:00",
@@ -15654,17 +15892,17 @@
     },
     "github:anthropics/commerce-agents": {
       "first_seen": "2026-09-04T04:18:04.014033+00:00",
-      "last_seen": "2026-09-23T04:34:29.608150+00:00",
-      "peak_signal": 3028,
-      "prior_value": 3020,
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 3033,
+      "prior_value": 3028,
       "reported_at": "2026-09-04T04:18:04.014033+00:00",
       "signal_name": "stars",
-      "signal_value": 3028,
+      "signal_value": 3033,
       "source": "github",
       "source_id": "anthropics/commerce-agents",
       "title": "anthropics/commerce-agents",
       "url": "https://github.com/anthropics/commerce-agents",
-      "velocity": 8.0
+      "velocity": 5.0
     },
     "github:anthropics/launch-your-agent": {
       "first_seen": "2026-07-13T03:47:07.144308+00:00",
@@ -15696,45 +15934,45 @@
     },
     "github:brayonpi/hexstellar": {
       "first_seen": "2026-09-10T04:24:58.693764+00:00",
-      "last_seen": "2026-09-23T04:34:29.608150+00:00",
-      "peak_signal": 1263,
-      "prior_value": 1242,
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 1267,
+      "prior_value": 1260,
       "reported_at": "2026-09-10T04:24:58.693764+00:00",
       "signal_name": "stars",
-      "signal_value": 1260,
+      "signal_value": 1267,
       "source": "github",
       "source_id": "brayonpi/hexstellar",
       "title": "brayonpi/hexstellar",
       "url": "https://github.com/brayonpi/hexstellar",
-      "velocity": 18.0
+      "velocity": 7.0
     },
     "github:browser-use/jev-ultrafast": {
       "first_seen": "2026-09-22T04:38:57.045887+00:00",
-      "last_seen": "2026-09-23T04:34:29.608150+00:00",
-      "peak_signal": 18309,
-      "prior_value": 16335,
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 19233,
+      "prior_value": 18309,
       "reported_at": "2026-09-22T04:38:57.045887+00:00",
       "signal_name": "stars",
-      "signal_value": 18309,
+      "signal_value": 19233,
       "source": "github",
       "source_id": "browser-use/jev-ultrafast",
       "title": "browser-use/jev-ultrafast",
       "url": "https://github.com/browser-use/jev-ultrafast",
-      "velocity": 1974.0
+      "velocity": 924.0
     },
     "github:cbrock84/headcount": {
       "first_seen": "2026-09-02T04:15:02.187530+00:00",
-      "last_seen": "2026-09-23T04:34:29.608150+00:00",
-      "peak_signal": 1651,
-      "prior_value": 1643,
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 1655,
+      "prior_value": 1651,
       "reported_at": "2026-09-02T04:15:02.187530+00:00",
       "signal_name": "stars",
-      "signal_value": 1651,
+      "signal_value": 1655,
       "source": "github",
       "source_id": "cbrock84/headcount",
       "title": "cbrock84/headcount",
       "url": "https://github.com/cbrock84/headcount",
-      "velocity": 8.0
+      "velocity": 4.0
     },
     "github:chuspeeism/dashiAI-ppt-skill": {
       "first_seen": "2026-07-09T01:25:07.414172+00:00",
@@ -15878,17 +16116,17 @@
     },
     "github:datawhalechina/zero-to-sglang": {
       "first_seen": "2026-09-17T04:42:27.043340+00:00",
-      "last_seen": "2026-09-23T04:34:29.608150+00:00",
-      "peak_signal": 1238,
-      "prior_value": 1222,
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 1260,
+      "prior_value": 1238,
       "reported_at": "2026-09-18T04:28:26.304386+00:00",
       "signal_name": "stars",
-      "signal_value": 1238,
+      "signal_value": 1260,
       "source": "github",
       "source_id": "datawhalechina/zero-to-sglang",
       "title": "datawhalechina/zero-to-sglang",
       "url": "https://github.com/datawhalechina/zero-to-sglang",
-      "velocity": 16.0
+      "velocity": 22.0
     },
     "github:davidondrej/skills": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
@@ -16242,31 +16480,31 @@
     },
     "github:jtydhr88/screenwriting-skills": {
       "first_seen": "2026-09-14T04:42:11.990233+00:00",
-      "last_seen": "2026-09-23T04:34:29.608150+00:00",
-      "peak_signal": 1349,
-      "prior_value": 1334,
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 1371,
+      "prior_value": 1349,
       "reported_at": "2026-09-14T04:42:11.990233+00:00",
       "signal_name": "stars",
-      "signal_value": 1349,
+      "signal_value": 1371,
       "source": "github",
       "source_id": "jtydhr88/screenwriting-skills",
       "title": "jtydhr88/screenwriting-skills",
       "url": "https://github.com/jtydhr88/screenwriting-skills",
-      "velocity": 15.0
+      "velocity": 22.0
     },
     "github:jub0t/Concat": {
       "first_seen": "2026-09-18T04:28:26.304386+00:00",
-      "last_seen": "2026-09-23T04:34:29.608150+00:00",
-      "peak_signal": 3304,
-      "prior_value": 3188,
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 3439,
+      "prior_value": 3304,
       "reported_at": "2026-09-18T04:28:26.304386+00:00",
       "signal_name": "stars",
-      "signal_value": 3304,
+      "signal_value": 3439,
       "source": "github",
       "source_id": "jub0t/Concat",
       "title": "jub0t/Concat",
       "url": "https://github.com/jub0t/Concat",
-      "velocity": 116.0
+      "velocity": 135.0
     },
     "github:kacperkapusciak/goldie": {
       "first_seen": "2026-09-01T04:53:34.492500+00:00",
@@ -16281,6 +16519,20 @@
       "title": "kacperkapusciak/goldie",
       "url": "https://github.com/kacperkapusciak/goldie",
       "velocity": 14.0
+    },
+    "github:kharmanskyi/open-steps": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 895,
+      "prior_value": 895,
+      "reported_at": null,
+      "signal_name": "stars",
+      "signal_value": 895,
+      "source": "github",
+      "source_id": "kharmanskyi/open-steps",
+      "title": "kharmanskyi/open-steps",
+      "url": "https://github.com/kharmanskyi/open-steps",
+      "velocity": 30.25
     },
     "github:kunchenguid/firstmate": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
@@ -16438,17 +16690,17 @@
     },
     "github:mcncarl/jianying-headless": {
       "first_seen": "2026-09-19T04:25:48.508660+00:00",
-      "last_seen": "2026-09-23T04:34:29.608150+00:00",
-      "peak_signal": 2456,
-      "prior_value": 2403,
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 2485,
+      "prior_value": 2456,
       "reported_at": "2026-09-19T04:25:48.508660+00:00",
       "signal_name": "stars",
-      "signal_value": 2456,
+      "signal_value": 2485,
       "source": "github",
       "source_id": "mcncarl/jianying-headless",
       "title": "mcncarl/jianying-headless",
       "url": "https://github.com/mcncarl/jianying-headless",
-      "velocity": 53.0
+      "velocity": 29.0
     },
     "github:mereyabdenbekuly-ctrl/clodex-ide": {
       "first_seen": "2026-07-15T03:20:23.850995+00:00",
@@ -16718,17 +16970,17 @@
     },
     "github:shadcn-ui/lint": {
       "first_seen": "2026-09-15T04:42:36.539262+00:00",
-      "last_seen": "2026-09-23T04:34:29.608150+00:00",
-      "peak_signal": 2595,
-      "prior_value": 2410,
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 2710,
+      "prior_value": 2595,
       "reported_at": "2026-09-15T04:42:36.539262+00:00",
       "signal_name": "stars",
-      "signal_value": 2595,
+      "signal_value": 2710,
       "source": "github",
       "source_id": "shadcn-ui/lint",
       "title": "shadcn-ui/lint",
       "url": "https://github.com/shadcn-ui/lint",
-      "velocity": 185.0
+      "velocity": 115.0
     },
     "github:shepherd-agents/shepherd": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
@@ -16774,17 +17026,17 @@
     },
     "github:tigerless-labs/agent-memory": {
       "first_seen": "2026-09-12T04:22:09.409419+00:00",
-      "last_seen": "2026-09-23T04:34:29.608150+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
       "peak_signal": 1445,
-      "prior_value": 963,
+      "prior_value": 964,
       "reported_at": "2026-09-12T04:22:09.409419+00:00",
       "signal_name": "stars",
-      "signal_value": 964,
+      "signal_value": 966,
       "source": "github",
       "source_id": "tigerless-labs/agent-memory",
       "title": "tigerless-labs/agent-memory",
       "url": "https://github.com/tigerless-labs/agent-memory",
-      "velocity": 1.0
+      "velocity": 2.0
     },
     "github:tigicion/dao-code": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
@@ -16886,17 +17138,17 @@
     },
     "github:unreallabsai/unreal-agent": {
       "first_seen": "2026-09-23T04:34:29.608150+00:00",
-      "last_seen": "2026-09-23T04:34:29.608150+00:00",
-      "peak_signal": 1126,
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 1766,
       "prior_value": 1126,
       "reported_at": "2026-09-23T04:34:29.608150+00:00",
       "signal_name": "stars",
-      "signal_value": 1126,
+      "signal_value": 1766,
       "source": "github",
       "source_id": "unreallabsai/unreal-agent",
       "title": "unreallabsai/unreal-agent",
       "url": "https://github.com/unreallabsai/unreal-agent",
-      "velocity": 921.03
+      "velocity": 640.0
     },
     "github:uzairansaruzi/hermex": {
       "first_seen": "2026-07-14T03:20:32.673484+00:00",
@@ -17040,17 +17292,17 @@
     },
     "github:youngyangyang04/llm-master": {
       "first_seen": "2026-09-22T04:38:57.045887+00:00",
-      "last_seen": "2026-09-22T04:38:57.045887+00:00",
-      "peak_signal": 881,
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 937,
       "prior_value": 881,
-      "reported_at": null,
+      "reported_at": "2026-09-24T04:32:21.357148+00:00",
       "signal_name": "stars",
-      "signal_value": 881,
+      "signal_value": 937,
       "source": "github",
       "source_id": "youngyangyang04/llm-master",
       "title": "youngyangyang04/llm-master",
       "url": "https://github.com/youngyangyang04/llm-master",
-      "velocity": 89.18
+      "velocity": 56.0
     },
     "github:ysr666/dsh-vision-router": {
       "first_seen": "2026-08-29T06:56:00.701255+00:00",
@@ -17082,17 +17334,17 @@
     },
     "github:zai-org/ZCode": {
       "first_seen": "2026-09-21T04:42:30.135508+00:00",
-      "last_seen": "2026-09-23T04:34:29.608150+00:00",
-      "peak_signal": 6372,
-      "prior_value": 5865,
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 6585,
+      "prior_value": 6372,
       "reported_at": "2026-09-21T04:42:30.135508+00:00",
       "signal_name": "stars",
-      "signal_value": 6372,
+      "signal_value": 6585,
       "source": "github",
       "source_id": "zai-org/ZCode",
       "title": "zai-org/ZCode",
       "url": "https://github.com/zai-org/ZCode",
-      "velocity": 507.0
+      "velocity": 213.0
     },
     "hackernews:48815117": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
@@ -22036,6 +22288,160 @@
       "url": "https://www.assbench.com/",
       "velocity": 142.0
     },
+    "hackernews:49814947": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 460,
+      "prior_value": 460,
+      "reported_at": "2026-09-24T04:32:21.357148+00:00",
+      "signal_name": "points",
+      "signal_value": 460,
+      "source": "hackernews",
+      "source_id": "49814947",
+      "title": "Claude Code reads AGENTS.md only when telemetry is on [fixed]",
+      "url": "https://blog.szypowi.cz/p/claude-code-reads-agents.md-only-when-telemetry-is-on/",
+      "velocity": 460.0
+    },
+    "hackernews:49815127": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 210,
+      "prior_value": 210,
+      "reported_at": null,
+      "signal_name": "points",
+      "signal_value": 210,
+      "source": "hackernews",
+      "source_id": "49815127",
+      "title": "OpenAI is enlisting an influencer army to make it look 'good for the world'",
+      "url": "https://www.businessinsider.com/inside-open-ai-influencer-marketing-strategy-chatgpt-ads-sponsorships-instagram-2026-9",
+      "velocity": 210.0
+    },
+    "hackernews:49817404": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 279,
+      "prior_value": 279,
+      "reported_at": null,
+      "signal_name": "points",
+      "signal_value": 279,
+      "source": "hackernews",
+      "source_id": "49817404",
+      "title": "GPT-6 Astra has gained the ability to drive a car",
+      "url": "https://drivingbench.com/",
+      "velocity": 279.0
+    },
+    "hackernews:49817615": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 275,
+      "prior_value": 275,
+      "reported_at": null,
+      "signal_name": "points",
+      "signal_value": 275,
+      "source": "hackernews",
+      "source_id": "49817615",
+      "title": "Gemini 3.8 text-to-speech",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-text-to-speech/",
+      "velocity": 275.0
+    },
+    "hackernews:49820134": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 562,
+      "prior_value": 562,
+      "reported_at": "2026-09-24T04:32:21.357148+00:00",
+      "signal_name": "points",
+      "signal_value": 562,
+      "source": "hackernews",
+      "source_id": "49820134",
+      "title": "Claude discovers a novel enzyme system with CRISPR-like repeats",
+      "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
+      "velocity": 562.0
+    },
+    "hackernews:49821196": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 187,
+      "prior_value": 187,
+      "reported_at": null,
+      "signal_name": "points",
+      "signal_value": 187,
+      "source": "hackernews",
+      "source_id": "49821196",
+      "title": "Once Claude can measure something, it can make it faster",
+      "url": "https://claude.dev/blog/how-we-made-claude-ai-faster/",
+      "velocity": 187.0
+    },
+    "hackernews:49822555": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 157,
+      "prior_value": 157,
+      "reported_at": null,
+      "signal_name": "points",
+      "signal_value": 157,
+      "source": "hackernews",
+      "source_id": "49822555",
+      "title": "VSCode's SSH Agent Is Bananas (2025)",
+      "url": "https://fly.io/blog/vscode-ssh-wtf/",
+      "velocity": 157.0
+    },
+    "hackernews:49822556": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 157,
+      "prior_value": 157,
+      "reported_at": null,
+      "signal_name": "points",
+      "signal_value": 157,
+      "source": "hackernews",
+      "source_id": "49822556",
+      "title": "OpenAI breaches Medicare, Albanese reveals",
+      "url": "https://www.smh.com.au/politics/federal/openai-breaches-medicare-albanese-reveals-20260924-p6100u.html",
+      "velocity": 157.0
+    },
+    "hackernews:49822864": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 105,
+      "prior_value": 105,
+      "reported_at": null,
+      "signal_name": "points",
+      "signal_value": 105,
+      "source": "hackernews",
+      "source_id": "49822864",
+      "title": "Claude's Load-Bearing Seams",
+      "url": "https://madradavid.com/claudes-load-bearing-seams/",
+      "velocity": 105.0
+    },
+    "hackernews:49823582": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 243,
+      "prior_value": 243,
+      "reported_at": null,
+      "signal_name": "points",
+      "signal_value": 243,
+      "source": "hackernews",
+      "source_id": "49823582",
+      "title": "Linux support is coming to Snapdragon X2 Series",
+      "url": "https://www.qualcomm.com/news/onq/2026/09/snapdragon-summit-agentic-ai-pcs-linux",
+      "velocity": 243.0
+    },
+    "hackernews:49824686": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 146,
+      "prior_value": 146,
+      "reported_at": null,
+      "signal_name": "points",
+      "signal_value": 146,
+      "source": "hackernews",
+      "source_id": "49824686",
+      "title": "Feds Target AI Critics as \"Foreign Agents\"",
+      "url": "https://www.kenklippenstein.com/p/feds-think-ai-critics-are-foreign",
+      "velocity": 146.0
+    },
     "huggingface:model:0bserverx/Qwen3.8-27B-Heretic-Abliterated-Uncensored-GGUF": {
       "first_seen": "2026-08-22T01:42:53.307534+00:00",
       "last_seen": "2026-08-22T01:42:53.307534+00:00",
@@ -22080,17 +22486,17 @@
     },
     "huggingface:model:AlexWortega/openjev": {
       "first_seen": "2026-09-20T04:43:37.398992+00:00",
-      "last_seen": "2026-09-23T04:34:29.608150+00:00",
-      "peak_signal": 487,
-      "prior_value": 427,
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 529,
+      "prior_value": 487,
       "reported_at": "2026-09-21T04:42:30.135508+00:00",
       "signal_name": "likes",
-      "signal_value": 487,
+      "signal_value": 529,
       "source": "huggingface",
       "source_id": "model:AlexWortega/openjev",
       "title": "AlexWortega/openjev",
       "url": "https://huggingface.co/AlexWortega/openjev",
-      "velocity": 60.0
+      "velocity": 42.0
     },
     "huggingface:model:AliesTaha/fable-traces": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
@@ -22122,17 +22528,17 @@
     },
     "huggingface:model:Altworld/Hemmingway-1": {
       "first_seen": "2026-09-22T04:38:57.045887+00:00",
-      "last_seen": "2026-09-23T04:34:29.608150+00:00",
-      "peak_signal": 505,
-      "prior_value": 400,
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 586,
+      "prior_value": 505,
       "reported_at": "2026-09-23T04:34:29.608150+00:00",
       "signal_name": "likes",
-      "signal_value": 505,
+      "signal_value": 586,
       "source": "huggingface",
       "source_id": "model:Altworld/Hemmingway-1",
       "title": "Altworld/Hemmingway-1",
       "url": "https://huggingface.co/Altworld/Hemmingway-1",
-      "velocity": 105.0
+      "velocity": 81.0
     },
     "huggingface:model:AngelSlim/Hy3-GGUF": {
       "first_seen": "2026-07-16T03:27:47.718940+00:00",
@@ -22220,17 +22626,17 @@
     },
     "huggingface:model:Comfy-Org/Qwen-Image-2.1": {
       "first_seen": "2026-09-21T04:42:30.135508+00:00",
-      "last_seen": "2026-09-23T04:34:29.608150+00:00",
-      "peak_signal": 574,
-      "prior_value": 460,
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 638,
+      "prior_value": 574,
       "reported_at": "2026-09-22T04:38:57.045887+00:00",
       "signal_name": "likes",
-      "signal_value": 574,
+      "signal_value": 638,
       "source": "huggingface",
       "source_id": "model:Comfy-Org/Qwen-Image-2.1",
       "title": "Comfy-Org/Qwen-Image-2.1",
       "url": "https://huggingface.co/Comfy-Org/Qwen-Image-2.1",
-      "velocity": 114.0
+      "velocity": 64.0
     },
     "huggingface:model:DavidAU/Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-NEO-MAX-MTP-GGUF": {
       "first_seen": "2026-07-20T03:53:51.276862+00:00",
@@ -22416,17 +22822,17 @@
     },
     "huggingface:model:ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF": {
       "first_seen": "2026-09-03T04:09:59.611367+00:00",
-      "last_seen": "2026-09-23T04:34:29.608150+00:00",
-      "peak_signal": 1581,
-      "prior_value": 1542,
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 1622,
+      "prior_value": 1581,
       "reported_at": "2026-09-03T04:09:59.611367+00:00",
       "signal_name": "likes",
-      "signal_value": 1581,
+      "signal_value": 1622,
       "source": "huggingface",
       "source_id": "model:ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF",
       "title": "ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF",
       "url": "https://huggingface.co/ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF",
-      "velocity": 39.0
+      "velocity": 41.0
     },
     "huggingface:model:InternScience/Agents-A1": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
@@ -22514,17 +22920,17 @@
     },
     "huggingface:model:Lightricks/LTX-2.5": {
       "first_seen": "2026-08-12T02:34:31.296058+00:00",
-      "last_seen": "2026-09-23T04:34:29.608150+00:00",
-      "peak_signal": 4813,
-      "prior_value": 4682,
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 4916,
+      "prior_value": 4813,
       "reported_at": "2026-08-13T02:36:08.576826+00:00",
       "signal_name": "likes",
-      "signal_value": 4813,
+      "signal_value": 4916,
       "source": "huggingface",
       "source_id": "model:Lightricks/LTX-2.5",
       "title": "Lightricks/LTX-2.5",
       "url": "https://huggingface.co/Lightricks/LTX-2.5",
-      "velocity": 131.0
+      "velocity": 103.0
     },
     "huggingface:model:LiquidAI/LFM2.5-2.6B": {
       "first_seen": "2026-08-05T03:23:40.890400+00:00",
@@ -22682,17 +23088,17 @@
     },
     "huggingface:model:Qwen/Qwen-Image-2.1": {
       "first_seen": "2026-09-21T04:42:30.135508+00:00",
-      "last_seen": "2026-09-23T04:34:29.608150+00:00",
-      "peak_signal": 1825,
-      "prior_value": 1505,
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 2064,
+      "prior_value": 1825,
       "reported_at": "2026-09-21T04:42:30.135508+00:00",
       "signal_name": "likes",
-      "signal_value": 1825,
+      "signal_value": 2064,
       "source": "huggingface",
       "source_id": "model:Qwen/Qwen-Image-2.1",
       "title": "Qwen/Qwen-Image-2.1",
       "url": "https://huggingface.co/Qwen/Qwen-Image-2.1",
-      "velocity": 320.0
+      "velocity": 239.0
     },
     "huggingface:model:Qwen/Qwen3.8-2.4T-A95B": {
       "first_seen": "2026-08-13T02:36:08.576826+00:00",
@@ -22724,17 +23130,17 @@
     },
     "huggingface:model:Qwen/Qwen3.8-27B": {
       "first_seen": "2026-08-15T01:43:17.741776+00:00",
-      "last_seen": "2026-09-23T04:34:29.608150+00:00",
-      "peak_signal": 16081,
-      "prior_value": 15980,
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 16151,
+      "prior_value": 16081,
       "reported_at": "2026-08-15T01:43:17.741776+00:00",
       "signal_name": "likes",
-      "signal_value": 16081,
+      "signal_value": 16151,
       "source": "huggingface",
       "source_id": "model:Qwen/Qwen3.8-27B",
       "title": "Qwen/Qwen3.8-27B",
       "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
-      "velocity": 101.0
+      "velocity": 70.0
     },
     "huggingface:model:Qwen/Qwen3.8-27B-FP8": {
       "first_seen": "2026-08-15T01:43:17.741776+00:00",
@@ -22805,6 +23211,20 @@
       "title": "SupraLabs/Supra-Router-51M",
       "url": "https://huggingface.co/SupraLabs/Supra-Router-51M",
       "velocity": 99.0
+    },
+    "huggingface:model:TaichuAI/ZDTaichu5.0-9B": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 761,
+      "prior_value": 761,
+      "reported_at": "2026-09-24T04:32:21.357148+00:00",
+      "signal_name": "likes",
+      "signal_value": 761,
+      "source": "huggingface",
+      "source_id": "model:TaichuAI/ZDTaichu5.0-9B",
+      "title": "TaichuAI/ZDTaichu5.0-9B",
+      "url": "https://huggingface.co/TaichuAI/ZDTaichu5.0-9B",
+      "velocity": 761.0
     },
     "huggingface:model:TokenRhythm/NeoHorse-1-4B": {
       "first_seen": "2026-09-16T04:37:45.343168+00:00",
@@ -22892,59 +23312,59 @@
     },
     "huggingface:model:XiaomiMiMo/MiMo-V2.6-Distill-Qwen-9B": {
       "first_seen": "2026-09-23T04:34:29.608150+00:00",
-      "last_seen": "2026-09-23T04:34:29.608150+00:00",
-      "peak_signal": 353,
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 412,
       "prior_value": 353,
       "reported_at": null,
       "signal_name": "likes",
-      "signal_value": 353,
+      "signal_value": 412,
       "source": "huggingface",
       "source_id": "model:XiaomiMiMo/MiMo-V2.6-Distill-Qwen-9B",
       "title": "XiaomiMiMo/MiMo-V2.6-Distill-Qwen-9B",
       "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Distill-Qwen-9B",
-      "velocity": 353.0
+      "velocity": 59.0
     },
     "huggingface:model:XiaomiMiMo/MiMo-V2.6-Flash-RL": {
       "first_seen": "2026-09-23T04:34:29.608150+00:00",
-      "last_seen": "2026-09-23T04:34:29.608150+00:00",
-      "peak_signal": 394,
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 429,
       "prior_value": 394,
       "reported_at": null,
       "signal_name": "likes",
-      "signal_value": 394,
+      "signal_value": 429,
       "source": "huggingface",
       "source_id": "model:XiaomiMiMo/MiMo-V2.6-Flash-RL",
       "title": "XiaomiMiMo/MiMo-V2.6-Flash-RL",
       "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Flash-RL",
-      "velocity": 394.0
+      "velocity": 35.0
     },
     "huggingface:model:XiaomiMiMo/MiMo-V2.6-Pro-RL": {
       "first_seen": "2026-09-23T04:34:29.608150+00:00",
-      "last_seen": "2026-09-23T04:34:29.608150+00:00",
-      "peak_signal": 401,
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 453,
       "prior_value": 401,
-      "reported_at": null,
+      "reported_at": "2026-09-24T04:32:21.357148+00:00",
       "signal_name": "likes",
-      "signal_value": 401,
+      "signal_value": 453,
       "source": "huggingface",
       "source_id": "model:XiaomiMiMo/MiMo-V2.6-Pro-RL",
       "title": "XiaomiMiMo/MiMo-V2.6-Pro-RL",
       "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL",
-      "velocity": 401.0
+      "velocity": 52.0
     },
     "huggingface:model:XingChen-AGI/Xing4.0-29B-A4B": {
       "first_seen": "2026-09-19T04:25:48.508660+00:00",
-      "last_seen": "2026-09-23T04:34:29.608150+00:00",
-      "peak_signal": 1411,
-      "prior_value": 1157,
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 1628,
+      "prior_value": 1411,
       "reported_at": "2026-09-19T04:25:48.508660+00:00",
       "signal_name": "likes",
-      "signal_value": 1411,
+      "signal_value": 1628,
       "source": "huggingface",
       "source_id": "model:XingChen-AGI/Xing4.0-29B-A4B",
       "title": "XingChen-AGI/Xing4.0-29B-A4B",
       "url": "https://huggingface.co/XingChen-AGI/Xing4.0-29B-A4B",
-      "velocity": 254.0
+      "velocity": 217.0
     },
     "huggingface:model:abenzerps/Qwen-Image-2.1-GGUF": {
       "first_seen": "2026-09-22T04:38:57.045887+00:00",
@@ -22962,17 +23382,17 @@
     },
     "huggingface:model:abenzerps/Qwen-Image-2.1-Uncensored-GGUF": {
       "first_seen": "2026-09-23T04:34:29.608150+00:00",
-      "last_seen": "2026-09-23T04:34:29.608150+00:00",
-      "peak_signal": 1180,
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 1470,
       "prior_value": 1180,
       "reported_at": "2026-09-23T04:34:29.608150+00:00",
       "signal_name": "likes",
-      "signal_value": 1180,
+      "signal_value": 1470,
       "source": "huggingface",
       "source_id": "model:abenzerps/Qwen-Image-2.1-Uncensored-GGUF",
       "title": "abenzerps/Qwen-Image-2.1-Uncensored-GGUF",
       "url": "https://huggingface.co/abenzerps/Qwen-Image-2.1-Uncensored-GGUF",
-      "velocity": 1180.0
+      "velocity": 290.0
     },
     "huggingface:model:alibaba-pai/MiniMax-H3-Acc-LoRAs": {
       "first_seen": "2026-09-01T04:53:34.492500+00:00",
@@ -23060,17 +23480,17 @@
     },
     "huggingface:model:convaiinnovations/laya": {
       "first_seen": "2026-09-20T04:43:37.398992+00:00",
-      "last_seen": "2026-09-23T04:34:29.608150+00:00",
-      "peak_signal": 2630,
-      "prior_value": 1894,
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 3151,
+      "prior_value": 2630,
       "reported_at": "2026-09-20T04:43:37.398992+00:00",
       "signal_name": "likes",
-      "signal_value": 2630,
+      "signal_value": 3151,
       "source": "huggingface",
       "source_id": "model:convaiinnovations/laya",
       "title": "convaiinnovations/laya",
       "url": "https://huggingface.co/convaiinnovations/laya",
-      "velocity": 736.0
+      "velocity": 521.0
     },
     "huggingface:model:dealignai/DeepSeek-V4.1-Flash-UNCENSORED-FP8": {
       "first_seen": "2026-09-17T04:42:27.043340+00:00",
@@ -23186,17 +23606,17 @@
     },
     "huggingface:model:deepseek-ai/DeepSeek-V4.1-Flash": {
       "first_seen": "2026-09-11T04:24:04.034197+00:00",
-      "last_seen": "2026-09-23T04:34:29.608150+00:00",
-      "peak_signal": 3622,
-      "prior_value": 3542,
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 3672,
+      "prior_value": 3622,
       "reported_at": "2026-09-11T04:24:04.034197+00:00",
       "signal_name": "likes",
-      "signal_value": 3622,
+      "signal_value": 3672,
       "source": "huggingface",
       "source_id": "model:deepseek-ai/DeepSeek-V4.1-Flash",
       "title": "deepseek-ai/DeepSeek-V4.1-Flash",
       "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
-      "velocity": 80.0
+      "velocity": 50.0
     },
     "huggingface:model:distilbert/distilbert-base-uncased": {
       "first_seen": "2026-09-05T04:13:36.940109+00:00",
@@ -23466,17 +23886,17 @@
     },
     "huggingface:model:harshatheg/Qwen-2.5-1B-RLCD": {
       "first_seen": "2026-09-18T04:28:26.304386+00:00",
-      "last_seen": "2026-09-23T04:34:29.608150+00:00",
-      "peak_signal": 548,
-      "prior_value": 520,
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 559,
+      "prior_value": 548,
       "reported_at": "2026-09-18T04:28:26.304386+00:00",
       "signal_name": "likes",
-      "signal_value": 548,
+      "signal_value": 559,
       "source": "huggingface",
       "source_id": "model:harshatheg/Qwen-2.5-1B-RLCD",
       "title": "harshatheg/Qwen-2.5-1B-RLCD",
       "url": "https://huggingface.co/harshatheg/Qwen-2.5-1B-RLCD",
-      "velocity": 28.0
+      "velocity": 11.0
     },
     "huggingface:model:huihui-ai/Huihui-Qwen3.8-27B-abliterated": {
       "first_seen": "2026-08-23T01:52:59.308960+00:00",
@@ -23606,17 +24026,17 @@
     },
     "huggingface:model:m-a-p/YuE2-3B": {
       "first_seen": "2026-09-12T04:22:09.409419+00:00",
-      "last_seen": "2026-09-23T04:34:29.608150+00:00",
-      "peak_signal": 971,
-      "prior_value": 952,
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 986,
+      "prior_value": 971,
       "reported_at": "2026-09-14T04:42:11.990233+00:00",
       "signal_name": "likes",
-      "signal_value": 971,
+      "signal_value": 986,
       "source": "huggingface",
       "source_id": "model:m-a-p/YuE2-3B",
       "title": "m-a-p/YuE2-3B",
       "url": "https://huggingface.co/m-a-p/YuE2-3B",
-      "velocity": 19.0
+      "velocity": 15.0
     },
     "huggingface:model:meituan-longcat/LongCat-2.0": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
@@ -23813,6 +24233,20 @@
       "title": "moonshotai/Kimi-K3",
       "url": "https://huggingface.co/moonshotai/Kimi-K3",
       "velocity": 30.0
+    },
+    "huggingface:model:netease-youdao/Confucius4-R2T2": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 362,
+      "prior_value": 362,
+      "reported_at": null,
+      "signal_name": "likes",
+      "signal_value": 362,
+      "source": "huggingface",
+      "source_id": "model:netease-youdao/Confucius4-R2T2",
+      "title": "netease-youdao/Confucius4-R2T2",
+      "url": "https://huggingface.co/netease-youdao/Confucius4-R2T2",
+      "velocity": 362.0
     },
     "huggingface:model:nex-agi/Nex-N2.5-Pro": {
       "first_seen": "2026-09-11T04:24:04.034197+00:00",
@@ -24320,31 +24754,31 @@
     },
     "huggingface:model:prism-ml/Ternary-Bonsai-2-27B-gguf": {
       "first_seen": "2026-09-18T04:28:26.304386+00:00",
-      "last_seen": "2026-09-23T04:34:29.608150+00:00",
-      "peak_signal": 1896,
-      "prior_value": 1751,
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 1960,
+      "prior_value": 1896,
       "reported_at": "2026-09-19T04:25:48.508660+00:00",
       "signal_name": "likes",
-      "signal_value": 1896,
+      "signal_value": 1960,
       "source": "huggingface",
       "source_id": "model:prism-ml/Ternary-Bonsai-2-27B-gguf",
       "title": "prism-ml/Ternary-Bonsai-2-27B-gguf",
       "url": "https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-gguf",
-      "velocity": 145.0
+      "velocity": 64.0
     },
     "huggingface:model:prism-ml/Ternary-Bonsai-2-27B-mlx-2bit": {
       "first_seen": "2026-09-20T04:43:37.398992+00:00",
-      "last_seen": "2026-09-23T04:34:29.608150+00:00",
-      "peak_signal": 338,
-      "prior_value": 320,
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 359,
+      "prior_value": 338,
       "reported_at": null,
       "signal_name": "likes",
-      "signal_value": 338,
+      "signal_value": 359,
       "source": "huggingface",
       "source_id": "model:prism-ml/Ternary-Bonsai-2-27B-mlx-2bit",
       "title": "prism-ml/Ternary-Bonsai-2-27B-mlx-2bit",
       "url": "https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-mlx-2bit",
-      "velocity": 18.0
+      "velocity": 21.0
     },
     "huggingface:model:prism-ml/Ternary-Bonsai-27B-gguf": {
       "first_seen": "2026-07-15T03:20:23.850995+00:00",
@@ -37338,6 +37772,20 @@
       "url": "https://arxiv.org/abs/2609.22220",
       "velocity": 1.0
     },
+    "huggingface:paper:2609.22319": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 1,
+      "prior_value": 1,
+      "reported_at": null,
+      "signal_name": "upvotes",
+      "signal_value": 1,
+      "source": "huggingface",
+      "source_id": "paper:2609.22319",
+      "title": "Embedding Physics Priors in Robot Learning: A Survey",
+      "url": "https://arxiv.org/abs/2609.22319",
+      "velocity": 1.0
+    },
     "huggingface:paper:2609.22323": {
       "first_seen": "2026-09-23T04:34:29.608150+00:00",
       "last_seen": "2026-09-23T04:34:29.608150+00:00",
@@ -37365,6 +37813,20 @@
       "title": "Towards Full Pipeline FP8 Reinforcement Learning for LLMs",
       "url": "https://arxiv.org/abs/2609.22870",
       "velocity": 5.0
+    },
+    "huggingface:paper:2609.22947": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 17,
+      "prior_value": 17,
+      "reported_at": null,
+      "signal_name": "upvotes",
+      "signal_value": 17,
+      "source": "huggingface",
+      "source_id": "paper:2609.22947",
+      "title": "RewardVerse: Rubric-Guided Policy Optimization for Video Reward Modeling",
+      "url": "https://arxiv.org/abs/2609.22947",
+      "velocity": 17.0
     },
     "huggingface:paper:2609.22966": {
       "first_seen": "2026-09-22T04:38:57.045887+00:00",
@@ -37534,6 +37996,20 @@
       "url": "https://arxiv.org/abs/2609.24997",
       "velocity": 2.0
     },
+    "huggingface:paper:2609.25053": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 4,
+      "prior_value": 4,
+      "reported_at": null,
+      "signal_name": "upvotes",
+      "signal_value": 4,
+      "source": "huggingface",
+      "source_id": "paper:2609.25053",
+      "title": "LatentPort: Beyond KV Cache - Cross-Model Transfer of Recurrent Memory in Hybrid Language Models: A 4B-to-9B Hybrid-State Handoff Without Target Prefix Replay",
+      "url": "https://arxiv.org/abs/2609.25053",
+      "velocity": 4.0
+    },
     "huggingface:paper:2609.25165": {
       "first_seen": "2026-09-23T04:34:29.608150+00:00",
       "last_seen": "2026-09-23T04:34:29.608150+00:00",
@@ -37562,6 +38038,20 @@
       "url": "https://arxiv.org/abs/2609.25186",
       "velocity": 10.0
     },
+    "huggingface:paper:2609.25267": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 3,
+      "prior_value": 3,
+      "reported_at": null,
+      "signal_name": "upvotes",
+      "signal_value": 3,
+      "source": "huggingface",
+      "source_id": "paper:2609.25267",
+      "title": "ImIR: Image-Instruction Tuning for All-in-One Image Restoration",
+      "url": "https://arxiv.org/abs/2609.25267",
+      "velocity": 3.0
+    },
     "huggingface:paper:2609.25270": {
       "first_seen": "2026-09-23T04:34:29.608150+00:00",
       "last_seen": "2026-09-23T04:34:29.608150+00:00",
@@ -37575,6 +38065,34 @@
       "title": "RULER: Instance-aware Rubric Rewards for SVG Generation",
       "url": "https://arxiv.org/abs/2609.25270",
       "velocity": 31.0
+    },
+    "huggingface:paper:2609.25636": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 4,
+      "prior_value": 4,
+      "reported_at": null,
+      "signal_name": "upvotes",
+      "signal_value": 4,
+      "source": "huggingface",
+      "source_id": "paper:2609.25636",
+      "title": "RoboFollow: Unveiling the Instruction Following Mirage in Embodied Agents",
+      "url": "https://arxiv.org/abs/2609.25636",
+      "velocity": 4.0
+    },
+    "huggingface:paper:2609.26355": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 12,
+      "prior_value": 12,
+      "reported_at": null,
+      "signal_name": "upvotes",
+      "signal_value": 12,
+      "source": "huggingface",
+      "source_id": "paper:2609.26355",
+      "title": "PACT: From Credit Assignment to Critic Alignment",
+      "url": "https://arxiv.org/abs/2609.26355",
+      "velocity": 12.0
     },
     "huggingface:paper:2609.26457": {
       "first_seen": "2026-09-23T04:34:29.608150+00:00",
@@ -37590,6 +38108,62 @@
       "url": "https://arxiv.org/abs/2609.26457",
       "velocity": 4.0
     },
+    "huggingface:paper:2609.26550": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 22,
+      "prior_value": 22,
+      "reported_at": null,
+      "signal_name": "upvotes",
+      "signal_value": 22,
+      "source": "huggingface",
+      "source_id": "paper:2609.26550",
+      "title": "JEV-as-a-Judge: Accept When Confident, Escalate When Unsure",
+      "url": "https://arxiv.org/abs/2609.26550",
+      "velocity": 22.0
+    },
+    "huggingface:paper:2609.26780": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 16,
+      "prior_value": 16,
+      "reported_at": null,
+      "signal_name": "upvotes",
+      "signal_value": 16,
+      "source": "huggingface",
+      "source_id": "paper:2609.26780",
+      "title": "SpeakerMem-R1: Speaker-Centered Dual-Track Memory for Multi-Party Dialogue",
+      "url": "https://arxiv.org/abs/2609.26780",
+      "velocity": 16.0
+    },
+    "huggingface:paper:2609.26781": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 11,
+      "prior_value": 11,
+      "reported_at": null,
+      "signal_name": "upvotes",
+      "signal_value": 11,
+      "source": "huggingface",
+      "source_id": "paper:2609.26781",
+      "title": "Agensh: Scaling Organizational Intelligence to 1,024 Agents",
+      "url": "https://arxiv.org/abs/2609.26781",
+      "velocity": 11.0
+    },
+    "huggingface:paper:2609.26793": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 0,
+      "prior_value": 0,
+      "reported_at": null,
+      "signal_name": "upvotes",
+      "signal_value": 0,
+      "source": "huggingface",
+      "source_id": "paper:2609.26793",
+      "title": "HARMONY: Hierarchical Agentic Reasoning for MONocular Image-to-Scene Synthesis",
+      "url": "https://arxiv.org/abs/2609.26793",
+      "velocity": 0.0
+    },
     "huggingface:paper:2609.26796": {
       "first_seen": "2026-09-23T04:34:29.608150+00:00",
       "last_seen": "2026-09-23T04:34:29.608150+00:00",
@@ -37603,6 +38177,104 @@
       "title": "Flash-dLLM: IO-Aware KV Caching and Parallel Decoding for Fast, Memory-Efficient Diffusion LLMs",
       "url": "https://arxiv.org/abs/2609.26796",
       "velocity": 10.0
+    },
+    "huggingface:paper:2609.27284": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 4,
+      "prior_value": 4,
+      "reported_at": null,
+      "signal_name": "upvotes",
+      "signal_value": 4,
+      "source": "huggingface",
+      "source_id": "paper:2609.27284",
+      "title": "Hunyuan-A13B Technical Report",
+      "url": "https://arxiv.org/abs/2609.27284",
+      "velocity": 4.0
+    },
+    "huggingface:paper:2609.27321": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 2,
+      "prior_value": 2,
+      "reported_at": null,
+      "signal_name": "upvotes",
+      "signal_value": 2,
+      "source": "huggingface",
+      "source_id": "paper:2609.27321",
+      "title": "Verifiable Hidden Dynamics Play: Generating Agentic RL Environments from Solved Mechanisms",
+      "url": "https://arxiv.org/abs/2609.27321",
+      "velocity": 2.0
+    },
+    "huggingface:paper:2609.27490": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 7,
+      "prior_value": 7,
+      "reported_at": null,
+      "signal_name": "upvotes",
+      "signal_value": 7,
+      "source": "huggingface",
+      "source_id": "paper:2609.27490",
+      "title": "WhatWorkedBench: Benchmarking Experimental Understanding in AI Agents",
+      "url": "https://arxiv.org/abs/2609.27490",
+      "velocity": 7.0
+    },
+    "huggingface:paper:2609.27656": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 2,
+      "prior_value": 2,
+      "reported_at": null,
+      "signal_name": "upvotes",
+      "signal_value": 2,
+      "source": "huggingface",
+      "source_id": "paper:2609.27656",
+      "title": "InternW0: A Foundational Physical World Model for Efficient Real-World Interactions",
+      "url": "https://arxiv.org/abs/2609.27656",
+      "velocity": 2.0
+    },
+    "huggingface:paper:2609.27891": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 10,
+      "prior_value": 10,
+      "reported_at": null,
+      "signal_name": "upvotes",
+      "signal_value": 10,
+      "source": "huggingface",
+      "source_id": "paper:2609.27891",
+      "title": "Schr\u00f6dinger's Code Repository: Have LLMs Learned SWE-bench or Memorized It?",
+      "url": "https://arxiv.org/abs/2609.27891",
+      "velocity": 10.0
+    },
+    "huggingface:paper:2609.28256": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 7,
+      "prior_value": 7,
+      "reported_at": null,
+      "signal_name": "upvotes",
+      "signal_value": 7,
+      "source": "huggingface",
+      "source_id": "paper:2609.28256",
+      "title": "MemBodied: Recurrent Associative Memory for Vision-Language-Action Models",
+      "url": "https://arxiv.org/abs/2609.28256",
+      "velocity": 7.0
+    },
+    "huggingface:paper:2609.28470": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 0,
+      "prior_value": 0,
+      "reported_at": null,
+      "signal_name": "upvotes",
+      "signal_value": 0,
+      "source": "huggingface",
+      "source_id": "paper:2609.28470",
+      "title": "StudentBench: AI and human tutoring yield equivalent GRE learning gains",
+      "url": "https://arxiv.org/abs/2609.28470",
+      "velocity": 0.0
     },
     "reddit:1upq1rc": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
@@ -57678,6 +58350,230 @@
       "source_id": "1wnmu2l",
       "title": "M5 ultra AI test results",
       "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wnmu2l/m5_ultra_ai_test_results/",
+      "velocity": 0.0
+    },
+    "reddit:1wnxhji": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 0,
+      "prior_value": 0,
+      "reported_at": "2026-09-24T04:32:21.357148+00:00",
+      "signal_name": "top",
+      "signal_value": 0,
+      "source": "reddit",
+      "source_id": "1wnxhji",
+      "title": "Pirate Face - pirate bay for LLMs",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wnxhji/pirate_face_pirate_bay_for_llms/",
+      "velocity": 0.0
+    },
+    "reddit:1wnxm0r": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 0,
+      "prior_value": 0,
+      "reported_at": null,
+      "signal_name": "top",
+      "signal_value": 0,
+      "source": "reddit",
+      "source_id": "1wnxm0r",
+      "title": "GGUFs in transformers natively!",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wnxm0r/ggufs_in_transformers_natively/",
+      "velocity": 0.0
+    },
+    "reddit:1wnyvl6": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 0,
+      "prior_value": 0,
+      "reported_at": null,
+      "signal_name": "top",
+      "signal_value": 0,
+      "source": "reddit",
+      "source_id": "1wnyvl6",
+      "title": "Most powerful harness for Qwen 3.8?",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wnyvl6/most_powerful_harness_for_qwen_38/",
+      "velocity": 0.0
+    },
+    "reddit:1wnzu2f": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 0,
+      "prior_value": 0,
+      "reported_at": null,
+      "signal_name": "top",
+      "signal_value": 0,
+      "source": "reddit",
+      "source_id": "1wnzu2f",
+      "title": "Engram gone wild! 2b model update...",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wnzu2f/engram_gone_wild_2b_model_update/",
+      "velocity": 0.0
+    },
+    "reddit:1wo1bct": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 0,
+      "prior_value": 0,
+      "reported_at": null,
+      "signal_name": "top",
+      "signal_value": 0,
+      "source": "reddit",
+      "source_id": "1wo1bct",
+      "title": "Cost of intelligence is dropping fast",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wo1bct/cost_of_intelligence_is_dropping_fast/",
+      "velocity": 0.0
+    },
+    "reddit:1wo7sfo": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 0,
+      "prior_value": 0,
+      "reported_at": null,
+      "signal_name": "top",
+      "signal_value": 0,
+      "source": "reddit",
+      "source_id": "1wo7sfo",
+      "title": "Perhaps the highest quality mainline quants of Qwen3.8 27B?",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wo7sfo/perhaps_the_highest_quality_mainline_quants_of/",
+      "velocity": 0.0
+    },
+    "reddit:1wo8tr5": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 0,
+      "prior_value": 0,
+      "reported_at": null,
+      "signal_name": "top",
+      "signal_value": 0,
+      "source": "reddit",
+      "source_id": "1wo8tr5",
+      "title": "Streaming Nemotron 3 Diarization",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wo8tr5/streaming_nemotron_3_diarization/",
+      "velocity": 0.0
+    },
+    "reddit:1woa5d3": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 0,
+      "prior_value": 0,
+      "reported_at": null,
+      "signal_name": "top",
+      "signal_value": 0,
+      "source": "reddit",
+      "source_id": "1woa5d3",
+      "title": "MiMo-V2.6 (both Pro and Flash) is a benchmaxxed scam",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1woa5d3/mimov26_both_pro_and_flash_is_a_benchmaxxed_scam/",
+      "velocity": 0.0
+    },
+    "reddit:1wob8ej": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 0,
+      "prior_value": 0,
+      "reported_at": null,
+      "signal_name": "top",
+      "signal_value": 0,
+      "source": "reddit",
+      "source_id": "1wob8ej",
+      "title": "Pi agent qwen 3.8 flash next plays Baldur's Gate 2",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wob8ej/pi_agent_qwen_38_flash_next_plays_baldurs_gate_2/",
+      "velocity": 0.0
+    },
+    "reddit:1wobk5f": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 0,
+      "prior_value": 0,
+      "reported_at": null,
+      "signal_name": "top",
+      "signal_value": 0,
+      "source": "reddit",
+      "source_id": "1wobk5f",
+      "title": "GUI harness [video]",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wobk5f/gui_harness_video/",
+      "velocity": 0.0
+    },
+    "reddit:1wod7l0": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 0,
+      "prior_value": 0,
+      "reported_at": null,
+      "signal_name": "top",
+      "signal_value": 0,
+      "source": "reddit",
+      "source_id": "1wod7l0",
+      "title": "BFL releases FLUX 3 Action: a 7B robot model",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wod7l0/bfl_releases_flux_3_action_a_7b_robot_model/",
+      "velocity": 0.0
+    },
+    "reddit:1wodf84": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 0,
+      "prior_value": 0,
+      "reported_at": null,
+      "signal_name": "top",
+      "signal_value": 0,
+      "source": "reddit",
+      "source_id": "1wodf84",
+      "title": "apple/LensVLM-9B \u00b7 Hugging Face",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wodf84/applelensvlm9b_hugging_face/",
+      "velocity": 0.0
+    },
+    "reddit:1woe70t": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 0,
+      "prior_value": 0,
+      "reported_at": null,
+      "signal_name": "top",
+      "signal_value": 0,
+      "source": "reddit",
+      "source_id": "1woe70t",
+      "title": "Jev isn't new tech. Its marketing targets people who think AI started with LLMs.",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1woe70t/jev_isnt_new_tech_its_marketing_targets_people/",
+      "velocity": 0.0
+    },
+    "reddit:1woi2ho": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 0,
+      "prior_value": 0,
+      "reported_at": null,
+      "signal_name": "top",
+      "signal_value": 0,
+      "source": "reddit",
+      "source_id": "1woi2ho",
+      "title": "Qwen FN vs 27B --- Think I'm saturated.",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1woi2ho/qwen_fn_vs_27b_think_im_saturated/",
+      "velocity": 0.0
+    },
+    "reddit:1wol7zc": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 0,
+      "prior_value": 0,
+      "reported_at": null,
+      "signal_name": "top",
+      "signal_value": 0,
+      "source": "reddit",
+      "source_id": "1wol7zc",
+      "title": "Using uncensored models makes working less of a headache",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wol7zc/using_uncensored_models_makes_working_less_of_a/",
+      "velocity": 0.0
+    },
+    "reddit:1wom3fe": {
+      "first_seen": "2026-09-24T04:32:21.357148+00:00",
+      "last_seen": "2026-09-24T04:32:21.357148+00:00",
+      "peak_signal": 0,
+      "prior_value": 0,
+      "reported_at": null,
+      "signal_name": "top",
+      "signal_value": 0,
+      "source": "reddit",
+      "source_id": "1wom3fe",
+      "title": "Qwen 3.8 Flash Next q4_k_m, 130k context, q8 cache on 16GB VRAM ann 64GB RAM, 15-20 t/s on 4080",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wom3fe/qwen_38_flash_next_q4_k_m_130k_context_q8_cache/",
       "velocity": 0.0
     }
   }
