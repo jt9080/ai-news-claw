@@ -3248,5 +3248,30 @@
       "published": 8
     },
     "state": "ok"
+  },
+  {
+    "run_at": "2026-11-12T06:58:19.999749+00:00",
+    "window": {
+      "start": "2026-11-11T00:00:00+00:00",
+      "end": "2026-11-12T00:00:00+00:00"
+    },
+    "feeds": {
+      "hackernews": "ok",
+      "github": "ok",
+      "huggingface": "ok",
+      "arxiv": "ok",
+      "reddit": "ok",
+      "blogs": "ok",
+      "judge": "failed"
+    },
+    "counts": {
+      "candidates": 143,
+      "kept": 93,
+      "new": 51,
+      "resurfaced": 1,
+      "suppressed": 85,
+      "published": 8
+    },
+    "state": "ok"
   }
 ]
