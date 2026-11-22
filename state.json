@@ -24500,6 +24500,20 @@
       "url": "https://simonwillison.net/2026/Nov/20/token-fraud-is-here-and-its-bad/",
       "velocity": 0.0
     },
+    "blogs:https://simonwillison.net/2026/Nov/21/muru/": {
+      "first_seen": "2026-11-22T06:28:37.016030+00:00",
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
+      "peak_signal": 0,
+      "prior_value": 0,
+      "reported_at": "2026-11-22T06:28:37.016030+00:00",
+      "signal_name": "editorial",
+      "signal_value": 0,
+      "source": "blogs",
+      "source_id": "https://simonwillison.net/2026/Nov/21/muru/",
+      "title": "Muru",
+      "url": "https://simonwillison.net/2026/Nov/21/muru/",
+      "velocity": 0.0
+    },
     "blogs:https://simonwillison.net/2026/Nov/3/october-newsletter/": {
       "first_seen": "2026-11-04T05:59:43.978709+00:00",
       "last_seen": "2026-11-04T05:59:43.978709+00:00",
@@ -28772,26 +28786,26 @@
     },
     "github:DIYgod/pinky": {
       "first_seen": "2026-11-12T06:58:19.999749+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
-      "peak_signal": 2610,
-      "prior_value": 2558,
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
+      "peak_signal": 2651,
+      "prior_value": 2610,
       "reported_at": "2026-11-12T06:58:19.999749+00:00",
       "signal_name": "stars",
-      "signal_value": 2610,
+      "signal_value": 2651,
       "source": "github",
       "source_id": "DIYgod/pinky",
       "title": "DIYgod/pinky",
       "url": "https://github.com/DIYgod/pinky",
-      "velocity": 52.0
+      "velocity": 41.0
     },
     "github:DenisSergeevitch/ex-ussr-kinship-research": {
       "first_seen": "2026-11-04T05:59:43.978709+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
-      "peak_signal": 2705,
-      "prior_value": 2687,
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
+      "peak_signal": 2723,
+      "prior_value": 2705,
       "reported_at": "2026-11-04T05:59:43.978709+00:00",
       "signal_name": "stars",
-      "signal_value": 2705,
+      "signal_value": 2723,
       "source": "github",
       "source_id": "DenisSergeevitch/ex-ussr-kinship-research",
       "title": "DenisSergeevitch/ex-ussr-kinship-research",
@@ -29024,17 +29038,17 @@
     },
     "github:KKKKhazix/agent-autoloop": {
       "first_seen": "2026-11-05T06:26:14.703050+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
-      "peak_signal": 6142,
-      "prior_value": 6069,
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
+      "peak_signal": 6222,
+      "prior_value": 6142,
       "reported_at": "2026-11-05T06:26:14.703050+00:00",
       "signal_name": "stars",
-      "signal_value": 6142,
+      "signal_value": 6222,
       "source": "github",
       "source_id": "KKKKhazix/agent-autoloop",
       "title": "KKKKhazix/agent-autoloop",
       "url": "https://github.com/KKKKhazix/agent-autoloop",
-      "velocity": 73.0
+      "velocity": 80.0
     },
     "github:KevinLiss/ApeAdmin": {
       "first_seen": "2026-09-19T04:25:48.508660+00:00",
@@ -29458,17 +29472,17 @@
     },
     "github:Sandflow-ai/sand3d": {
       "first_seen": "2026-11-11T05:54:46.383901+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
-      "peak_signal": 2209,
-      "prior_value": 2180,
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
+      "peak_signal": 2224,
+      "prior_value": 2209,
       "reported_at": "2026-11-11T05:54:46.383901+00:00",
       "signal_name": "stars",
-      "signal_value": 2209,
+      "signal_value": 2224,
       "source": "github",
       "source_id": "Sandflow-ai/sand3d",
       "title": "Sandflow-ai/sand3d",
       "url": "https://github.com/Sandflow-ai/sand3d",
-      "velocity": 29.0
+      "velocity": 15.0
     },
     "github:SeanJ1ang/design-judge-skills": {
       "first_seen": "2026-08-10T02:26:13.302908+00:00",
@@ -29724,17 +29738,17 @@
     },
     "github:ZiChuanLan/agent-purge": {
       "first_seen": "2026-11-15T06:09:23.296469+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
-      "peak_signal": 2007,
-      "prior_value": 1988,
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
+      "peak_signal": 2030,
+      "prior_value": 2007,
       "reported_at": "2026-11-15T06:09:23.296469+00:00",
       "signal_name": "stars",
-      "signal_value": 2007,
+      "signal_value": 2030,
       "source": "github",
       "source_id": "ZiChuanLan/agent-purge",
       "title": "ZiChuanLan/agent-purge",
       "url": "https://github.com/ZiChuanLan/agent-purge",
-      "velocity": 19.0
+      "velocity": 23.0
     },
     "github:Zyrexnn/Cybermes": {
       "first_seen": "2026-09-18T04:28:26.304386+00:00",
@@ -29794,17 +29808,17 @@
     },
     "github:agentes-chat/agentes-chat": {
       "first_seen": "2026-11-18T07:07:10.053342+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
-      "peak_signal": 1864,
-      "prior_value": 1730,
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
+      "peak_signal": 1916,
+      "prior_value": 1864,
       "reported_at": "2026-11-18T07:07:10.053342+00:00",
       "signal_name": "stars",
-      "signal_value": 1864,
+      "signal_value": 1916,
       "source": "github",
       "source_id": "agentes-chat/agentes-chat",
       "title": "agentes-chat/agentes-chat",
       "url": "https://github.com/agentes-chat/agentes-chat",
-      "velocity": 134.0
+      "velocity": 52.0
     },
     "github:agentverse-os/AgentVerse-OS": {
       "first_seen": "2026-09-20T04:43:37.398992+00:00",
@@ -29906,17 +29920,17 @@
     },
     "github:andyhuo520/digital-human-koubo": {
       "first_seen": "2026-11-02T05:46:58.753034+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
-      "peak_signal": 2055,
-      "prior_value": 2048,
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
+      "peak_signal": 2061,
+      "prior_value": 2055,
       "reported_at": "2026-11-07T05:45:27.314414+00:00",
       "signal_name": "stars",
-      "signal_value": 2055,
+      "signal_value": 2061,
       "source": "github",
       "source_id": "andyhuo520/digital-human-koubo",
       "title": "andyhuo520/digital-human-koubo",
       "url": "https://github.com/andyhuo520/digital-human-koubo",
-      "velocity": 7.0
+      "velocity": 6.0
     },
     "github:angusdevgo/Seep-Reverse-Lab": {
       "first_seen": "2026-10-09T05:54:52.359024+00:00",
@@ -29976,17 +29990,17 @@
     },
     "github:benjitaylor/skills": {
       "first_seen": "2026-11-05T06:26:14.703050+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
-      "peak_signal": 3902,
-      "prior_value": 3834,
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
+      "peak_signal": 3971,
+      "prior_value": 3902,
       "reported_at": "2026-11-05T06:26:14.703050+00:00",
       "signal_name": "stars",
-      "signal_value": 3902,
+      "signal_value": 3971,
       "source": "github",
       "source_id": "benjitaylor/skills",
       "title": "benjitaylor/skills",
       "url": "https://github.com/benjitaylor/skills",
-      "velocity": 68.0
+      "velocity": 69.0
     },
     "github:bherbruck/solidcraft": {
       "first_seen": "2026-10-14T04:40:36.033926+00:00",
@@ -30032,17 +30046,17 @@
     },
     "github:bookwjitchieni1986/blender-ai-mcp-addon": {
       "first_seen": "2026-11-21T06:53:49.610572+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
-      "peak_signal": 1855,
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
+      "peak_signal": 2685,
       "prior_value": 1855,
       "reported_at": "2026-11-21T06:53:49.610572+00:00",
       "signal_name": "stars",
-      "signal_value": 1855,
+      "signal_value": 2685,
       "source": "github",
       "source_id": "bookwjitchieni1986/blender-ai-mcp-addon",
       "title": "bookwjitchieni1986/blender-ai-mcp-addon",
       "url": "https://github.com/bookwjitchieni1986/blender-ai-mcp-addon",
-      "velocity": 1108.08
+      "velocity": 830.0
     },
     "github:brayonpi/hexstellar": {
       "first_seen": "2026-09-10T04:24:58.693764+00:00",
@@ -30074,17 +30088,17 @@
     },
     "github:caru-ini/stack-diagram": {
       "first_seen": "2026-11-05T06:26:14.703050+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
-      "peak_signal": 2688,
-      "prior_value": 2666,
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
+      "peak_signal": 2696,
+      "prior_value": 2688,
       "reported_at": "2026-11-06T06:20:28.206582+00:00",
       "signal_name": "stars",
-      "signal_value": 2688,
+      "signal_value": 2696,
       "source": "github",
       "source_id": "caru-ini/stack-diagram",
       "title": "caru-ini/stack-diagram",
       "url": "https://github.com/caru-ini/stack-diagram",
-      "velocity": 22.0
+      "velocity": 8.0
     },
     "github:cbrock84/headcount": {
       "first_seen": "2026-09-02T04:15:02.187530+00:00",
@@ -30102,17 +30116,17 @@
     },
     "github:ccch1mneyyy/dsh-Go": {
       "first_seen": "2026-10-31T05:19:11.646168+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
-      "peak_signal": 29171,
-      "prior_value": 28477,
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
+      "peak_signal": 29775,
+      "prior_value": 29171,
       "reported_at": "2026-10-31T05:19:11.646168+00:00",
       "signal_name": "stars",
-      "signal_value": 29171,
+      "signal_value": 29775,
       "source": "github",
       "source_id": "ccch1mneyyy/dsh-Go",
       "title": "ccch1mneyyy/dsh-Go",
       "url": "https://github.com/ccch1mneyyy/dsh-Go",
-      "velocity": 694.0
+      "velocity": 604.0
     },
     "github:chuspeeism/dashiAI-ppt-skill": {
       "first_seen": "2026-07-09T01:25:07.414172+00:00",
@@ -30284,12 +30298,12 @@
     },
     "github:daveebbelaar/bama": {
       "first_seen": "2026-11-07T05:45:27.314414+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
-      "peak_signal": 1923,
-      "prior_value": 1912,
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
+      "peak_signal": 1934,
+      "prior_value": 1923,
       "reported_at": "2026-11-08T05:48:42.115595+00:00",
       "signal_name": "stars",
-      "signal_value": 1923,
+      "signal_value": 1934,
       "source": "github",
       "source_id": "daveebbelaar/bama",
       "title": "daveebbelaar/bama",
@@ -30312,17 +30326,17 @@
     },
     "github:deepseek-ai/dsh-superagent-prototype": {
       "first_seen": "2026-11-01T05:48:09.758867+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
-      "peak_signal": 24105,
-      "prior_value": 23987,
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
+      "peak_signal": 24182,
+      "prior_value": 24105,
       "reported_at": "2026-11-02T05:46:58.753034+00:00",
       "signal_name": "stars",
-      "signal_value": 24105,
+      "signal_value": 24182,
       "source": "github",
       "source_id": "deepseek-ai/dsh-superagent-prototype",
       "title": "deepseek-ai/dsh-superagent-prototype",
       "url": "https://github.com/deepseek-ai/dsh-superagent-prototype",
-      "velocity": 118.0
+      "velocity": 77.0
     },
     "github:deer-flow/llm-space": {
       "first_seen": "2026-07-17T03:29:37.471589+00:00",
@@ -30424,17 +30438,17 @@
     },
     "github:expo/exact": {
       "first_seen": "2026-11-11T05:54:46.383901+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
-      "peak_signal": 4838,
-      "prior_value": 4748,
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
+      "peak_signal": 4889,
+      "prior_value": 4838,
       "reported_at": "2026-11-11T05:54:46.383901+00:00",
       "signal_name": "stars",
-      "signal_value": 4838,
+      "signal_value": 4889,
       "source": "github",
       "source_id": "expo/exact",
       "title": "expo/exact",
       "url": "https://github.com/expo/exact",
-      "velocity": 90.0
+      "velocity": 51.0
     },
     "github:fancydirty/mediary-scout": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
@@ -30760,17 +30774,17 @@
     },
     "github:janestreet/agent_skills": {
       "first_seen": "2026-11-10T07:01:50.008698+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
-      "peak_signal": 10468,
-      "prior_value": 10324,
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
+      "peak_signal": 10587,
+      "prior_value": 10468,
       "reported_at": "2026-11-10T07:01:50.008698+00:00",
       "signal_name": "stars",
-      "signal_value": 10468,
+      "signal_value": 10587,
       "source": "github",
       "source_id": "janestreet/agent_skills",
       "title": "janestreet/agent_skills",
       "url": "https://github.com/janestreet/agent_skills",
-      "velocity": 144.0
+      "velocity": 119.0
     },
     "github:jdshfhds/northcinder": {
       "first_seen": "2026-08-19T01:45:31.935580+00:00",
@@ -31068,17 +31082,17 @@
     },
     "github:mdiri-ai/SoduWork": {
       "first_seen": "2026-11-18T07:07:10.053342+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
-      "peak_signal": 6136,
-      "prior_value": 4458,
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
+      "peak_signal": 6511,
+      "prior_value": 6136,
       "reported_at": "2026-11-18T07:07:10.053342+00:00",
       "signal_name": "stars",
-      "signal_value": 6136,
+      "signal_value": 6511,
       "source": "github",
       "source_id": "mdiri-ai/SoduWork",
       "title": "mdiri-ai/SoduWork",
       "url": "https://github.com/mdiri-ai/SoduWork",
-      "velocity": 1678.0
+      "velocity": 375.0
     },
     "github:mereyabdenbekuly-ctrl/clodex-ide": {
       "first_seen": "2026-07-15T03:20:23.850995+00:00",
@@ -31152,17 +31166,17 @@
     },
     "github:modelflare-ai/AnyModelBot": {
       "first_seen": "2026-11-03T06:28:13.620658+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
-      "peak_signal": 4912,
-      "prior_value": 4730,
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
+      "peak_signal": 4970,
+      "prior_value": 4912,
       "reported_at": "2026-11-04T05:59:43.978709+00:00",
       "signal_name": "stars",
-      "signal_value": 4912,
+      "signal_value": 4970,
       "source": "github",
       "source_id": "modelflare-ai/AnyModelBot",
       "title": "modelflare-ai/AnyModelBot",
       "url": "https://github.com/modelflare-ai/AnyModelBot",
-      "velocity": 182.0
+      "velocity": 58.0
     },
     "github:modiqo/skillspec": {
       "first_seen": "2026-07-10T04:05:20.806177+00:00",
@@ -31194,17 +31208,17 @@
     },
     "github:morganlinton/BeautifulRust": {
       "first_seen": "2026-11-02T05:46:58.753034+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
-      "peak_signal": 2079,
-      "prior_value": 2074,
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
+      "peak_signal": 2082,
+      "prior_value": 2079,
       "reported_at": "2026-11-08T05:48:42.115595+00:00",
       "signal_name": "stars",
-      "signal_value": 2079,
+      "signal_value": 2082,
       "source": "github",
       "source_id": "morganlinton/BeautifulRust",
       "title": "morganlinton/BeautifulRust",
       "url": "https://github.com/morganlinton/BeautifulRust",
-      "velocity": 5.0
+      "velocity": 3.0
     },
     "github:mrtooher/fable-mode": {
       "first_seen": "2026-07-13T03:47:07.144308+00:00",
@@ -31516,17 +31530,17 @@
     },
     "github:qybaihe/bla": {
       "first_seen": "2026-11-01T05:48:09.758867+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
-      "peak_signal": 6340,
-      "prior_value": 6235,
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
+      "peak_signal": 6391,
+      "prior_value": 6340,
       "reported_at": "2026-11-02T05:46:58.753034+00:00",
       "signal_name": "stars",
-      "signal_value": 6340,
+      "signal_value": 6391,
       "source": "github",
       "source_id": "qybaihe/bla",
       "title": "qybaihe/bla",
       "url": "https://github.com/qybaihe/bla",
-      "velocity": 105.0
+      "velocity": 51.0
     },
     "github:ray-r-ren/agent-apprenticeship": {
       "first_seen": "2026-07-18T03:18:58.124038+00:00",
@@ -31600,17 +31614,17 @@
     },
     "github:sarpstar/cinecode": {
       "first_seen": "2026-11-10T07:01:50.008698+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
-      "peak_signal": 2819,
-      "prior_value": 2789,
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
+      "peak_signal": 2841,
+      "prior_value": 2819,
       "reported_at": "2026-11-10T07:01:50.008698+00:00",
       "signal_name": "stars",
-      "signal_value": 2819,
+      "signal_value": 2841,
       "source": "github",
       "source_id": "sarpstar/cinecode",
       "title": "sarpstar/cinecode",
       "url": "https://github.com/sarpstar/cinecode",
-      "velocity": 30.0
+      "velocity": 22.0
     },
     "github:shadcn-ui/lint": {
       "first_seen": "2026-09-15T04:42:36.539262+00:00",
@@ -31628,17 +31642,17 @@
     },
     "github:shanselman/gputaskman": {
       "first_seen": "2026-11-12T06:58:19.999749+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
-      "peak_signal": 3642,
-      "prior_value": 3599,
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
+      "peak_signal": 3677,
+      "prior_value": 3642,
       "reported_at": "2026-11-12T06:58:19.999749+00:00",
       "signal_name": "stars",
-      "signal_value": 3642,
+      "signal_value": 3677,
       "source": "github",
       "source_id": "shanselman/gputaskman",
       "title": "shanselman/gputaskman",
       "url": "https://github.com/shanselman/gputaskman",
-      "velocity": 43.0
+      "velocity": 35.0
     },
     "github:shepherd-agents/shepherd": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
@@ -31684,17 +31698,17 @@
     },
     "github:simplexai-labs/linger": {
       "first_seen": "2026-11-20T06:57:44.069777+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
-      "peak_signal": 3036,
-      "prior_value": 2114,
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
+      "peak_signal": 3537,
+      "prior_value": 3036,
       "reported_at": "2026-11-20T06:57:44.069777+00:00",
       "signal_name": "stars",
-      "signal_value": 3036,
+      "signal_value": 3537,
       "source": "github",
       "source_id": "simplexai-labs/linger",
       "title": "simplexai-labs/linger",
       "url": "https://github.com/simplexai-labs/linger",
-      "velocity": 922.0
+      "velocity": 501.0
     },
     "github:sums001/Windows-Copilot-API": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
@@ -31712,17 +31726,17 @@
     },
     "github:t3dotgg/tstack": {
       "first_seen": "2026-10-27T04:48:35.511034+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
-      "peak_signal": 4250,
-      "prior_value": 4203,
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
+      "peak_signal": 4280,
+      "prior_value": 4250,
       "reported_at": "2026-10-27T04:48:35.511034+00:00",
       "signal_name": "stars",
-      "signal_value": 4250,
+      "signal_value": 4280,
       "source": "github",
       "source_id": "t3dotgg/tstack",
       "title": "t3dotgg/tstack",
       "url": "https://github.com/t3dotgg/tstack",
-      "velocity": 47.0
+      "velocity": 30.0
     },
     "github:tangency-labs/solidcraft": {
       "first_seen": "2026-10-17T04:09:22.510842+00:00",
@@ -31936,17 +31950,17 @@
     },
     "github:vercel-labs/ui": {
       "first_seen": "2026-11-13T06:23:24.824169+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
-      "peak_signal": 6309,
-      "prior_value": 6176,
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
+      "peak_signal": 6476,
+      "prior_value": 6309,
       "reported_at": "2026-11-13T06:23:24.824169+00:00",
       "signal_name": "stars",
-      "signal_value": 6309,
+      "signal_value": 6476,
       "source": "github",
       "source_id": "vercel-labs/ui",
       "title": "vercel-labs/ui",
       "url": "https://github.com/vercel-labs/ui",
-      "velocity": 133.0
+      "velocity": 167.0
     },
     "github:vercel/eve": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
@@ -31978,17 +31992,17 @@
     },
     "github:wangzan101/Mika": {
       "first_seen": "2026-10-31T05:19:11.646168+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
-      "peak_signal": 9323,
-      "prior_value": 9226,
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
+      "peak_signal": 9522,
+      "prior_value": 9323,
       "reported_at": "2026-11-01T05:48:09.758867+00:00",
       "signal_name": "stars",
-      "signal_value": 9323,
+      "signal_value": 9522,
       "source": "github",
       "source_id": "wangzan101/Mika",
       "title": "wangzan101/Mika",
       "url": "https://github.com/wangzan101/Mika",
-      "velocity": 97.0
+      "velocity": 199.0
     },
     "github:wheresryan22/anatomy": {
       "first_seen": "2026-10-12T05:43:35.652101+00:00",
@@ -32118,17 +32132,17 @@
     },
     "github:yjid/kensaku": {
       "first_seen": "2026-11-16T06:07:47.343370+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
-      "peak_signal": 1884,
-      "prior_value": 1869,
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
+      "peak_signal": 1893,
+      "prior_value": 1884,
       "reported_at": "2026-11-16T06:07:47.343370+00:00",
       "signal_name": "stars",
-      "signal_value": 1884,
+      "signal_value": 1893,
       "source": "github",
       "source_id": "yjid/kensaku",
       "title": "yjid/kensaku",
       "url": "https://github.com/yjid/kensaku",
-      "velocity": 15.0
+      "velocity": 9.0
     },
     "github:youngyangyang04/llm-master": {
       "first_seen": "2026-09-22T04:38:57.045887+00:00",
@@ -41188,6 +41202,20 @@
       "url": "https://ankitg.me/blog/vibecoding-inference-chip/",
       "velocity": 136.0
     },
+    "hackernews:50586292": {
+      "first_seen": "2026-11-22T06:28:37.016030+00:00",
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
+      "peak_signal": 162,
+      "prior_value": 162,
+      "reported_at": "2026-11-22T06:28:37.016030+00:00",
+      "signal_name": "points",
+      "signal_value": 162,
+      "source": "hackernews",
+      "source_id": "50586292",
+      "title": "ClawDOS \u2013 An AI coding agent for DOS",
+      "url": "http://ricapar.net/ClawDOS/",
+      "velocity": 156.5
+    },
     "huggingface:model:0bserverx/Qwen3.8-27B-Heretic-Abliterated-Uncensored-GGUF": {
       "first_seen": "2026-08-22T01:42:53.307534+00:00",
       "last_seen": "2026-08-22T01:42:53.307534+00:00",
@@ -41355,6 +41383,20 @@
       "title": "AtomicChat/DeepSeek-V4.1-Flash-1017-Uncensored-GSQ-RCO-GGUF",
       "url": "https://huggingface.co/AtomicChat/DeepSeek-V4.1-Flash-1017-Uncensored-GSQ-RCO-GGUF",
       "velocity": 14.0
+    },
+    "huggingface:model:AtomicChat/Inkling-2-Mini-Uncensored-GGUF": {
+      "first_seen": "2026-11-22T06:28:37.016030+00:00",
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
+      "peak_signal": 288,
+      "prior_value": 288,
+      "reported_at": null,
+      "signal_name": "likes",
+      "signal_value": 288,
+      "source": "huggingface",
+      "source_id": "model:AtomicChat/Inkling-2-Mini-Uncensored-GGUF",
+      "title": "AtomicChat/Inkling-2-Mini-Uncensored-GGUF",
+      "url": "https://huggingface.co/AtomicChat/Inkling-2-Mini-Uncensored-GGUF",
+      "velocity": 288.0
     },
     "huggingface:model:AtomicChat/Qwen-Image-2.1-Turbo-Uncensored-GGUF": {
       "first_seen": "2026-10-11T05:33:28.552327+00:00",
@@ -41610,17 +41652,17 @@
     },
     "huggingface:model:DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF": {
       "first_seen": "2026-09-06T04:22:22.544662+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
       "peak_signal": 3482,
-      "prior_value": 3412,
+      "prior_value": 3482,
       "reported_at": "2026-09-08T04:21:52.308887+00:00",
       "signal_name": "likes",
-      "signal_value": 3482,
+      "signal_value": 3474,
       "source": "huggingface",
       "source_id": "model:DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF",
       "title": "DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF",
       "url": "https://huggingface.co/DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF",
-      "velocity": 70.0
+      "velocity": -8.0
     },
     "huggingface:model:Diffuspace/Clover-35B-A3B-Preview": {
       "first_seen": "2026-11-02T05:46:58.753034+00:00",
@@ -42086,17 +42128,17 @@
     },
     "huggingface:model:Lightricks/LTX-2.5": {
       "first_seen": "2026-08-12T02:34:31.296058+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
-      "peak_signal": 12925,
-      "prior_value": 12764,
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
+      "peak_signal": 12962,
+      "prior_value": 12925,
       "reported_at": "2026-08-13T02:36:08.576826+00:00",
       "signal_name": "likes",
-      "signal_value": 12925,
+      "signal_value": 12962,
       "source": "huggingface",
       "source_id": "model:Lightricks/LTX-2.5",
       "title": "Lightricks/LTX-2.5",
       "url": "https://huggingface.co/Lightricks/LTX-2.5",
-      "velocity": 161.0
+      "velocity": 37.0
     },
     "huggingface:model:LiquidAI/LFM2.5-2.6B": {
       "first_seen": "2026-08-05T03:23:40.890400+00:00",
@@ -42240,17 +42282,17 @@
     },
     "huggingface:model:MiniMaxAI/MiniMax-H3-Image": {
       "first_seen": "2026-11-11T05:54:46.383901+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
-      "peak_signal": 1688,
-      "prior_value": 1657,
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
+      "peak_signal": 1694,
+      "prior_value": 1688,
       "reported_at": "2026-11-11T05:54:46.383901+00:00",
       "signal_name": "likes",
-      "signal_value": 1688,
+      "signal_value": 1694,
       "source": "huggingface",
       "source_id": "model:MiniMaxAI/MiniMax-H3-Image",
       "title": "MiniMaxAI/MiniMax-H3-Image",
       "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3-Image",
-      "velocity": 31.0
+      "velocity": 6.0
     },
     "huggingface:model:MiniMaxAI/MiniMax-M3.1-Flash": {
       "first_seen": "2026-10-24T04:23:02.899743+00:00",
@@ -42534,17 +42576,17 @@
     },
     "huggingface:model:Qwen/Qwen3.8-27B": {
       "first_seen": "2026-08-15T01:43:17.741776+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
-      "peak_signal": 20823,
-      "prior_value": 20703,
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
+      "peak_signal": 20824,
+      "prior_value": 20823,
       "reported_at": "2026-08-15T01:43:17.741776+00:00",
       "signal_name": "likes",
-      "signal_value": 20823,
+      "signal_value": 20824,
       "source": "huggingface",
       "source_id": "model:Qwen/Qwen3.8-27B",
       "title": "Qwen/Qwen3.8-27B",
       "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
-      "velocity": 120.0
+      "velocity": 1.0
     },
     "huggingface:model:Qwen/Qwen3.8-27B-FP8": {
       "first_seen": "2026-08-15T01:43:17.741776+00:00",
@@ -42671,6 +42713,20 @@
       "title": "StarDoc-AI/TeleOCR",
       "url": "https://huggingface.co/StarDoc-AI/TeleOCR",
       "velocity": 434.0
+    },
+    "huggingface:model:SulphurAI/Sulphur-3": {
+      "first_seen": "2026-11-22T06:28:37.016030+00:00",
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
+      "peak_signal": 706,
+      "prior_value": 706,
+      "reported_at": "2026-11-22T06:28:37.016030+00:00",
+      "signal_name": "likes",
+      "signal_value": 706,
+      "source": "huggingface",
+      "source_id": "model:SulphurAI/Sulphur-3",
+      "title": "SulphurAI/Sulphur-3",
+      "url": "https://huggingface.co/SulphurAI/Sulphur-3",
+      "velocity": 706.0
     },
     "huggingface:model:SupersonicLabs/Julia-1": {
       "first_seen": "2026-09-30T05:21:31.055179+00:00",
@@ -43066,31 +43122,31 @@
     },
     "huggingface:model:apple/DepthPro2": {
       "first_seen": "2026-11-21T06:53:49.610572+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
-      "peak_signal": 139,
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
+      "peak_signal": 209,
       "prior_value": 139,
       "reported_at": null,
       "signal_name": "likes",
-      "signal_value": 139,
+      "signal_value": 209,
       "source": "huggingface",
       "source_id": "model:apple/DepthPro2",
       "title": "apple/DepthPro2",
       "url": "https://huggingface.co/apple/DepthPro2",
-      "velocity": 139.0
+      "velocity": 70.0
     },
     "huggingface:model:apple/FastFrames-L": {
       "first_seen": "2026-11-19T07:08:04.085253+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
-      "peak_signal": 492,
-      "prior_value": 356,
-      "reported_at": null,
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
+      "peak_signal": 499,
+      "prior_value": 492,
+      "reported_at": "2026-11-22T06:28:37.016030+00:00",
       "signal_name": "likes",
-      "signal_value": 492,
+      "signal_value": 499,
       "source": "huggingface",
       "source_id": "model:apple/FastFrames-L",
       "title": "apple/FastFrames-L",
       "url": "https://huggingface.co/apple/FastFrames-L",
-      "velocity": 136.0
+      "velocity": 7.0
     },
     "huggingface:model:apple/LensVLM-9B": {
       "first_seen": "2026-09-30T05:21:31.055179+00:00",
@@ -43346,17 +43402,17 @@
     },
     "huggingface:model:chatrlabs/Qwen-Image-2.1-Uncensored-Omni-Quantized": {
       "first_seen": "2026-11-15T06:09:23.296469+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
       "peak_signal": 771,
-      "prior_value": 701,
+      "prior_value": 771,
       "reported_at": "2026-11-16T06:07:47.343370+00:00",
       "signal_name": "likes",
-      "signal_value": 771,
+      "signal_value": 747,
       "source": "huggingface",
       "source_id": "model:chatrlabs/Qwen-Image-2.1-Uncensored-Omni-Quantized",
       "title": "chatrlabs/Qwen-Image-2.1-Uncensored-Omni-Quantized",
       "url": "https://huggingface.co/chatrlabs/Qwen-Image-2.1-Uncensored-Omni-Quantized",
-      "velocity": 70.0
+      "velocity": -24.0
     },
     "huggingface:model:conradlocke/krea2-identity-edit": {
       "first_seen": "2026-07-09T03:27:25.240372+00:00",
@@ -43878,17 +43934,17 @@
     },
     "huggingface:model:harness-hub/Qwen3.8-27B-pi-adapted": {
       "first_seen": "2026-11-18T07:07:10.053342+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
-      "peak_signal": 872,
-      "prior_value": 757,
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
+      "peak_signal": 942,
+      "prior_value": 872,
       "reported_at": "2026-11-19T07:08:04.085253+00:00",
       "signal_name": "likes",
-      "signal_value": 872,
+      "signal_value": 942,
       "source": "huggingface",
       "source_id": "model:harness-hub/Qwen3.8-27B-pi-adapted",
       "title": "harness-hub/Qwen3.8-27B-pi-adapted",
       "url": "https://huggingface.co/harness-hub/Qwen3.8-27B-pi-adapted",
-      "velocity": 115.0
+      "velocity": 70.0
     },
     "huggingface:model:harshatheg/Qwen-2.5-1B-RLCD": {
       "first_seen": "2026-09-18T04:28:26.304386+00:00",
@@ -43906,17 +43962,17 @@
     },
     "huggingface:model:higurashi-ai/Haru-4B": {
       "first_seen": "2026-11-15T06:09:23.296469+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
       "peak_signal": 5705,
-      "prior_value": 3676,
+      "prior_value": 5705,
       "reported_at": "2026-11-20T06:57:44.069777+00:00",
       "signal_name": "likes",
-      "signal_value": 5705,
+      "signal_value": 846,
       "source": "huggingface",
       "source_id": "model:higurashi-ai/Haru-4B",
       "title": "higurashi-ai/Haru-4B",
       "url": "https://huggingface.co/higurashi-ai/Haru-4B",
-      "velocity": 2029.0
+      "velocity": -4859.0
     },
     "huggingface:model:huihui-ai/Huihui-Qwen3.8-27B-abliterated": {
       "first_seen": "2026-08-23T01:52:59.308960+00:00",
@@ -44004,17 +44060,17 @@
     },
     "huggingface:model:inworld/voice-isolator": {
       "first_seen": "2026-11-19T07:08:04.085253+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
-      "peak_signal": 510,
-      "prior_value": 294,
-      "reported_at": null,
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
+      "peak_signal": 533,
+      "prior_value": 510,
+      "reported_at": "2026-11-22T06:28:37.016030+00:00",
       "signal_name": "likes",
-      "signal_value": 510,
+      "signal_value": 533,
       "source": "huggingface",
       "source_id": "model:inworld/voice-isolator",
       "title": "inworld/voice-isolator",
       "url": "https://huggingface.co/inworld/voice-isolator",
-      "velocity": 216.0
+      "velocity": 23.0
     },
     "huggingface:model:jialinyyzz/humanizer": {
       "first_seen": "2026-10-06T06:06:50.539940+00:00",
@@ -44130,17 +44186,17 @@
     },
     "huggingface:model:maxwell-model/Maxwell-V1-Flash": {
       "first_seen": "2026-11-18T07:07:10.053342+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
       "peak_signal": 336,
-      "prior_value": 240,
+      "prior_value": 336,
       "reported_at": null,
       "signal_name": "likes",
-      "signal_value": 336,
+      "signal_value": 329,
       "source": "huggingface",
       "source_id": "model:maxwell-model/Maxwell-V1-Flash",
       "title": "maxwell-model/Maxwell-V1-Flash",
       "url": "https://huggingface.co/maxwell-model/Maxwell-V1-Flash",
-      "velocity": 96.0
+      "velocity": -7.0
     },
     "huggingface:model:meituan-longcat/LongCat-2.0": {
       "first_seen": "2026-07-08T08:29:23.923902+00:00",
@@ -44158,17 +44214,17 @@
     },
     "huggingface:model:meituan-longcat/LongCat-Video-Avatar-1.6": {
       "first_seen": "2026-11-18T07:07:10.053342+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
       "peak_signal": 397,
-      "prior_value": 340,
-      "reported_at": null,
+      "prior_value": 397,
+      "reported_at": "2026-11-22T06:28:37.016030+00:00",
       "signal_name": "likes",
-      "signal_value": 397,
+      "signal_value": 393,
       "source": "huggingface",
       "source_id": "model:meituan-longcat/LongCat-Video-Avatar-1.6",
       "title": "meituan-longcat/LongCat-Video-Avatar-1.6",
       "url": "https://huggingface.co/meituan-longcat/LongCat-Video-Avatar-1.6",
-      "velocity": 57.0
+      "velocity": -4.0
     },
     "huggingface:model:meta-llama/Llama-3.1-8B-Instruct": {
       "first_seen": "2026-09-17T04:42:27.043340+00:00",
@@ -44438,17 +44494,17 @@
     },
     "huggingface:model:n4ze3m/tiny-voca": {
       "first_seen": "2026-11-18T07:07:10.053342+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
       "peak_signal": 388,
-      "prior_value": 342,
+      "prior_value": 388,
       "reported_at": null,
       "signal_name": "likes",
-      "signal_value": 388,
+      "signal_value": 377,
       "source": "huggingface",
       "source_id": "model:n4ze3m/tiny-voca",
       "title": "n4ze3m/tiny-voca",
       "url": "https://huggingface.co/n4ze3m/tiny-voca",
-      "velocity": 46.0
+      "velocity": -11.0
     },
     "huggingface:model:nerkyor/Qwen3.8-27B-Coder390-EfficientThink-Opus5.5-GPT6Astra-Grok4.7-DSV4Pro-K3-SFT-RLOO-MTP-DFlash2": {
       "first_seen": "2026-10-11T05:33:28.552327+00:00",
@@ -45278,17 +45334,17 @@
     },
     "huggingface:model:sensenova/SenseNova-Loop-9B": {
       "first_seen": "2026-11-18T07:07:10.053342+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
-      "peak_signal": 453,
-      "prior_value": 396,
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
+      "peak_signal": 466,
+      "prior_value": 453,
       "reported_at": "2026-11-20T06:57:44.069777+00:00",
       "signal_name": "likes",
-      "signal_value": 453,
+      "signal_value": 466,
       "source": "huggingface",
       "source_id": "model:sensenova/SenseNova-Loop-9B",
       "title": "sensenova/SenseNova-Loop-9B",
       "url": "https://huggingface.co/sensenova/SenseNova-Loop-9B",
-      "velocity": 57.0
+      "velocity": 13.0
     },
     "huggingface:model:sensenova/SenseNova-Loop-9B-Preview": {
       "first_seen": "2026-11-04T05:59:43.978709+00:00",
@@ -45446,9 +45502,9 @@
     },
     "huggingface:model:tencent/Hy4-flash": {
       "first_seen": "2026-11-19T07:08:04.085253+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
       "peak_signal": 555,
-      "prior_value": 373,
+      "prior_value": 555,
       "reported_at": "2026-11-21T06:53:49.610572+00:00",
       "signal_name": "likes",
       "signal_value": 555,
@@ -45456,7 +45512,7 @@
       "source_id": "model:tencent/Hy4-flash",
       "title": "tencent/Hy4-flash",
       "url": "https://huggingface.co/tencent/Hy4-flash",
-      "velocity": 182.0
+      "velocity": 0.0
     },
     "huggingface:model:tencent/Hy4-preview": {
       "first_seen": "2026-08-28T11:11:27.873735+00:00",
@@ -45502,17 +45558,17 @@
     },
     "huggingface:model:thinkingmachines/Inkling-2-Mini": {
       "first_seen": "2026-11-21T06:53:49.610572+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
-      "peak_signal": 926,
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
+      "peak_signal": 3280,
       "prior_value": 926,
-      "reported_at": "2026-11-21T06:53:49.610572+00:00",
+      "reported_at": "2026-11-22T06:28:37.016030+00:00",
       "signal_name": "likes",
-      "signal_value": 926,
+      "signal_value": 3280,
       "source": "huggingface",
       "source_id": "model:thinkingmachines/Inkling-2-Mini",
       "title": "thinkingmachines/Inkling-2-Mini",
       "url": "https://huggingface.co/thinkingmachines/Inkling-2-Mini",
-      "velocity": 926.0
+      "velocity": 2354.0
     },
     "huggingface:model:thinkingmachines/Inkling-2-Small": {
       "first_seen": "2026-11-14T06:03:24.953150+00:00",
@@ -45628,17 +45684,17 @@
     },
     "huggingface:model:unsloth/Inkling-2-Mini-GGUF": {
       "first_seen": "2026-11-21T06:53:49.610572+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
-      "peak_signal": 304,
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
+      "peak_signal": 687,
       "prior_value": 304,
-      "reported_at": null,
+      "reported_at": "2026-11-22T06:28:37.016030+00:00",
       "signal_name": "likes",
-      "signal_value": 304,
+      "signal_value": 687,
       "source": "huggingface",
       "source_id": "model:unsloth/Inkling-2-Mini-GGUF",
       "title": "unsloth/Inkling-2-Mini-GGUF",
       "url": "https://huggingface.co/unsloth/Inkling-2-Mini-GGUF",
-      "velocity": 304.0
+      "velocity": 383.0
     },
     "huggingface:model:unsloth/Kimi-K3": {
       "first_seen": "2026-07-29T03:27:37.534320+00:00",
@@ -45712,17 +45768,17 @@
     },
     "huggingface:model:unsloth/Qwen3.8-27B-GGUF": {
       "first_seen": "2026-08-15T01:43:17.741776+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
       "peak_signal": 6301,
-      "prior_value": 6240,
+      "prior_value": 6301,
       "reported_at": "2026-08-15T01:43:17.741776+00:00",
       "signal_name": "likes",
-      "signal_value": 6301,
+      "signal_value": 6271,
       "source": "huggingface",
       "source_id": "model:unsloth/Qwen3.8-27B-GGUF",
       "title": "unsloth/Qwen3.8-27B-GGUF",
       "url": "https://huggingface.co/unsloth/Qwen3.8-27B-GGUF",
-      "velocity": 61.0
+      "velocity": -30.0
     },
     "huggingface:model:unsloth/Qwen3.8-27B-NVFP4": {
       "first_seen": "2026-08-18T01:43:24.515086+00:00",
@@ -68574,7 +68630,7 @@
     },
     "huggingface:paper:2611.15941": {
       "first_seen": "2026-11-21T06:53:49.610572+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
       "peak_signal": 1,
       "prior_value": 1,
       "reported_at": null,
@@ -68584,7 +68640,7 @@
       "source_id": "paper:2611.15941",
       "title": "Lang-SVG: Hierarchical Image Vectorization with Language Priors",
       "url": "https://arxiv.org/abs/2611.15941",
-      "velocity": 1.0
+      "velocity": 0.0
     },
     "huggingface:paper:2611.16009": {
       "first_seen": "2026-11-14T06:03:24.953150+00:00",
@@ -69190,17 +69246,17 @@
     },
     "huggingface:paper:2611.21053": {
       "first_seen": "2026-11-21T06:53:49.610572+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
-      "peak_signal": 4,
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
+      "peak_signal": 6,
       "prior_value": 4,
       "reported_at": null,
       "signal_name": "upvotes",
-      "signal_value": 4,
+      "signal_value": 6,
       "source": "huggingface",
       "source_id": "paper:2611.21053",
       "title": "System 1 agents: a method for local, reliable and fast agentic AI",
       "url": "https://arxiv.org/abs/2611.21053",
-      "velocity": 4.0
+      "velocity": 2.0
     },
     "huggingface:paper:2611.21099": {
       "first_seen": "2026-11-18T07:07:10.053342+00:00",
@@ -69274,17 +69330,17 @@
     },
     "huggingface:paper:2611.21885": {
       "first_seen": "2026-11-21T06:53:49.610572+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
-      "peak_signal": 6,
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
+      "peak_signal": 10,
       "prior_value": 6,
       "reported_at": null,
       "signal_name": "upvotes",
-      "signal_value": 6,
+      "signal_value": 10,
       "source": "huggingface",
       "source_id": "paper:2611.21885",
       "title": "Language Models Can Rewrite Their Own Weights",
       "url": "https://arxiv.org/abs/2611.21885",
-      "velocity": 6.0
+      "velocity": 4.0
     },
     "huggingface:paper:2611.22033": {
       "first_seen": "2026-11-19T07:08:04.085253+00:00",
@@ -69428,17 +69484,17 @@
     },
     "huggingface:paper:2611.23875": {
       "first_seen": "2026-11-21T06:53:49.610572+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
-      "peak_signal": 2,
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
+      "peak_signal": 3,
       "prior_value": 2,
       "reported_at": null,
       "signal_name": "upvotes",
-      "signal_value": 2,
+      "signal_value": 3,
       "source": "huggingface",
       "source_id": "paper:2611.23875",
       "title": "In Situ Training of Optical Neural Networks by Coding Agents",
       "url": "https://arxiv.org/abs/2611.23875",
-      "velocity": 2.0
+      "velocity": 1.0
     },
     "huggingface:paper:2611.24011": {
       "first_seen": "2026-11-20T06:57:44.069777+00:00",
@@ -69596,7 +69652,7 @@
     },
     "huggingface:paper:2611.25179": {
       "first_seen": "2026-11-21T06:53:49.610572+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
       "peak_signal": 4,
       "prior_value": 4,
       "reported_at": null,
@@ -69606,21 +69662,21 @@
       "source_id": "paper:2611.25179",
       "title": "Phantom Success, Silent Failure: Auditing the Success Checkers of Simulated Manipulation Benchmarks",
       "url": "https://arxiv.org/abs/2611.25179",
-      "velocity": 4.0
+      "velocity": 0.0
     },
     "huggingface:paper:2611.25200": {
       "first_seen": "2026-11-21T06:53:49.610572+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
-      "peak_signal": 2,
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
+      "peak_signal": 3,
       "prior_value": 2,
       "reported_at": null,
       "signal_name": "upvotes",
-      "signal_value": 2,
+      "signal_value": 3,
       "source": "huggingface",
       "source_id": "paper:2611.25200",
       "title": "Squoosh Bench: Evaluating UX-1 on 318 Historical Website A/B Tests",
       "url": "https://arxiv.org/abs/2611.25200",
-      "velocity": 2.0
+      "velocity": 1.0
     },
     "huggingface:paper:2611.25387": {
       "first_seen": "2026-11-20T06:57:44.069777+00:00",
@@ -69638,7 +69694,7 @@
     },
     "huggingface:paper:2611.25604": {
       "first_seen": "2026-11-21T06:53:49.610572+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
       "peak_signal": 4,
       "prior_value": 4,
       "reported_at": null,
@@ -69648,7 +69704,7 @@
       "source_id": "paper:2611.25604",
       "title": "PAD: Policy-Aware Data Valuation for Autonomous Driving",
       "url": "https://arxiv.org/abs/2611.25604",
-      "velocity": 4.0
+      "velocity": 0.0
     },
     "huggingface:paper:2611.25776": {
       "first_seen": "2026-11-20T06:57:44.069777+00:00",
@@ -69666,7 +69722,7 @@
     },
     "huggingface:paper:2611.25935": {
       "first_seen": "2026-11-21T06:53:49.610572+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
       "peak_signal": 1,
       "prior_value": 1,
       "reported_at": null,
@@ -69676,30 +69732,30 @@
       "source_id": "paper:2611.25935",
       "title": "TwinD: Generalizing Deepfake Detection from Blending to Entire Face Synthesis",
       "url": "https://arxiv.org/abs/2611.25935",
-      "velocity": 1.0
+      "velocity": 0.0
     },
     "huggingface:paper:2611.26073": {
       "first_seen": "2026-11-21T06:53:49.610572+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
-      "peak_signal": 21,
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
+      "peak_signal": 23,
       "prior_value": 21,
       "reported_at": null,
       "signal_name": "upvotes",
-      "signal_value": 21,
+      "signal_value": 23,
       "source": "huggingface",
       "source_id": "paper:2611.26073",
       "title": "AltRA-Test: An Alternative Annotator Test for LLM Judges Without Shared Annotators",
       "url": "https://arxiv.org/abs/2611.26073",
-      "velocity": 21.0
+      "velocity": 2.0
     },
     "huggingface:paper:2611.26211": {
       "first_seen": "2026-11-21T06:53:49.610572+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
-      "peak_signal": 2,
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
+      "peak_signal": 4,
       "prior_value": 2,
       "reported_at": null,
       "signal_name": "upvotes",
-      "signal_value": 2,
+      "signal_value": 4,
       "source": "huggingface",
       "source_id": "paper:2611.26211",
       "title": "SpecWM: Turning Verification into Refinement for Streaming World Models",
@@ -69708,12 +69764,12 @@
     },
     "huggingface:paper:2611.26232": {
       "first_seen": "2026-11-21T06:53:49.610572+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
-      "peak_signal": 1,
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
+      "peak_signal": 2,
       "prior_value": 1,
       "reported_at": null,
       "signal_name": "upvotes",
-      "signal_value": 1,
+      "signal_value": 2,
       "source": "huggingface",
       "source_id": "paper:2611.26232",
       "title": "Time Series Structure Learning with Local Causal Parent Discovery",
@@ -69722,21 +69778,21 @@
     },
     "huggingface:paper:2611.26239": {
       "first_seen": "2026-11-21T06:53:49.610572+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
-      "peak_signal": 3,
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
+      "peak_signal": 7,
       "prior_value": 3,
       "reported_at": null,
       "signal_name": "upvotes",
-      "signal_value": 3,
+      "signal_value": 7,
       "source": "huggingface",
       "source_id": "paper:2611.26239",
       "title": "Teaching Vision-Language-Action Models to Stop Safely",
       "url": "https://arxiv.org/abs/2611.26239",
-      "velocity": 3.0
+      "velocity": 4.0
     },
     "huggingface:paper:2611.26286": {
       "first_seen": "2026-11-21T06:53:49.610572+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
       "peak_signal": 10,
       "prior_value": 10,
       "reported_at": null,
@@ -69746,7 +69802,7 @@
       "source_id": "paper:2611.26286",
       "title": "Twice-Told Critiques: Claim-Level Homogenization of Peer Review in the LLM Era",
       "url": "https://arxiv.org/abs/2611.26286",
-      "velocity": 10.0
+      "velocity": 0.0
     },
     "huggingface:paper:2611.26298": {
       "first_seen": "2026-11-20T06:57:44.069777+00:00",
@@ -69778,17 +69834,17 @@
     },
     "huggingface:paper:2611.26408": {
       "first_seen": "2026-11-21T06:53:49.610572+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
-      "peak_signal": 13,
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
+      "peak_signal": 15,
       "prior_value": 13,
       "reported_at": null,
       "signal_name": "upvotes",
-      "signal_value": 13,
+      "signal_value": 15,
       "source": "huggingface",
       "source_id": "paper:2611.26408",
       "title": "Training Vision Models for LLM-Driven Weight-Space Programming",
       "url": "https://arxiv.org/abs/2611.26408",
-      "velocity": 13.0
+      "velocity": 2.0
     },
     "huggingface:paper:2611.26409": {
       "first_seen": "2026-11-20T06:57:44.069777+00:00",
@@ -69820,17 +69876,17 @@
     },
     "huggingface:paper:2611.26450": {
       "first_seen": "2026-11-21T06:53:49.610572+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
-      "peak_signal": 4,
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
+      "peak_signal": 6,
       "prior_value": 4,
       "reported_at": null,
       "signal_name": "upvotes",
-      "signal_value": 4,
+      "signal_value": 6,
       "source": "huggingface",
       "source_id": "paper:2611.26450",
       "title": "A CPU Inside an LLM: Zero-Gradient Compilation of Exact Circuits into Pretrained Weights",
       "url": "https://arxiv.org/abs/2611.26450",
-      "velocity": 4.0
+      "velocity": 2.0
     },
     "huggingface:paper:2611.26510": {
       "first_seen": "2026-11-20T06:57:44.069777+00:00",
@@ -69848,7 +69904,7 @@
     },
     "huggingface:paper:2611.26511": {
       "first_seen": "2026-11-21T06:53:49.610572+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
       "peak_signal": 4,
       "prior_value": 4,
       "reported_at": null,
@@ -69858,21 +69914,21 @@
       "source_id": "paper:2611.26511",
       "title": "Direct3D-V3: Latent-Free Diffusion Transformers in the Native Voxel Domain",
       "url": "https://arxiv.org/abs/2611.26511",
-      "velocity": 4.0
+      "velocity": 0.0
     },
     "huggingface:paper:2611.26540": {
       "first_seen": "2026-11-21T06:53:49.610572+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
-      "peak_signal": 2,
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
+      "peak_signal": 3,
       "prior_value": 2,
       "reported_at": null,
       "signal_name": "upvotes",
-      "signal_value": 2,
+      "signal_value": 3,
       "source": "huggingface",
       "source_id": "paper:2611.26540",
       "title": "AURA: AUdio-dRiven streaming Avatar",
       "url": "https://arxiv.org/abs/2611.26540",
-      "velocity": 2.0
+      "velocity": 1.0
     },
     "huggingface:paper:2611.26595": {
       "first_seen": "2026-11-20T06:57:44.069777+00:00",
@@ -69904,17 +69960,17 @@
     },
     "huggingface:paper:2611.26627": {
       "first_seen": "2026-11-21T06:53:49.610572+00:00",
-      "last_seen": "2026-11-21T06:53:49.610572+00:00",
-      "peak_signal": 14,
+      "last_seen": "2026-11-22T06:28:37.016030+00:00",
+      "peak_signal": 18,
       "prior_value": 14,
       "reported_at": null,
       "signal_name": "upvotes",
-      "signal_value": 14,
+      "signal_value": 18,
       "source": "huggingface",
       "source_id": "paper:2611.26627",
       "title": "RL Post-Training in Diffusion Transformers Is Activation Steering",
       "url": "https://arxiv.org/abs/2611.26627",
-      "velocity": 14.0
+      "velocity": 4.0
     },
     "huggingface:paper:2611.26629": {
       "first_seen": "2026-11-20T06:57:44.069777+00:00",
